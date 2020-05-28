@@ -11,7 +11,7 @@
 
 * 简介：模块中重点类为SqLiteCRUD，它是一个**工具类**(类似java中的Utils)，实现**增删改查和创建**
 * SqlLiteCRUD概况：
-  * `SqLiteCRUD(string connectionString)` —— 构造方法，传入路径创建本地数据库
+  * `SqLiteCRUD(string connectionString)` —— 构造方法，传入磁盘路径创建本地数据库
   * `SQLiteDataReader CreateTable(string tableName, string[] colNames, string[] colTypes)` —— 创建表
   * `SQLiteDataReader InsertValues(参数已省略)` —— 增加
   *  `SQLiteDataReader UpdateValues(参数已省略)` —— 修改
