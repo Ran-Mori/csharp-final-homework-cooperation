@@ -3,4 +3,21 @@
 *********************
 ## 目录文件夹基本结构
   * **FinalProject** : 用于合并模块构建最后的成品项目
+  * **SQLite**:dao层，存放与数据库操作相关的功能模块
+
 *************
+
+### SQLite模块中对数据库的第一层封装 
+
+* 简介：模块中重点类为SqLiteCRUD，它是一个**工具类**(类似java中的Utils)，实现**增删改查和创建**
+* SqlLiteCRUD概况：
+  * `SqLiteCRUD(string connectionString)` —— 构造方法，传入路径创建本地数据库
+  * `SQLiteDataReader CreateTable(string tableName, string[] colNames, string[] colTypes)` —— 创建表
+  * `SQLiteDataReader InsertValues(参数已省略)` —— 增加
+  *  `SQLiteDataReader UpdateValues(参数已省略)` —— 修改
+  * `SQLiteDataReader DeleteValuesAnd(参数已省略)` —— 删除
+  *  `SQLiteDataReader ReadFullTable(string tableName)` —— 查询
+* 环境依赖
+  * .Net Framework 4.6.1
+  * SqLite for .Net Framework 1.0.112.0 (3.30.1)
+    * 使用方法，先安装dll库，在项目中`using System.Data.SQLite;`
