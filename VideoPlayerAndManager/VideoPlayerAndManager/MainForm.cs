@@ -29,14 +29,25 @@ namespace VideoPlayerAndManager
             listBox1.DrawMode = DrawMode.OwnerDrawVariable;
             listBox1.DrawItem += ListBox1_DrawItem;
             listBox1.MeasureItem += ListBox1_MeasureItem;
+            InitListBoxItem();
 
-            listBox1.Items.Add("全部视频");
-            listBox1.Items.Add("收藏夹");//始终存在所以直接添加
 
             List<string> imageNames = service.GetAllVideos();
             ListViewUpdate(imageNames);
         }
 
+        //初始化listBox
+        private void InitListBoxItem()
+        {
+            listBox1.Items.Add("全部视频");
+            listBox1.Items.Add("收藏夹");//始终存在所以直接添加
+            List<string> lists = service.GetVideoList();
+            foreach (string list in lists)
+            {
+                listBox1.Items.Add(list);
+            }
+
+        }
         private void ListViewUpdate(List<string> imageNames)//更新listview中的内容
         {
             imageList1.Images.Clear();
@@ -50,24 +61,25 @@ namespace VideoPlayerAndManager
             }
 
             int pic_size = 256;
-            foreach (string name in imageNames)
+            for (int i = imageNames.Count - 1; i >= 0; i--)
             {
-                if(!File.Exists(name))
+                if (!File.Exists(imageNames[i]))
                 {
-                    service.RemoveFlie(name);
-                    imageNames.Remove(name);
+                    service.RemoveFlie(imageNames[i]);
+                    imageNames.Remove(imageNames[i]);
                     continue;
                 }
-                Bitmap bm = WindowsThumbnailProvider.GetThumbnail(name, pic_size, pic_size, ThumbnailOptions.None);
+                Bitmap bm = WindowsThumbnailProvider.GetThumbnail(imageNames[i], pic_size, pic_size, ThumbnailOptions.None);
                 Image img = Image.FromHbitmap(bm.GetHbitmap());
                 imageList1.Images.Add(img);
                 progressBar1.Value += pgbSpeed;
             }
 
-            for (int i = 0; i < imageNames.Count; i++)
+
+            for (int i = imageNames.Count - 1; i >= 0; i--)
             {
                 ListViewItem lvi = new ListViewItem();
-                lvi.ImageIndex = i;
+                lvi.ImageIndex = imageNames.Count - 1 - i;
                 lvi.Name = imageNames[i];
                 lvi.Text = System.IO.Path.GetFileNameWithoutExtension(imageNames[i]);
                 //string str = imageNames[i];
@@ -117,7 +129,9 @@ namespace VideoPlayerAndManager
 
         private void Button3_Click(object sender, EventArgs e)//创建新的视频列表
         {
+            AddListForm f1 = new AddListForm(listBox1);
 
+            f1.ShowDialog();
         }
 
         private void ListBox1_MeasureItem(object sender, MeasureItemEventArgs e)//set listbox1 item height
@@ -150,6 +164,14 @@ namespace VideoPlayerAndManager
             {
                 List<string> imageNames = service.GetCollection();
                 ListViewUpdate(imageNames);
+            }
+            else //其他列表
+            {
+                string name = listBox1.SelectedItem.ToString();
+                ListDetailForm f = new ListDetailForm(name, listBox1);
+
+                f.ShowDialog();
+
             }
         }
 

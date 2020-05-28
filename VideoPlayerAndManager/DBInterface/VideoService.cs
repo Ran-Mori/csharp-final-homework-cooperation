@@ -132,35 +132,34 @@ namespace DBInterface
         //添加videolist
         public bool AddVideoList(VideoList videoList)
         {
-            List<string> listNames = GetVideoList(videoList.ListID);
+            List<string> listNames = GetVideoList(videoList.ListID.ToString());
             if (listNames.Count > 0) return false;
-            helper.InsertValues("videolist", new string[] { videoList.ToString(), videoList.Name });
+
+            helper.InsertValues("videolist", new string[] { videoList.ListID.ToString(), videoList.Name });
             return true;
         }
 
         //读取所有videolist
-        public List<VideoList> GetVideoList()
+        public List<String> GetVideoList()
         {
-            List<VideoList> lists = new List<VideoList>();
+            List<String> lists = new List<String>();
             System.Data.SQLite.SQLiteDataReader sr = helper.ExecuteQuery("select * from videolist");
             while (sr.Read())
             {
-                int id = sr.GetInt16(sr.GetOrdinal("listid"));
-                string name = sr.GetString(sr.GetOrdinal("name"));
-                VideoList videoList = new VideoList(id, name);
-                lists.Add(videoList);
+
+                lists.Add(sr.GetString(sr.GetOrdinal("name")));
             }
             return lists;
         }
 
-        //查询指定listid的name
-        public List<string> GetVideoList(int id)
+        //查询指定name的listid
+        public List<String> GetVideoList(string name)
         {
-            List<string> result = new List<string>();
-            System.Data.SQLite.SQLiteDataReader sr = helper.Query("videolist", "listid", "=", id.ToString());
+            List<String> result = new List<String>();
+            System.Data.SQLite.SQLiteDataReader sr = helper.Query("videolist", "name", "=", name);
             while (sr.Read())
             {
-                result.Add(sr.GetString(sr.GetOrdinal("name")));
+                result.Add(sr[0].ToString());
             }
             return result;
         }
@@ -172,7 +171,7 @@ namespace DBInterface
         }
 
         //获取指定listid的视频，返回文件地址的list
-        public static List<string> GetFileFromList(int listid)
+        public List<string> GetFileFromList(string listid)
         {
             System.Data.SQLite.SQLiteDataReader sr = helper.Query("video", "listid", "=", listid.ToString());
             List<string> result = new List<string>();
@@ -182,7 +181,33 @@ namespace DBInterface
             }
             return result;
         }
+        //更新列表name
+        public void UpdateListName(string id, string newName)
+        {
+            string sql = $"update videolist set name = '{newName}' where listid = '{id}'";
+            helper.ExecuteQuery(sql);
+        }
 
+        //更新列表id
+        public void UpdateListID(string newid, string name)
+        {
+            string sql = $"update videolist set listid = '{newid}' where name = '{name}'";
+            helper.ExecuteQuery(sql);
+        }
+
+        //添加新视频到列表
+        public bool AddVideosToList(string filePath, string listId)
+        {
+            System.Data.SQLite.SQLiteDataReader sr = helper.Query("video", "address", "=", filePath);
+            if (sr.HasRows)
+            {
+                return false;
+            }
+            Video video = new Video(filePath);
+            helper.InsertValues("video",
+                new string[] { video.Address, video.Name, video.Time.ToString(), video.Collected.ToString(), listId });
+            return true;
+        }
 
         public void Close()
         {

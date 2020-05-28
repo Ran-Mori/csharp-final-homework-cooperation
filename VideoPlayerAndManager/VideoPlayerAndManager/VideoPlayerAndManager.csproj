@@ -8,10 +8,11 @@
     <OutputType>WinExe</OutputType>
     <RootNamespace>VideoPlayerAndManager</RootNamespace>
     <AssemblyName>VideoPlayerAndManager</AssemblyName>
-    <TargetFrameworkVersion>v4.7</TargetFrameworkVersion>
+    <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
     <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
     <Deterministic>true</Deterministic>
+    <TargetFrameworkProfile />
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>x64</PlatformTarget>
@@ -46,7 +47,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AddListForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="AddListForm.designer.cs">
+      <DependentUpon>AddListForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="GetFile.cs" />
+    <Compile Include="ListDetailForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="ListDetailForm.designer.cs">
+      <DependentUpon>ListDetailForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -55,6 +68,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="AddListForm.resx">
+      <DependentUpon>AddListForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ListDetailForm.resx">
+      <DependentUpon>ListDetailForm.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
@@ -66,6 +85,7 @@
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
     </Compile>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
