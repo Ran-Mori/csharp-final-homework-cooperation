@@ -20,4 +20,4 @@
 * 环境依赖
   * .Net Framework 4.6.1
   * SqLite for .Net Framework 1.0.112.0 (3.30.1)
-    * 使用方法，先安装dll库，在项目中`using System.Data.SQLite;`
+    * 使用方法，先安装dll库，项目中添加依赖，类中`using System.Data.SQLite;`
