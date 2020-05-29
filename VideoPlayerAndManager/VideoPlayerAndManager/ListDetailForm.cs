@@ -108,15 +108,14 @@ namespace VideoPlayerAndManager
         //更新列表的name信息
         private void button1_Click(object sender, EventArgs e)
         {
+            service.UpdateListName(ListID, listNameText.Text);
             try { lb.Items.Remove(oldName); }
             catch
             {
-                MessageBox.Show("修改成功！");
-            }
+            }            
             lb.Items.Add(listNameText.Text);
-            service.UpdateListName(ListID, listNameText.Text);
-
-
+            MessageBox.Show("修改成功！");
+            oldName = listNameText.Text;
         }
 
        
