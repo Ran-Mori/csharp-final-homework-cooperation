@@ -80,7 +80,7 @@ namespace DBInterface
             }
             return result;
         }
-
+        
         //获取给定视频地址的Video对象list
         public List<Video> GetVideo(string address)
         {

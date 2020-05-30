@@ -45,7 +45,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.07563F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.92437F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 316F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.listnameText, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.addListButton, 2, 0);
@@ -68,21 +68,23 @@
             this.label1.Size = new System.Drawing.Size(142, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "输入新建列表名称";
+            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // listnameText
             // 
             this.listnameText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.listnameText.Location = new System.Drawing.Point(175, 37);
             this.listnameText.Name = "listnameText";
-            this.listnameText.Size = new System.Drawing.Size(416, 25);
+            this.listnameText.Size = new System.Drawing.Size(413, 25);
             this.listnameText.TabIndex = 1;
+            this.listnameText.TextChanged += new System.EventHandler(this.listnameText_TextChanged);
             this.listnameText.Enter += new System.EventHandler(this.listnameText_Enter);
             this.listnameText.Leave += new System.EventHandler(this.listnameText_Leave);
             // 
             // addListButton
             // 
             this.addListButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.addListButton.Location = new System.Drawing.Point(644, 34);
+            this.addListButton.Location = new System.Drawing.Point(641, 34);
             this.addListButton.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
             this.addListButton.Name = "addListButton";
             this.addListButton.Size = new System.Drawing.Size(216, 32);
@@ -94,9 +96,9 @@
             // addVideosButton
             // 
             this.addVideosButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.addVideosButton.Location = new System.Drawing.Point(913, 35);
+            this.addVideosButton.Location = new System.Drawing.Point(910, 35);
             this.addVideosButton.Name = "addVideosButton";
-            this.addVideosButton.Size = new System.Drawing.Size(135, 30);
+            this.addVideosButton.Size = new System.Drawing.Size(138, 30);
             this.addVideosButton.TabIndex = 3;
             this.addVideosButton.Text = "扫描磁盘";
             this.addVideosButton.UseVisualStyleBackColor = true;
@@ -111,6 +113,7 @@
             this.listView1.Size = new System.Drawing.Size(1051, 423);
             this.listView1.TabIndex = 1;
             this.listView1.UseCompatibleStateImageBehavior = false;
+            this.listView1.SelectedIndexChanged += new System.EventHandler(this.listView1_SelectedIndexChanged);
             this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.listView1_MouseClick);
             // 
             // imageList1
@@ -128,6 +131,7 @@
             this.Controls.Add(this.tableLayoutPanel1);
             this.Name = "AddListForm";
             this.Text = "AddListForm";
+            this.Load += new System.EventHandler(this.AddListForm_Load_1);
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
             this.ResumeLayout(false);

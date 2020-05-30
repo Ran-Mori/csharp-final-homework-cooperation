@@ -175,6 +175,26 @@ namespace VideoPlayerAndManager
             List<string> videos = service.GetAllVideos();
             ListViewUpdate(videos);
         }
+
+        private void listnameText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void AddListForm_Load_1(object sender, EventArgs e)
+        {
+
+        }
     }
 }
 

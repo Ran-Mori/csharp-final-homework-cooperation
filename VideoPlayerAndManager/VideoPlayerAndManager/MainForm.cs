@@ -165,6 +165,7 @@ namespace VideoPlayerAndManager
                 List<string> imageNames = service.GetCollection();
                 ListViewUpdate(imageNames);
             }
+           
             else //其他列表
             {
                 string name = listBox1.SelectedItem.ToString();
@@ -218,6 +219,29 @@ namespace VideoPlayerAndManager
         private void ListView1_MouseDoubleClick(object sender, MouseEventArgs e)//进行播放
         {
 
+        }
+
+        private void textBox1_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void MainForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+     
+
+        private void button4_Click(object sender, EventArgs e)
+        {
+            ImageDialogMain imageDialog = new ImageDialogMain();
+            imageDialog.ShowDialog();
         }
     }
 }

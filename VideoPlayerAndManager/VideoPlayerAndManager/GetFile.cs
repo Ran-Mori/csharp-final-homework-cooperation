@@ -12,7 +12,7 @@ namespace VideoPlayerAndManager
     {
         public static List<string> GetVideo(string path, List<string> FileList)
         {
-            string[] extension = { ".mp4", ".avi", ".mkv", ".MP4", ".AVI", ".MKV" };
+            string[] extension = { ".mp4", ".avi", ".mkv", ".MP4", ".AVI", ".MKV","mov"};
             try
             {
                 DirectoryInfo dir = new DirectoryInfo(path);

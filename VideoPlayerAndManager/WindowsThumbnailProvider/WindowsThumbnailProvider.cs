@@ -1,4 +1,4 @@
-﻿//生成缩略图-魏昌鑫
+﻿//生成缩略图（任意文件）-魏昌鑫
 using System;
 using System.Drawing;
 using System.Drawing.Imaging;
@@ -19,7 +19,7 @@ namespace VideoPlayerAndManager
 
     }
 
-    public class WindowsThumbnailProvider//生辰成缩略图类
+    public class WindowsThumbnailProvider//生成缩略图类
     {
         private const string IShellItem2Guid = "7E9FB0D3-919F-4307-AB2E-9B1860310C93";
 
@@ -93,7 +93,7 @@ namespace VideoPlayerAndManager
         }
 
         [StructLayout(LayoutKind.Sequential)]
-        internal struct NativeSize
+        internal struct NativeSize//图片结构体
         {
             private int width;
             private int height;
@@ -119,17 +119,17 @@ namespace VideoPlayerAndManager
 
             try
             {
-                // return a System.Drawing.Bitmap from the hBitmap  
+
                 return GetBitmapFromHBitmap(hBitmap);
             }
             finally
             {
-                // delete HBitmap to avoid memory leaks  
+               
                 DeleteObject(hBitmap);
             }
         }
 
-        public static Bitmap GetBitmapFromHBitmap(IntPtr nativeHBitmap)
+        public static Bitmap GetBitmapFromHBitmap(IntPtr nativeHBitmap)//获取视频文件Bitmap
         {
             Bitmap bmp = Bitmap.FromHbitmap(nativeHBitmap);
 
@@ -139,6 +139,7 @@ namespace VideoPlayerAndManager
             return CreateAlphaBitmap(bmp, PixelFormat.Format32bppArgb);
         }
 
+        //获取视频文件Bitmap原位图
         public static Bitmap CreateAlphaBitmap(Bitmap srcBitmap, PixelFormat targetPixelFormat)
         {
             Bitmap result = new Bitmap(srcBitmap.Width, srcBitmap.Height, targetPixelFormat);
@@ -182,6 +183,7 @@ namespace VideoPlayerAndManager
             }
         }
 
+        //获取Bitmap
         private static IntPtr GetHBitmap(string fileName, int width, int height, ThumbnailOptions options)
         {
             IShellItem nativeShellItem;
