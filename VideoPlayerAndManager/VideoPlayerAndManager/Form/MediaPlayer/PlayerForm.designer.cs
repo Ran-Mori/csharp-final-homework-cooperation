@@ -33,38 +33,38 @@
             this.saveFileDialog1 = new System.Windows.Forms.SaveFileDialog();
             this.listBox1 = new System.Windows.Forms.ListBox();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
-            this.文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.打开ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.收藏ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.信息ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.关闭ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.下一个ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.打开文件夹ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.管理器ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.显示ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.全屏ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.语言ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.FileToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.addToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.informationToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.closeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.nextToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.openDirectoryToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.managerToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.showToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.fullscreenToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.languageToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.中文ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.englishToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.倍速ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem2 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem3 = new System.Windows.Forms.ToolStripMenuItem();
+            this.toolStripMenuItem4 = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripMenuItem5 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem7 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem8 = new System.Windows.Forms.ToolStripMenuItem();
-            this.toolStripMenuItem9 = new System.Windows.Forms.ToolStripMenuItem();
-            this.自定义ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.外观ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.皮肤ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.原皮肤ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.浅橘色ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.钻石蓝ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.炫酷银ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.ToolStripMenuItem6 = new System.Windows.Forms.ToolStripMenuItem();
+            this.outlookToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.skinToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.originToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.orangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.blueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.silverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.录制ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.视频截图ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.模式ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.顺序播放ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.随机播放ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.循环播放ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.playmodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.sequenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.randomToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.selfToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.skinEngine1 = new Sunisoft.IrisSkin.SkinEngine();
             this.tabControl1 = new System.Windows.Forms.TabControl();
             this.tabPage1 = new System.Windows.Forms.TabPage();
@@ -90,11 +90,6 @@
             // openFileDialog1
             // 
             this.openFileDialog1.FileName = "openFileDialog1";
-            resources.ApplyResources(this.openFileDialog1, "openFileDialog1");
-            // 
-            // saveFileDialog1
-            // 
-            resources.ApplyResources(this.saveFileDialog1, "saveFileDialog1");
             // 
             // listBox1
             // 
@@ -106,245 +101,238 @@
             // 
             // menuStrip1
             // 
-            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.ImageScalingSize = new System.Drawing.Size(32, 32);
             this.menuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.文件ToolStripMenuItem,
-            this.显示ToolStripMenuItem,
-            this.外观ToolStripMenuItem,
+            this.FileToolStripMenuItem,
+            this.showToolStripMenuItem,
+            this.outlookToolStripMenuItem,
             this.录制ToolStripMenuItem,
-            this.模式ToolStripMenuItem});
+            this.playmodeToolStripMenuItem});
+            resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
             // 
-            // 文件ToolStripMenuItem
+            // FileToolStripMenuItem
             // 
-            resources.ApplyResources(this.文件ToolStripMenuItem, "文件ToolStripMenuItem");
-            this.文件ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.打开ToolStripMenuItem,
-            this.收藏ToolStripMenuItem,
-            this.信息ToolStripMenuItem,
-            this.关闭ToolStripMenuItem,
-            this.下一个ToolStripMenuItem,
-            this.打开文件夹ToolStripMenuItem,
-            this.管理器ToolStripMenuItem});
-            this.文件ToolStripMenuItem.Name = "文件ToolStripMenuItem";
+            this.FileToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.openToolStripMenuItem,
+            this.addToolStripMenuItem,
+            this.informationToolStripMenuItem,
+            this.closeToolStripMenuItem,
+            this.nextToolStripMenuItem,
+            this.openDirectoryToolStripMenuItem,
+            this.managerToolStripMenuItem});
+            this.FileToolStripMenuItem.Name = "FileToolStripMenuItem";
+            resources.ApplyResources(this.FileToolStripMenuItem, "FileToolStripMenuItem");
             // 
-            // 打开ToolStripMenuItem
+            // openToolStripMenuItem
             // 
-            resources.ApplyResources(this.打开ToolStripMenuItem, "打开ToolStripMenuItem");
-            this.打开ToolStripMenuItem.Name = "打开ToolStripMenuItem";
-            this.打开ToolStripMenuItem.Click += new System.EventHandler(this.打开ToolStripMenuItem_Click);
+            this.openToolStripMenuItem.Name = "openToolStripMenuItem";
+            resources.ApplyResources(this.openToolStripMenuItem, "openToolStripMenuItem");
+            this.openToolStripMenuItem.Click += new System.EventHandler(this.openToolStripMenuItem_Click);
             // 
-            // 收藏ToolStripMenuItem
+            // addToolStripMenuItem
             // 
-            resources.ApplyResources(this.收藏ToolStripMenuItem, "收藏ToolStripMenuItem");
-            this.收藏ToolStripMenuItem.Name = "收藏ToolStripMenuItem";
-            this.收藏ToolStripMenuItem.Click += new System.EventHandler(this.收藏ToolStripMenuItem_Click);
+            this.addToolStripMenuItem.Name = "addToolStripMenuItem";
+            resources.ApplyResources(this.addToolStripMenuItem, "addToolStripMenuItem");
+            this.addToolStripMenuItem.Click += new System.EventHandler(this.addToolStripMenuItem_Click);
             // 
-            // 信息ToolStripMenuItem
+            // informationToolStripMenuItem
             // 
-            resources.ApplyResources(this.信息ToolStripMenuItem, "信息ToolStripMenuItem");
-            this.信息ToolStripMenuItem.Name = "信息ToolStripMenuItem";
-            this.信息ToolStripMenuItem.Click += new System.EventHandler(this.信息ToolStripMenuItem_Click);
+            this.informationToolStripMenuItem.Name = "informationToolStripMenuItem";
+            resources.ApplyResources(this.informationToolStripMenuItem, "informationToolStripMenuItem");
+            this.informationToolStripMenuItem.Click += new System.EventHandler(this.informationToolStripMenuItem_Click);
             // 
-            // 关闭ToolStripMenuItem
+            // closeToolStripMenuItem
             // 
-            resources.ApplyResources(this.关闭ToolStripMenuItem, "关闭ToolStripMenuItem");
-            this.关闭ToolStripMenuItem.Name = "关闭ToolStripMenuItem";
-            this.关闭ToolStripMenuItem.Click += new System.EventHandler(this.关闭ToolStripMenuItem_Click);
+            this.closeToolStripMenuItem.Name = "closeToolStripMenuItem";
+            resources.ApplyResources(this.closeToolStripMenuItem, "closeToolStripMenuItem");
+            this.closeToolStripMenuItem.Click += new System.EventHandler(this.closeToolStripMenuItem_Click);
             // 
-            // 下一个ToolStripMenuItem
+            // nextToolStripMenuItem
             // 
-            resources.ApplyResources(this.下一个ToolStripMenuItem, "下一个ToolStripMenuItem");
-            this.下一个ToolStripMenuItem.Name = "下一个ToolStripMenuItem";
-            this.下一个ToolStripMenuItem.Click += new System.EventHandler(this.下一个ToolStripMenuItem_Click);
+            this.nextToolStripMenuItem.Name = "nextToolStripMenuItem";
+            resources.ApplyResources(this.nextToolStripMenuItem, "nextToolStripMenuItem");
+            this.nextToolStripMenuItem.Click += new System.EventHandler(this.nextToolStripMenuItem_Click);
             // 
-            // 打开文件夹ToolStripMenuItem
+            // openDirectoryToolStripMenuItem
             // 
-            resources.ApplyResources(this.打开文件夹ToolStripMenuItem, "打开文件夹ToolStripMenuItem");
-            this.打开文件夹ToolStripMenuItem.Name = "打开文件夹ToolStripMenuItem";
-            this.打开文件夹ToolStripMenuItem.Click += new System.EventHandler(this.打开文件夹ToolStripMenuItem_Click);
+            this.openDirectoryToolStripMenuItem.Name = "openDirectoryToolStripMenuItem";
+            resources.ApplyResources(this.openDirectoryToolStripMenuItem, "openDirectoryToolStripMenuItem");
+            this.openDirectoryToolStripMenuItem.Click += new System.EventHandler(this.openDirectoryToolStripMenuItem_Click);
             // 
-            // 管理器ToolStripMenuItem
+            // managerToolStripMenuItem
             // 
-            resources.ApplyResources(this.管理器ToolStripMenuItem, "管理器ToolStripMenuItem");
-            this.管理器ToolStripMenuItem.Name = "管理器ToolStripMenuItem";
+            this.managerToolStripMenuItem.Name = "managerToolStripMenuItem";
+            resources.ApplyResources(this.managerToolStripMenuItem, "managerToolStripMenuItem");
+            this.managerToolStripMenuItem.Click += new System.EventHandler(this.managerToolStripMenuItem_Click);
             // 
-            // 显示ToolStripMenuItem
+            // showToolStripMenuItem
             // 
-            resources.ApplyResources(this.显示ToolStripMenuItem, "显示ToolStripMenuItem");
-            this.显示ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.全屏ToolStripMenuItem,
-            this.语言ToolStripMenuItem,
+            this.showToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.fullscreenToolStripMenuItem,
+            this.languageToolStripMenuItem,
             this.倍速ToolStripMenuItem});
-            this.显示ToolStripMenuItem.Name = "显示ToolStripMenuItem";
+            this.showToolStripMenuItem.Name = "showToolStripMenuItem";
+            resources.ApplyResources(this.showToolStripMenuItem, "showToolStripMenuItem");
             // 
-            // 全屏ToolStripMenuItem
+            // fullscreenToolStripMenuItem
             // 
-            resources.ApplyResources(this.全屏ToolStripMenuItem, "全屏ToolStripMenuItem");
-            this.全屏ToolStripMenuItem.Name = "全屏ToolStripMenuItem";
-            this.全屏ToolStripMenuItem.Click += new System.EventHandler(this.全屏ToolStripMenuItem_Click);
+            this.fullscreenToolStripMenuItem.Name = "fullscreenToolStripMenuItem";
+            resources.ApplyResources(this.fullscreenToolStripMenuItem, "fullscreenToolStripMenuItem");
+            this.fullscreenToolStripMenuItem.Click += new System.EventHandler(this.fullscreenToolStripMenuItem_Click);
             // 
-            // 语言ToolStripMenuItem
+            // languageToolStripMenuItem
             // 
-            resources.ApplyResources(this.语言ToolStripMenuItem, "语言ToolStripMenuItem");
-            this.语言ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.languageToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.中文ToolStripMenuItem,
             this.englishToolStripMenuItem});
-            this.语言ToolStripMenuItem.Name = "语言ToolStripMenuItem";
-            this.语言ToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.语言ToolStripMenuItem_DropDownItemClicked);
+            this.languageToolStripMenuItem.Name = "languageToolStripMenuItem";
+            resources.ApplyResources(this.languageToolStripMenuItem, "languageToolStripMenuItem");
+            this.languageToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.languageToolStripMenuItem_DropDownItemClicked);
             // 
             // 中文ToolStripMenuItem
             // 
-            resources.ApplyResources(this.中文ToolStripMenuItem, "中文ToolStripMenuItem");
             this.中文ToolStripMenuItem.Checked = true;
             this.中文ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.中文ToolStripMenuItem.Name = "中文ToolStripMenuItem";
+            resources.ApplyResources(this.中文ToolStripMenuItem, "中文ToolStripMenuItem");
             this.中文ToolStripMenuItem.Click += new System.EventHandler(this.中文ToolStripMenuItem_Click);
             // 
             // englishToolStripMenuItem
             // 
-            resources.ApplyResources(this.englishToolStripMenuItem, "englishToolStripMenuItem");
             this.englishToolStripMenuItem.Name = "englishToolStripMenuItem";
+            resources.ApplyResources(this.englishToolStripMenuItem, "englishToolStripMenuItem");
             this.englishToolStripMenuItem.Click += new System.EventHandler(this.englishToolStripMenuItem_Click);
             // 
             // 倍速ToolStripMenuItem
             // 
-            resources.ApplyResources(this.倍速ToolStripMenuItem, "倍速ToolStripMenuItem");
             this.倍速ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.toolStripMenuItem1,
+            this.toolStripMenuItem2,
+            this.toolStripMenuItem3,
+            this.toolStripMenuItem4,
             this.toolStripMenuItem5,
-            this.toolStripMenuItem6,
-            this.toolStripMenuItem7,
-            this.toolStripMenuItem8,
-            this.toolStripMenuItem9,
-            this.自定义ToolStripMenuItem});
+            this.ToolStripMenuItem6});
             this.倍速ToolStripMenuItem.Name = "倍速ToolStripMenuItem";
-            this.倍速ToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.倍速ToolStripMenuItem_DropDownItemClicked);
+            resources.ApplyResources(this.倍速ToolStripMenuItem, "倍速ToolStripMenuItem");
+            this.倍速ToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.speedToolStripMenuItem_DropDownItemClicked);
+            // 
+            // toolStripMenuItem1
+            // 
+            this.toolStripMenuItem1.Checked = true;
+            this.toolStripMenuItem1.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.toolStripMenuItem1.Name = "toolStripMenuItem1";
+            resources.ApplyResources(this.toolStripMenuItem1, "toolStripMenuItem1");
+            // 
+            // toolStripMenuItem2
+            // 
+            this.toolStripMenuItem2.Name = "toolStripMenuItem2";
+            resources.ApplyResources(this.toolStripMenuItem2, "toolStripMenuItem2");
+            // 
+            // toolStripMenuItem3
+            // 
+            this.toolStripMenuItem3.Name = "toolStripMenuItem3";
+            resources.ApplyResources(this.toolStripMenuItem3, "toolStripMenuItem3");
+            // 
+            // toolStripMenuItem4
+            // 
+            this.toolStripMenuItem4.Name = "toolStripMenuItem4";
+            resources.ApplyResources(this.toolStripMenuItem4, "toolStripMenuItem4");
             // 
             // toolStripMenuItem5
             // 
-            resources.ApplyResources(this.toolStripMenuItem5, "toolStripMenuItem5");
-            this.toolStripMenuItem5.Checked = true;
-            this.toolStripMenuItem5.CheckState = System.Windows.Forms.CheckState.Checked;
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
-            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem5_Click);
+            resources.ApplyResources(this.toolStripMenuItem5, "toolStripMenuItem5");
+            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
             // 
-            // toolStripMenuItem6
+            // ToolStripMenuItem6
             // 
-            resources.ApplyResources(this.toolStripMenuItem6, "toolStripMenuItem6");
-            this.toolStripMenuItem6.Name = "toolStripMenuItem6";
-            this.toolStripMenuItem6.Click += new System.EventHandler(this.toolStripMenuItem6_Click);
+            this.ToolStripMenuItem6.Name = "ToolStripMenuItem6";
+            resources.ApplyResources(this.ToolStripMenuItem6, "ToolStripMenuItem6");
             // 
-            // toolStripMenuItem7
+            // outlookToolStripMenuItem
             // 
-            resources.ApplyResources(this.toolStripMenuItem7, "toolStripMenuItem7");
-            this.toolStripMenuItem7.Name = "toolStripMenuItem7";
-            this.toolStripMenuItem7.Click += new System.EventHandler(this.toolStripMenuItem7_Click);
+            this.outlookToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.skinToolStripMenuItem});
+            this.outlookToolStripMenuItem.Name = "outlookToolStripMenuItem";
+            resources.ApplyResources(this.outlookToolStripMenuItem, "outlookToolStripMenuItem");
             // 
-            // toolStripMenuItem8
+            // skinToolStripMenuItem
             // 
-            resources.ApplyResources(this.toolStripMenuItem8, "toolStripMenuItem8");
-            this.toolStripMenuItem8.Name = "toolStripMenuItem8";
-            this.toolStripMenuItem8.Click += new System.EventHandler(this.toolStripMenuItem8_Click);
+            this.skinToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.originToolStripMenuItem,
+            this.orangeToolStripMenuItem,
+            this.blueToolStripMenuItem,
+            this.silverToolStripMenuItem});
+            this.skinToolStripMenuItem.Name = "skinToolStripMenuItem";
+            resources.ApplyResources(this.skinToolStripMenuItem, "skinToolStripMenuItem");
+            this.skinToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.skinToolStripMenuItem_DropDownItemClicked);
             // 
-            // toolStripMenuItem9
+            // originToolStripMenuItem
             // 
-            resources.ApplyResources(this.toolStripMenuItem9, "toolStripMenuItem9");
-            this.toolStripMenuItem9.Name = "toolStripMenuItem9";
-            this.toolStripMenuItem9.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
+            this.originToolStripMenuItem.Checked = true;
+            this.originToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.originToolStripMenuItem.Name = "originToolStripMenuItem";
+            resources.ApplyResources(this.originToolStripMenuItem, "originToolStripMenuItem");
+            this.originToolStripMenuItem.Click += new System.EventHandler(this.originToolStripMenuItem_Click);
             // 
-            // 自定义ToolStripMenuItem
+            // orangeToolStripMenuItem
             // 
-            resources.ApplyResources(this.自定义ToolStripMenuItem, "自定义ToolStripMenuItem");
-            this.自定义ToolStripMenuItem.Name = "自定义ToolStripMenuItem";
-            this.自定义ToolStripMenuItem.Click += new System.EventHandler(this.自定义ToolStripMenuItem_Click);
+            this.orangeToolStripMenuItem.Name = "orangeToolStripMenuItem";
+            resources.ApplyResources(this.orangeToolStripMenuItem, "orangeToolStripMenuItem");
+            this.orangeToolStripMenuItem.Click += new System.EventHandler(this.orangeToolStripMenuItem_Click);
             // 
-            // 外观ToolStripMenuItem
+            // blueToolStripMenuItem
             // 
-            resources.ApplyResources(this.外观ToolStripMenuItem, "外观ToolStripMenuItem");
-            this.外观ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.皮肤ToolStripMenuItem});
-            this.外观ToolStripMenuItem.Name = "外观ToolStripMenuItem";
+            this.blueToolStripMenuItem.Name = "blueToolStripMenuItem";
+            resources.ApplyResources(this.blueToolStripMenuItem, "blueToolStripMenuItem");
+            this.blueToolStripMenuItem.Click += new System.EventHandler(this.blueToolStripMenuItem_Click);
             // 
-            // 皮肤ToolStripMenuItem
+            // silverToolStripMenuItem
             // 
-            resources.ApplyResources(this.皮肤ToolStripMenuItem, "皮肤ToolStripMenuItem");
-            this.皮肤ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.原皮肤ToolStripMenuItem,
-            this.浅橘色ToolStripMenuItem,
-            this.钻石蓝ToolStripMenuItem,
-            this.炫酷银ToolStripMenuItem});
-            this.皮肤ToolStripMenuItem.Name = "皮肤ToolStripMenuItem";
-            this.皮肤ToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.皮肤ToolStripMenuItem_DropDownItemClicked);
-            // 
-            // 原皮肤ToolStripMenuItem
-            // 
-            resources.ApplyResources(this.原皮肤ToolStripMenuItem, "原皮肤ToolStripMenuItem");
-            this.原皮肤ToolStripMenuItem.Checked = true;
-            this.原皮肤ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.原皮肤ToolStripMenuItem.Name = "原皮肤ToolStripMenuItem";
-            this.原皮肤ToolStripMenuItem.Click += new System.EventHandler(this.原皮肤ToolStripMenuItem_Click);
-            // 
-            // 浅橘色ToolStripMenuItem
-            // 
-            resources.ApplyResources(this.浅橘色ToolStripMenuItem, "浅橘色ToolStripMenuItem");
-            this.浅橘色ToolStripMenuItem.Name = "浅橘色ToolStripMenuItem";
-            this.浅橘色ToolStripMenuItem.Click += new System.EventHandler(this.浅橘色ToolStripMenuItem_Click);
-            // 
-            // 钻石蓝ToolStripMenuItem
-            // 
-            resources.ApplyResources(this.钻石蓝ToolStripMenuItem, "钻石蓝ToolStripMenuItem");
-            this.钻石蓝ToolStripMenuItem.Name = "钻石蓝ToolStripMenuItem";
-            this.钻石蓝ToolStripMenuItem.Click += new System.EventHandler(this.钻石蓝ToolStripMenuItem_Click);
-            // 
-            // 炫酷银ToolStripMenuItem
-            // 
-            resources.ApplyResources(this.炫酷银ToolStripMenuItem, "炫酷银ToolStripMenuItem");
-            this.炫酷银ToolStripMenuItem.Name = "炫酷银ToolStripMenuItem";
-            this.炫酷银ToolStripMenuItem.Click += new System.EventHandler(this.炫酷银ToolStripMenuItem_Click);
+            this.silverToolStripMenuItem.Name = "silverToolStripMenuItem";
+            resources.ApplyResources(this.silverToolStripMenuItem, "silverToolStripMenuItem");
+            this.silverToolStripMenuItem.Click += new System.EventHandler(this.silverToolStripMenuItem_Click);
             // 
             // 录制ToolStripMenuItem
             // 
-            resources.ApplyResources(this.录制ToolStripMenuItem, "录制ToolStripMenuItem");
             this.录制ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.视频截图ToolStripMenuItem});
             this.录制ToolStripMenuItem.Name = "录制ToolStripMenuItem";
+            resources.ApplyResources(this.录制ToolStripMenuItem, "录制ToolStripMenuItem");
             // 
             // 视频截图ToolStripMenuItem
             // 
-            resources.ApplyResources(this.视频截图ToolStripMenuItem, "视频截图ToolStripMenuItem");
             this.视频截图ToolStripMenuItem.Name = "视频截图ToolStripMenuItem";
+            resources.ApplyResources(this.视频截图ToolStripMenuItem, "视频截图ToolStripMenuItem");
             this.视频截图ToolStripMenuItem.Click += new System.EventHandler(this.视频截图ToolStripMenuItem_Click);
             // 
-            // 模式ToolStripMenuItem
+            // playmodeToolStripMenuItem
             // 
-            resources.ApplyResources(this.模式ToolStripMenuItem, "模式ToolStripMenuItem");
-            this.模式ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.顺序播放ToolStripMenuItem,
-            this.随机播放ToolStripMenuItem,
-            this.循环播放ToolStripMenuItem});
-            this.模式ToolStripMenuItem.Name = "模式ToolStripMenuItem";
-            this.模式ToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.模式ToolStripMenuItem_DropDownItemClicked);
+            this.playmodeToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.sequenceToolStripMenuItem,
+            this.randomToolStripMenuItem,
+            this.selfToolStripMenuItem});
+            this.playmodeToolStripMenuItem.Name = "playmodeToolStripMenuItem";
+            resources.ApplyResources(this.playmodeToolStripMenuItem, "playmodeToolStripMenuItem");
+            this.playmodeToolStripMenuItem.DropDownItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.playmodeToolStripMenuItem_DropDownItemClicked);
             // 
-            // 顺序播放ToolStripMenuItem
+            // sequenceToolStripMenuItem
             // 
-            resources.ApplyResources(this.顺序播放ToolStripMenuItem, "顺序播放ToolStripMenuItem");
-            this.顺序播放ToolStripMenuItem.Checked = true;
-            this.顺序播放ToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
-            this.顺序播放ToolStripMenuItem.Name = "顺序播放ToolStripMenuItem";
-            this.顺序播放ToolStripMenuItem.Click += new System.EventHandler(this.顺序播放ToolStripMenuItem_Click);
+            this.sequenceToolStripMenuItem.Checked = true;
+            this.sequenceToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
+            this.sequenceToolStripMenuItem.Name = "sequenceToolStripMenuItem";
+            resources.ApplyResources(this.sequenceToolStripMenuItem, "sequenceToolStripMenuItem");
             // 
-            // 随机播放ToolStripMenuItem
+            // randomToolStripMenuItem
             // 
-            resources.ApplyResources(this.随机播放ToolStripMenuItem, "随机播放ToolStripMenuItem");
-            this.随机播放ToolStripMenuItem.Name = "随机播放ToolStripMenuItem";
-            this.随机播放ToolStripMenuItem.Click += new System.EventHandler(this.随机播放ToolStripMenuItem_Click);
+            this.randomToolStripMenuItem.Name = "randomToolStripMenuItem";
+            resources.ApplyResources(this.randomToolStripMenuItem, "randomToolStripMenuItem");
             // 
-            // 循环播放ToolStripMenuItem
+            // selfToolStripMenuItem
             // 
-            resources.ApplyResources(this.循环播放ToolStripMenuItem, "循环播放ToolStripMenuItem");
-            this.循环播放ToolStripMenuItem.Name = "循环播放ToolStripMenuItem";
-            this.循环播放ToolStripMenuItem.Click += new System.EventHandler(this.循环播放ToolStripMenuItem_Click);
+            this.selfToolStripMenuItem.Name = "selfToolStripMenuItem";
+            resources.ApplyResources(this.selfToolStripMenuItem, "selfToolStripMenuItem");
             // 
             // skinEngine1
             // 
@@ -357,47 +345,47 @@
             // 
             // tabControl1
             // 
-            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Controls.Add(this.tabPage1);
             this.tabControl1.Controls.Add(this.tabPage2);
+            resources.ApplyResources(this.tabControl1, "tabControl1");
             this.tabControl1.Name = "tabControl1";
             this.tabControl1.SelectedIndex = 0;
             // 
             // tabPage1
             // 
-            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Controls.Add(this.listBox1);
+            resources.ApplyResources(this.tabPage1, "tabPage1");
             this.tabPage1.Name = "tabPage1";
             this.tabPage1.UseVisualStyleBackColor = true;
             // 
             // tabPage2
             // 
-            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Controls.Add(this.panel1);
+            resources.ApplyResources(this.tabPage2, "tabPage2");
             this.tabPage2.Name = "tabPage2";
             this.tabPage2.UseVisualStyleBackColor = true;
             // 
             // panel1
             // 
-            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.label5);
             this.panel1.Controls.Add(this.label4);
             this.panel1.Controls.Add(this.label1);
             this.panel1.Controls.Add(this.label3);
             this.panel1.Controls.Add(this.label2);
+            resources.ApplyResources(this.panel1, "panel1");
             this.panel1.Name = "panel1";
             // 
             // panel2
             // 
-            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Controls.Add(this.label6);
+            resources.ApplyResources(this.panel2, "panel2");
             this.panel2.Name = "panel2";
             // 
             // label6
             // 
-            resources.ApplyResources(this.label6, "label6");
             this.label6.BackColor = System.Drawing.Color.Yellow;
+            resources.ApplyResources(this.label6, "label6");
             this.label6.Name = "label6";
             // 
             // label5
@@ -426,8 +414,8 @@
             // 
             // label2
             // 
-            resources.ApplyResources(this.label2, "label2");
             this.label2.BackColor = System.Drawing.Color.NavajoWhite;
+            resources.ApplyResources(this.label2, "label2");
             this.label2.Name = "label2";
             // 
             // axWindowsMediaPlayer1
@@ -465,35 +453,35 @@
         private System.Windows.Forms.SaveFileDialog saveFileDialog1;
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.MenuStrip menuStrip1;
-        private System.Windows.Forms.ToolStripMenuItem 文件ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 打开ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 收藏ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 关闭ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 显示ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 全屏ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 语言ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem FileToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem addToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem closeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem showToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem fullscreenToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem languageToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 倍速ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 外观ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 皮肤ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem outlookToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem skinToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 录制ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 视频截图ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem3;
+        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem4;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem5;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem6;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem7;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem8;
-        private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem9;
-        private System.Windows.Forms.ToolStripMenuItem 自定义ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem ToolStripMenuItem6;
         private Sunisoft.IrisSkin.SkinEngine skinEngine1;
-        private System.Windows.Forms.ToolStripMenuItem 浅橘色ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 钻石蓝ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 炫酷银ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem orangeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem blueToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem silverToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 中文ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem englishToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 信息ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 模式ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 顺序播放ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 随机播放ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 循环播放ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem informationToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem playmodeToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem sequenceToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem randomToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem selfToolStripMenuItem;
         private System.Windows.Forms.TabControl tabControl1;
         private System.Windows.Forms.TabPage tabPage1;
         private System.Windows.Forms.TabPage tabPage2;
@@ -504,11 +492,11 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.ToolStripMenuItem 管理器ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem managerToolStripMenuItem;
         private AxWMPLib.AxWindowsMediaPlayer axWindowsMediaPlayer1;
-        private System.Windows.Forms.ToolStripMenuItem 下一个ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 打开文件夹ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 原皮肤ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem nextToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem openDirectoryToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem originToolStripMenuItem;
         private System.Windows.Forms.Panel panel2;
     }
 }

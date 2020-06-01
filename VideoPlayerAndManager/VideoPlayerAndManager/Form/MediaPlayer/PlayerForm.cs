@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Resources;
-using System.Runtime.InteropServices;
+//using System.Runtime.InteropServices;
 
 namespace MoviePlayer
 {
@@ -22,14 +22,14 @@ namespace MoviePlayer
         {
             InitializeComponent();
             listBox1.DrawMode = DrawMode.OwnerDrawFixed;
-            axWindowsMediaPlayer1.uiMode = "mini";
+            listBox1.ItemHeight = 35;
         }
 
         public PlayerForm(Video movie, List<Video> movies)
         {
             InitializeComponent();
-            axWindowsMediaPlayer1.uiMode = "mini";
             listBox1.DrawMode = DrawMode.OwnerDrawFixed;
+            listBox1.ItemHeight = 35;
             currentMovie = movie;
             movieList = movies;
             foreach (Video one in movies)
@@ -50,8 +50,8 @@ namespace MoviePlayer
         public PlayerForm(Video movie)
         {
             InitializeComponent();
-            axWindowsMediaPlayer1.uiMode = "mini";
             listBox1.DrawMode = DrawMode.OwnerDrawFixed;
+            listBox1.ItemHeight = 35;
             currentMovie = movie;
             foreach (Video one in movieList)
             {
@@ -68,10 +68,7 @@ namespace MoviePlayer
             }
         }
 
-       
-       
-
-        private void 全屏ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void fullscreenToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (axWindowsMediaPlayer1.playState == WMPLib.WMPPlayState.wmppsPlaying)
             {
@@ -82,7 +79,7 @@ namespace MoviePlayer
             }
         }
 
-        private void 打开ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openToolStripMenuItem_Click(object sender, EventArgs e)
         {
             openFileDialog1.Filter = "mp4文件|*.mp4|mkv文件|*.mkv|avi文件|*。avi";
             if (openFileDialog1.ShowDialog() == DialogResult.OK)
@@ -107,55 +104,28 @@ namespace MoviePlayer
             }
         }
 
-        private void 关闭ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Close();
         }
 
-        private void 收藏ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void toolStripMenuItem9_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
+        
+        private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
             AddtoLike(currentMovie);
             MessageBox.Show("添加成功");
         }
 
-        private void toolStripMenuItem9_Click(object sender, EventArgs e)
-        {
-            axWindowsMediaPlayer1.settings.rate = 2;
-        }
-
-        private void toolStripMenuItem5_Click(object sender, EventArgs e)
-        {
-            axWindowsMediaPlayer1.settings.rate = 1;
-        }
-
-        private void toolStripMenuItem6_Click(object sender, EventArgs e)
-        {
-            axWindowsMediaPlayer1.settings.rate = 1.25;
-        }
-
-        private void toolStripMenuItem7_Click(object sender, EventArgs e)
-        {
-            axWindowsMediaPlayer1.settings.rate = 1.5;
-        }
-
-        private void toolStripMenuItem8_Click(object sender, EventArgs e)
-        {
-            axWindowsMediaPlayer1.settings.rate = 1.75;
-        }
-
-        private void 自定义ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            SpeedForm s = new SpeedForm(this.skinEngine1.SkinFile);
-            if (s.ShowDialog() == DialogResult.OK)
-            {
-                axWindowsMediaPlayer1.settings.rate = s.getValue();
-            }
-        }
-        private void 原皮肤ToolStripMenuItem_Click(object sender, EventArgs e)
+        
+        private void originToolStripMenuItem_Click(object sender, EventArgs e)
         {
             skinEngine1.Active = false;
         }
-        private void 钻石蓝ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void blueToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (skinEngine1.Active == false)
             {
@@ -164,7 +134,7 @@ namespace MoviePlayer
             skinEngine1.SkinFile = "DiamondBlue.ssk";
         }
 
-        private void 浅橘色ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void orangeToolStripMenuItem_Click(object sender, EventArgs e)
         {
            
             if (skinEngine1.Active == false)
@@ -174,7 +144,7 @@ namespace MoviePlayer
             this.skinEngine1.SkinFile = "GlassOrange.ssk";
         }
 
-        private void 炫酷银ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void silverToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (skinEngine1.Active == false)
             {
@@ -284,6 +254,7 @@ namespace MoviePlayer
             tabPage2.Text = rm.GetString("tabPage2.Text");
         }
 
+
         //英文切换，读取英国版本的资源
         private void englishToolStripMenuItem_Click(object sender, EventArgs e)
         {
@@ -336,7 +307,7 @@ namespace MoviePlayer
             }
         }
 
-        private void 信息ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void informationToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (currentMovie.name != "")
             {
@@ -349,21 +320,6 @@ namespace MoviePlayer
         }
 
 
-        private void 顺序播放ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-             mode = playMode.Sequence;
-           
-        }
-
-        private void 随机播放ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-             mode = playMode.Random;
-        }
-
-        private void 循环播放ToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-             mode = playMode.Self;
-        }
         private void getPath()
         {
 
@@ -419,14 +375,14 @@ namespace MoviePlayer
             }
         }
 
-        private void 下一个ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void nextToolStripMenuItem_Click(object sender, EventArgs e)
         {
             axWindowsMediaPlayer1.Ctlcontrols.stop();
             getPath();
             axWindowsMediaPlayer1.Ctlcontrols.play();
         }
 
-        private void 打开文件夹ToolStripMenuItem_Click(object sender, EventArgs e)
+        private void openDirectoryToolStripMenuItem_Click(object sender, EventArgs e)
         {
             if (currentMovie != null) {
                 string url = currentMovie.url;
@@ -436,21 +392,46 @@ namespace MoviePlayer
             }
         }
 
-        private void 倍速ToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void speedToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
             foreach (ToolStripMenuItem item in 倍速ToolStripMenuItem.DropDownItems)
             {
                 item.Checked = false;
-                if (item.Text == e.ClickedItem.Text) {
+                if (item.Name == e.ClickedItem.Name) {
                     item.Checked = true;
+                    switch (e.ClickedItem.Name)
+                    {
+                        case "toolStripMenuItem1":
+                            axWindowsMediaPlayer1.settings.rate = 1;
+                            break;
+                        case "toolStripMenuItem2":
+                            axWindowsMediaPlayer1.settings.rate = 1.25;
+                            break;
+                        case "toolStripMenuItem3":
+                            axWindowsMediaPlayer1.settings.rate = 1.5;
+                            break;
+                        case "toolStripMenuItem4":
+                            axWindowsMediaPlayer1.settings.rate = 1.75;
+                            break;
+                        case "toolStripMenuItem5":
+                            axWindowsMediaPlayer1.settings.rate = 2.0;
+                            break;
+                        case "toolStripMenuItem6":
+                            SpeedForm s = new SpeedForm(this.skinEngine1.SkinFile);
+                            if (s.ShowDialog() == DialogResult.OK)
+                            {
+                                axWindowsMediaPlayer1.settings.rate = s.getValue();
+                            }
+                            break;
+                    }
                 }
             }
             
         }
 
-        private void 语言ToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void languageToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            foreach (ToolStripMenuItem item in 语言ToolStripMenuItem.DropDownItems)
+            foreach (ToolStripMenuItem item in languageToolStripMenuItem.DropDownItems)
             {
                 item.Checked = false;
                 if (item.Text == e.ClickedItem.Text)
@@ -460,9 +441,9 @@ namespace MoviePlayer
             }
         }
 
-        private void 模式ToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void playmodeToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            foreach (ToolStripMenuItem item in 模式ToolStripMenuItem.DropDownItems)
+            foreach (ToolStripMenuItem item in playmodeToolStripMenuItem.DropDownItems)
             {
                 item.Checked = false;
                 if (item.Text == e.ClickedItem.Text)
@@ -472,19 +453,34 @@ namespace MoviePlayer
             }
         }
 
-        private void 皮肤ToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        private void skinToolStripMenuItem_DropDownItemClicked(object sender, ToolStripItemClickedEventArgs e)
         {
-            foreach (ToolStripMenuItem item in 皮肤ToolStripMenuItem.DropDownItems)
+            foreach (ToolStripMenuItem item in skinToolStripMenuItem.DropDownItems)
             {
                 item.Checked = false;
-                if (item.Text == e.ClickedItem.Text)
+                if (item.Name == e.ClickedItem.Name)
                 {
                     item.Checked = true;
+                    switch (e.ClickedItem.Name) {
+                        case "sequenceToolStripMenuItem":
+                            mode = playMode.Sequence;
+                            break;
+                        case "selfToolStripMenuItem":
+                            mode = playMode.Self;
+                            break;
+                        case "randomToolStripMenuItem":
+                            mode = playMode.Random;
+                            break;
+                    }
                 }
             }
         }
 
-       
+        private void managerToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+        }
+
     }
 
     public enum playMode { Sequence = 1, Random = 2, Self = 3 };

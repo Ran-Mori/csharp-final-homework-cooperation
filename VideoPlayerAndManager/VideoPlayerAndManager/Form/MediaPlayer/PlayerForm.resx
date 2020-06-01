@@ -117,287 +117,662 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="&gt;&gt;信息ToolStripMenuItem.Name" xml:space="preserve">
-    <value>信息ToolStripMenuItem</value>
-  </data>
-  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 24</value>
-  </data>
-  <data name="&gt;&gt;label6.Name" xml:space="preserve">
-    <value>label6</value>
-  </data>
-  <data name="外观ToolStripMenuItem.Text" xml:space="preserve">
-    <value>外观</value>
-  </data>
-  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="&gt;&gt;循环播放ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;下一个ToolStripMenuItem.Name" xml:space="preserve">
-    <value>下一个ToolStripMenuItem</value>
+  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>17, 17</value>
+  </metadata>
+  <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>281, 17</value>
+  </metadata>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="listBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
+  <data name="listBox1.ItemHeight" type="System.Int32, mscorlib">
+    <value>24</value>
   </data>
-  <data name="&gt;&gt;label5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="listBox1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>3, 3</value>
   </data>
-  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
-  <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
-    <value>GrowAndShrink</value>
+  <data name="listBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 457</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItem8.Name" xml:space="preserve">
-    <value>toolStripMenuItem8</value>
+  <data name="listBox1.TabIndex" type="System.Int32, mscorlib">
+    <value>4</value>
   </data>
-  <data name="&gt;&gt;钻石蓝ToolStripMenuItem.Name" xml:space="preserve">
-    <value>钻石蓝ToolStripMenuItem</value>
+  <data name="&gt;&gt;listBox1.Name" xml:space="preserve">
+    <value>listBox1</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItem6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;listBox1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 119</value>
+  <data name="&gt;&gt;listBox1.Parent" xml:space="preserve">
+    <value>tabPage1</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItem9.Name" xml:space="preserve">
-    <value>toolStripMenuItem9</value>
+  <data name="&gt;&gt;listBox1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="label5.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="循环播放ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 44</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
-    <value>2</value>
-  </data>
-  <data name="toolStripMenuItem7.Text" xml:space="preserve">
-    <value>1.5</value>
-  </data>
-  <data name="label6.Text" xml:space="preserve">
-    <value>地址</value>
-  </data>
-  <data name="toolStripMenuItem9.Text" xml:space="preserve">
-    <value>2.0</value>
-  </data>
-  <data name="&gt;&gt;炫酷银ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="信息ToolStripMenuItem.Text" xml:space="preserve">
-    <value>信息</value>
-  </data>
-  <data name="&gt;&gt;自定义ToolStripMenuItem.Name" xml:space="preserve">
-    <value>自定义ToolStripMenuItem</value>
-  </data>
-  <data name="收藏ToolStripMenuItem.Text" xml:space="preserve">
-    <value>收藏</value>
-  </data>
-  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;label2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="显示ToolStripMenuItem.Text" xml:space="preserve">
-    <value>显示</value>
-  </data>
-  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="toolStripMenuItem6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
+  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>537, 17</value>
+  </metadata>
+  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
     <value>1054, 39</value>
   </data>
-  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
   </data>
-  <data name="皮肤ToolStripMenuItem.Text" xml:space="preserve">
-    <value>皮肤</value>
+  <data name="menuStrip1.Text" xml:space="preserve">
+    <value>打开文件</value>
   </data>
-  <data name="&gt;&gt;skinEngine1.Name" xml:space="preserve">
-    <value>skinEngine1</value>
-  </data>
-  <data name="&gt;&gt;倍速ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;语言ToolStripMenuItem.Name" xml:space="preserve">
-    <value>语言ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
+    <value>menuStrip1</value>
   </data>
   <data name="&gt;&gt;menuStrip1.Type" xml:space="preserve">
     <value>System.Windows.Forms.MenuStrip, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;文件ToolStripMenuItem.Name" xml:space="preserve">
-    <value>文件ToolStripMenuItem</value>
+  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="$this.Text" xml:space="preserve">
-    <value>视频播放器</value>
+  <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
+    <value>2</value>
   </data>
-  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="FileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 35</value>
   </data>
-  <data name="下一个ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+  <data name="FileToolStripMenuItem.Text" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>267, 44</value>
   </data>
-  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
-    <value>tabPage2</value>
+  <data name="openToolStripMenuItem.Text" xml:space="preserve">
+    <value>打开</value>
   </data>
-  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
-    <value>3</value>
+  <data name="addToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 44</value>
   </data>
-  <data name="&gt;&gt;视频截图ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="addToolStripMenuItem.Text" xml:space="preserve">
+    <value>收藏</value>
   </data>
-  <data name="&gt;&gt;label1.Name" xml:space="preserve">
-    <value>label1</value>
+  <data name="informationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 44</value>
   </data>
-  <data name="关闭ToolStripMenuItem.Text" xml:space="preserve">
+  <data name="informationToolStripMenuItem.Text" xml:space="preserve">
+    <value>信息</value>
+  </data>
+  <data name="closeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 44</value>
+  </data>
+  <data name="closeToolStripMenuItem.Text" xml:space="preserve">
     <value>关闭</value>
   </data>
-  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
+  <data name="nextToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 44</value>
   </data>
-  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="nextToolStripMenuItem.Text" xml:space="preserve">
+    <value>下一个</value>
   </data>
-  <data name="label3.TabIndex" type="System.Int32, mscorlib">
-    <value>2</value>
+  <data name="openDirectoryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 44</value>
+  </data>
+  <data name="openDirectoryToolStripMenuItem.Text" xml:space="preserve">
+    <value>打开文件夹</value>
+  </data>
+  <data name="managerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>267, 44</value>
+  </data>
+  <data name="managerToolStripMenuItem.Text" xml:space="preserve">
+    <value>管理器</value>
+  </data>
+  <data name="showToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 35</value>
+  </data>
+  <data name="showToolStripMenuItem.Text" xml:space="preserve">
+    <value>显示</value>
+  </data>
+  <data name="fullscreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>317, 44</value>
+  </data>
+  <data name="fullscreenToolStripMenuItem.Text" xml:space="preserve">
+    <value>全屏</value>
+  </data>
+  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>317, 44</value>
+  </data>
+  <data name="languageToolStripMenuItem.Text" xml:space="preserve">
+    <value>语言/Language</value>
+  </data>
+  <data name="中文ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 44</value>
   </data>
   <data name="中文ToolStripMenuItem.Text" xml:space="preserve">
     <value>中文</value>
   </data>
-  <data name="&gt;&gt;menuStrip1.Parent" xml:space="preserve">
-    <value>$this</value>
+  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>228, 44</value>
   </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 463</value>
-  </data>
-  <data name="&gt;&gt;模式ToolStripMenuItem.Name" xml:space="preserve">
-    <value>模式ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;关闭ToolStripMenuItem.Name" xml:space="preserve">
-    <value>关闭ToolStripMenuItem</value>
-  </data>
-  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>12, 24</value>
-  </data>
-  <data name="&gt;&gt;打开文件夹ToolStripMenuItem.Name" xml:space="preserve">
-    <value>打开文件夹ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;中文ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
+    <value>English</value>
   </data>
   <data name="倍速ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>317, 44</value>
   </data>
-  <data name="&gt;&gt;saveFileDialog1.Name" xml:space="preserve">
-    <value>saveFileDialog1</value>
+  <data name="倍速ToolStripMenuItem.Text" xml:space="preserve">
+    <value>倍速</value>
   </data>
-  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 44</value>
+  <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 44</value>
   </data>
-  <data name="原皮肤ToolStripMenuItem.Text" xml:space="preserve">
+  <data name="toolStripMenuItem1.Text" xml:space="preserve">
+    <value>1.0</value>
+  </data>
+  <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 44</value>
+  </data>
+  <data name="toolStripMenuItem2.Text" xml:space="preserve">
+    <value>1.25</value>
+  </data>
+  <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 44</value>
+  </data>
+  <data name="toolStripMenuItem3.Text" xml:space="preserve">
+    <value>1.5</value>
+  </data>
+  <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 44</value>
+  </data>
+  <data name="toolStripMenuItem4.Text" xml:space="preserve">
+    <value>1.75</value>
+  </data>
+  <data name="toolStripMenuItem5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 44</value>
+  </data>
+  <data name="toolStripMenuItem5.Text" xml:space="preserve">
+    <value>2.0</value>
+  </data>
+  <data name="ToolStripMenuItem6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 44</value>
+  </data>
+  <data name="ToolStripMenuItem6.Text" xml:space="preserve">
+    <value>自定义</value>
+  </data>
+  <data name="outlookToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 35</value>
+  </data>
+  <data name="outlookToolStripMenuItem.Text" xml:space="preserve">
+    <value>外观</value>
+  </data>
+  <data name="skinToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>195, 44</value>
+  </data>
+  <data name="skinToolStripMenuItem.Text" xml:space="preserve">
+    <value>皮肤</value>
+  </data>
+  <data name="originToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 44</value>
+  </data>
+  <data name="originToolStripMenuItem.Text" xml:space="preserve">
     <value>原皮肤</value>
   </data>
-  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 160</value>
+  <data name="orangeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 44</value>
   </data>
-  <data name="label3.Text" xml:space="preserve">
-    <value>媒体长度</value>
-  </data>
-  <data name="&gt;&gt;浅橘色ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="全屏ToolStripMenuItem.Text" xml:space="preserve">
-    <value>全屏</value>
-  </data>
-  <data name="label5.Text" xml:space="preserve">
-    <value>原始地址</value>
-  </data>
-  <data name="&gt;&gt;倍速ToolStripMenuItem.Name" xml:space="preserve">
-    <value>倍速ToolStripMenuItem</value>
-  </data>
-  <data name="浅橘色ToolStripMenuItem.Text" xml:space="preserve">
+  <data name="orangeToolStripMenuItem.Text" xml:space="preserve">
     <value>浅橘色</value>
+  </data>
+  <data name="blueToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 44</value>
+  </data>
+  <data name="blueToolStripMenuItem.Text" xml:space="preserve">
+    <value>钻石蓝</value>
+  </data>
+  <data name="silverToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>219, 44</value>
+  </data>
+  <data name="silverToolStripMenuItem.Text" xml:space="preserve">
+    <value>炫酷银</value>
+  </data>
+  <data name="录制ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 35</value>
+  </data>
+  <data name="录制ToolStripMenuItem.Text" xml:space="preserve">
+    <value>截图</value>
+  </data>
+  <data name="视频截图ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>359, 44</value>
+  </data>
+  <data name="视频截图ToolStripMenuItem.Text" xml:space="preserve">
+    <value>视频截图</value>
+  </data>
+  <data name="playmodeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 35</value>
+  </data>
+  <data name="playmodeToolStripMenuItem.Text" xml:space="preserve">
+    <value>模式</value>
+  </data>
+  <data name="sequenceToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 44</value>
+  </data>
+  <data name="sequenceToolStripMenuItem.Text" xml:space="preserve">
+    <value>顺序播放</value>
+  </data>
+  <data name="randomToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 44</value>
+  </data>
+  <data name="randomToolStripMenuItem.Text" xml:space="preserve">
+    <value>随机播放</value>
+  </data>
+  <data name="selfToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>243, 44</value>
+  </data>
+  <data name="selfToolStripMenuItem.Text" xml:space="preserve">
+    <value>循环播放</value>
+  </data>
+  <metadata name="skinEngine1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
+    <value>746, 17</value>
+  </metadata>
+  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 39</value>
+  </data>
+  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>222, 463</value>
+  </data>
+  <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>列表</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
     <value>tabControl1</value>
   </data>
-  <data name="管理器ToolStripMenuItem.Text" xml:space="preserve">
-    <value>管理器</value>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;skinEngine1.Type" xml:space="preserve">
-    <value>Sunisoft.IrisSkin.SkinEngine, IrisSkin4, Version=2006.3.22.45, Culture=neutral, PublicKeyToken=127be25a6db25e07</value>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
   </data>
-  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="皮肤ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 44</value>
-  </data>
-  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 39</value>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>tabPage2</value>
   </data>
   <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
     <value>0</value>
   </data>
-  <data name="&gt;&gt;axWindowsMediaPlayer1.ZOrder" xml:space="preserve">
-    <value>0</value>
+  <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>8, 39</value>
   </data>
-  <data name="&gt;&gt;钻石蓝ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>3, 3, 3, 3</value>
   </data>
-  <data name="&gt;&gt;语言ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 460</value>
   </data>
-  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
-    <value>5</value>
+  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
   </data>
-  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>详情</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
     <value>tabControl1</value>
   </data>
-  <data name="&gt;&gt;全屏ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;收藏ToolStripMenuItem.Name" xml:space="preserve">
-    <value>收藏ToolStripMenuItem</value>
-  </data>
-  <data name="打开文件夹ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 44</value>
-  </data>
-  <data name="toolStripMenuItem6.Text" xml:space="preserve">
-    <value>1.25</value>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
   </data>
   <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
     <value>Right</value>
   </data>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>816, 39</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>238, 510</value>
+  </data>
+  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
   <data name="&gt;&gt;label5.Name" xml:space="preserve">
     <value>label5</value>
   </data>
-  <data name="&gt;&gt;顺序播放ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>6, 6</value>
+  </data>
+  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>194, 452</value>
+  </data>
+  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;panel1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>19, 279</value>
+  </data>
+  <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 160</value>
+  </data>
+  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="label6.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 0</value>
+  </data>
+  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>157, 160</value>
+  </data>
+  <data name="label6.TabIndex" type="System.Int32, mscorlib">
+    <value>7</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>地址</value>
+  </data>
+  <data name="&gt;&gt;label6.Name" xml:space="preserve">
+    <value>label6</value>
+  </data>
+  <data name="&gt;&gt;label6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label6.Parent" xml:space="preserve">
+    <value>panel2</value>
+  </data>
+  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label5.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 224</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 24</value>
+  </data>
+  <data name="label5.TabIndex" type="System.Int32, mscorlib">
+    <value>6</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>原始地址</value>
+  </data>
+  <data name="&gt;&gt;label5.Name" xml:space="preserve">
+    <value>label5</value>
+  </data>
+  <data name="&gt;&gt;label5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="label4.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label4.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 168</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>58, 24</value>
+  </data>
+  <data name="label4.TabIndex" type="System.Int32, mscorlib">
+    <value>3</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>长度</value>
+  </data>
+  <data name="&gt;&gt;label4.Name" xml:space="preserve">
+    <value>label4</value>
+  </data>
+  <data name="&gt;&gt;label4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label4.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label4.ZOrder" xml:space="preserve">
+    <value>2</value>
+  </data>
+  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 15</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 24</value>
+  </data>
+  <data name="label1.TabIndex" type="System.Int32, mscorlib">
+    <value>0</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>媒体名称</value>
+  </data>
+  <data name="&gt;&gt;label1.Name" xml:space="preserve">
+    <value>label1</value>
+  </data>
+  <data name="&gt;&gt;label1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label1.ZOrder" xml:space="preserve">
+    <value>3</value>
+  </data>
+  <data name="label3.AutoSize" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 119</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 24</value>
+  </data>
+  <data name="label3.TabIndex" type="System.Int32, mscorlib">
+    <value>2</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>媒体长度</value>
+  </data>
+  <data name="&gt;&gt;label3.Name" xml:space="preserve">
+    <value>label3</value>
+  </data>
+  <data name="&gt;&gt;label3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
+    <value>4</value>
+  </data>
+  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
+    <value>NoControl</value>
+  </data>
+  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
+    <value>15, 63</value>
+  </data>
+  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 28</value>
+  </data>
+  <data name="label2.TabIndex" type="System.Int32, mscorlib">
+    <value>1</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>名称</value>
+  </data>
+  <data name="&gt;&gt;label2.Name" xml:space="preserve">
+    <value>label2</value>
+  </data>
+  <data name="&gt;&gt;label2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
+    <value>panel1</value>
+  </data>
+  <data name="&gt;&gt;label2.ZOrder" xml:space="preserve">
+    <value>5</value>
+  </data>
+  <data name="axWindowsMediaPlayer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Fill</value>
+  </data>
+  <data name="axWindowsMediaPlayer1.Enabled" type="System.Boolean, mscorlib">
+    <value>True</value>
+  </data>
+  <data name="axWindowsMediaPlayer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 39</value>
   </data>
   <data name="axWindowsMediaPlayer1.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -410,538 +785,256 @@
         AAAL
 </value>
   </data>
-  <data name="&gt;&gt;axWindowsMediaPlayer1.Name" xml:space="preserve">
-    <value>axWindowsMediaPlayer1</value>
-  </data>
-  <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
-  </data>
-  <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 168</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="中文ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 44</value>
-  </data>
-  <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 15</value>
-  </data>
-  <data name="&gt;&gt;打开文件夹ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="管理器ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 44</value>
-  </data>
-  <data name="&gt;&gt;$this.Name" xml:space="preserve">
-    <value>PlayerForm</value>
-  </data>
-  <data name="&gt;&gt;收藏ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel2.Name" xml:space="preserve">
-    <value>panel2</value>
-  </data>
-  <data name="&gt;&gt;label4.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 463</value>
-  </data>
-  <data name="englishToolStripMenuItem.Text" xml:space="preserve">
-    <value>English</value>
-  </data>
-  <data name="顺序播放ToolStripMenuItem.Text" xml:space="preserve">
-    <value>顺序播放</value>
-  </data>
-  <data name="打开ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 44</value>
-  </data>
-  <data name="&gt;&gt;外观ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="listBox1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="&gt;&gt;皮肤ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;关闭ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel2.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 39</value>
-  </data>
-  <data name="&gt;&gt;listBox1.Parent" xml:space="preserve">
-    <value>tabPage1</value>
-  </data>
-  <data name="浅橘色ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
-  </data>
-  <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 28</value>
-  </data>
-  <data name="&gt;&gt;随机播放ToolStripMenuItem.Name" xml:space="preserve">
-    <value>随机播放ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem7.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;panel1.Parent" xml:space="preserve">
-    <value>tabPage2</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem6.Name" xml:space="preserve">
-    <value>toolStripMenuItem6</value>
-  </data>
-  <data name="炫酷银ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
-  </data>
-  <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
-    <value>6</value>
-  </data>
-  <data name="关闭ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 44</value>
-  </data>
-  <data name="&gt;&gt;label2.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;录制ToolStripMenuItem.Name" xml:space="preserve">
-    <value>录制ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;显示ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;menuStrip1.Name" xml:space="preserve">
-    <value>menuStrip1</value>
-  </data>
-  <data name="&gt;&gt;label3.ZOrder" xml:space="preserve">
-    <value>4</value>
-  </data>
-  <data name="随机播放ToolStripMenuItem.Text" xml:space="preserve">
-    <value>随机播放</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem5.Name" xml:space="preserve">
-    <value>toolStripMenuItem5</value>
-  </data>
-  <data name="模式ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 35</value>
-  </data>
-  <data name="视频截图ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 44</value>
-  </data>
-  <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>194, 452</value>
-  </data>
-  <data name="&gt;&gt;axWindowsMediaPlayer1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="listBox1.ItemHeight" type="System.Int32, mscorlib">
-    <value>24</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
-    <value>openFileDialog1</value>
-  </data>
   <data name="axWindowsMediaPlayer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>850, 510</value>
+    <value>816, 510</value>
   </data>
   <data name="axWindowsMediaPlayer1.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
   </data>
-  <data name="label1.Text" xml:space="preserve">
-    <value>媒体名称</value>
-  </data>
-  <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 0</value>
-  </data>
-  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>850, 39</value>
-  </data>
-  <data name="&gt;&gt;label4.Name" xml:space="preserve">
-    <value>label4</value>
-  </data>
-  <data name="录制ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 35</value>
-  </data>
-  <data name="钻石蓝ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="toolStripMenuItem5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
-  </data>
-  <data name="&gt;&gt;管理器ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label3.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
-  </data>
-  <data name="toolStripMenuItem5.Text" xml:space="preserve">
-    <value>1.0</value>
-  </data>
-  <data name="label1.TabIndex" type="System.Int32, mscorlib">
-    <value>0</value>
-  </data>
-  <data name="打开文件夹ToolStripMenuItem.Text" xml:space="preserve">
-    <value>打开文件夹</value>
-  </data>
-  <data name="原皮肤ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
-  </data>
-  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 24</value>
-  </data>
-  <data name="&gt;&gt;打开ToolStripMenuItem.Name" xml:space="preserve">
-    <value>打开ToolStripMenuItem</value>
-  </data>
-  <data name="label2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;listBox1.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="label6.TabIndex" type="System.Int32, mscorlib">
-    <value>7</value>
-  </data>
-  <data name="&gt;&gt;englishToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="钻石蓝ToolStripMenuItem.Text" xml:space="preserve">
-    <value>钻石蓝</value>
-  </data>
-  <data name="&gt;&gt;全屏ToolStripMenuItem.Name" xml:space="preserve">
-    <value>全屏ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;视频截图ToolStripMenuItem.Name" xml:space="preserve">
-    <value>视频截图ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;label3.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label4.Text" xml:space="preserve">
-    <value>长度</value>
-  </data>
-  <data name="倍速ToolStripMenuItem.Text" xml:space="preserve">
-    <value>倍速</value>
-  </data>
-  <data name="&gt;&gt;管理器ToolStripMenuItem.Name" xml:space="preserve">
-    <value>管理器ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;文件ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="panel1.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="文件ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 35</value>
-  </data>
-  <data name="收藏ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 44</value>
-  </data>
-  <data name="&gt;&gt;打开ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label6.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label1.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="下一个ToolStripMenuItem.Text" xml:space="preserve">
-    <value>下一个</value>
-  </data>
-  <data name="&gt;&gt;$this.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;label3.Name" xml:space="preserve">
-    <value>label3</value>
-  </data>
-  <data name="listBox1.TabIndex" type="System.Int32, mscorlib">
-    <value>4</value>
-  </data>
-  <data name="label2.Text" xml:space="preserve">
-    <value>名称</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem7.Name" xml:space="preserve">
-    <value>toolStripMenuItem7</value>
-  </data>
-  <data name="显示ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 35</value>
-  </data>
-  <data name="axWindowsMediaPlayer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 39</value>
-  </data>
-  <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
-  </data>
-  <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 279</value>
-  </data>
-  <data name="&gt;&gt;englishToolStripMenuItem.Name" xml:space="preserve">
-    <value>englishToolStripMenuItem</value>
-  </data>
-  <data name="炫酷银ToolStripMenuItem.Text" xml:space="preserve">
-    <value>炫酷银</value>
-  </data>
-  <data name="toolStripMenuItem9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
-  </data>
-  <data name="外观ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 35</value>
-  </data>
-  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>详情</value>
-  </data>
-  <data name="&gt;&gt;随机播放ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 224</value>
-  </data>
-  <data name="&gt;&gt;panel2.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Panel, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="tabPage1.Text" xml:space="preserve">
-    <value>列表</value>
-  </data>
-  <data name="&gt;&gt;label5.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="&gt;&gt;模式ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="toolStripMenuItem8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
-  </data>
-  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 24</value>
-  </data>
-  <data name="toolStripMenuItem8.Text" xml:space="preserve">
-    <value>1.75</value>
-  </data>
-  <data name="&gt;&gt;listBox1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ListBox, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;toolStripMenuItem5.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="信息ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 44</value>
-  </data>
-  <data name="循环播放ToolStripMenuItem.Text" xml:space="preserve">
-    <value>循环播放</value>
-  </data>
-  <data name="&gt;&gt;信息ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;炫酷银ToolStripMenuItem.Name" xml:space="preserve">
-    <value>炫酷银ToolStripMenuItem</value>
-  </data>
-  <data name="axWindowsMediaPlayer1.Enabled" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="label5.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;下一个ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="模式ToolStripMenuItem.Text" xml:space="preserve">
-    <value>模式</value>
-  </data>
-  <data name="label4.TabIndex" type="System.Int32, mscorlib">
-    <value>3</value>
-  </data>
-  <data name="随机播放ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 44</value>
-  </data>
-  <data name="&gt;&gt;录制ToolStripMenuItem.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="顺序播放ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 44</value>
-  </data>
-  <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 160</value>
-  </data>
-  <data name="&gt;&gt;label3.Type" xml:space="preserve">
-    <value>System.Windows.Forms.Label, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;axWindowsMediaPlayer1.Name" xml:space="preserve">
+    <value>axWindowsMediaPlayer1</value>
   </data>
   <data name="&gt;&gt;axWindowsMediaPlayer1.Type" xml:space="preserve">
     <value>AxWMPLib.AxWindowsMediaPlayer, AxInterop.WMPLib, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null</value>
   </data>
-  <data name="自定义ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
+  <data name="&gt;&gt;axWindowsMediaPlayer1.Parent" xml:space="preserve">
+    <value>$this</value>
   </data>
-  <data name="menuStrip1.Text" xml:space="preserve">
-    <value>打开文件</value>
+  <data name="&gt;&gt;axWindowsMediaPlayer1.ZOrder" xml:space="preserve">
+    <value>0</value>
   </data>
-  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>True</value>
+  </metadata>
+  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
+    <value>147</value>
+  </metadata>
+  <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
+    <value>12, 24</value>
   </data>
-  <data name="&gt;&gt;label2.Name" xml:space="preserve">
-    <value>label2</value>
-  </data>
-  <data name="&gt;&gt;顺序播放ToolStripMenuItem.Name" xml:space="preserve">
-    <value>顺序播放ToolStripMenuItem</value>
-  </data>
-  <data name="listBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>182, 457</value>
-  </data>
-  <data name="&gt;&gt;panel1.Name" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 63</value>
-  </data>
-  <data name="打开ToolStripMenuItem.Text" xml:space="preserve">
-    <value>打开</value>
+  <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
+    <value>GrowAndShrink</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
     <value>1054, 549</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItem8.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="$this.Text" xml:space="preserve">
+    <value>视频播放器</value>
   </data>
-  <data name="&gt;&gt;toolStripMenuItem9.Type" xml:space="preserve">
-    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  <data name="&gt;&gt;openFileDialog1.Name" xml:space="preserve">
+    <value>openFileDialog1</value>
   </data>
-  <data name="&gt;&gt;panel2.Parent" xml:space="preserve">
-    <value>panel1</value>
+  <data name="&gt;&gt;openFileDialog1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.OpenFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;原皮肤ToolStripMenuItem.Name" xml:space="preserve">
-    <value>原皮肤ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;label6.ZOrder" xml:space="preserve">
-    <value>0</value>
-  </data>
-  <data name="&gt;&gt;皮肤ToolStripMenuItem.Name" xml:space="preserve">
-    <value>皮肤ToolStripMenuItem</value>
-  </data>
-  <data name="文件ToolStripMenuItem.Text" xml:space="preserve">
-    <value>文件</value>
-  </data>
-  <data name="&gt;&gt;循环播放ToolStripMenuItem.Name" xml:space="preserve">
-    <value>循环播放ToolStripMenuItem</value>
-  </data>
-  <data name="视频截图ToolStripMenuItem.Text" xml:space="preserve">
-    <value>视频截图</value>
-  </data>
-  <data name="label6.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
+  <data name="&gt;&gt;saveFileDialog1.Name" xml:space="preserve">
+    <value>saveFileDialog1</value>
   </data>
   <data name="&gt;&gt;saveFileDialog1.Type" xml:space="preserve">
     <value>System.Windows.Forms.SaveFileDialog, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="语言ToolStripMenuItem.Text" xml:space="preserve">
-    <value>语言/Language</value>
+  <data name="&gt;&gt;FileToolStripMenuItem.Name" xml:space="preserve">
+    <value>FileToolStripMenuItem</value>
   </data>
-  <data name="toolStripMenuItem7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
+  <data name="&gt;&gt;FileToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="label2.ImeMode" type="System.Windows.Forms.ImeMode, System.Windows.Forms">
-    <value>NoControl</value>
+  <data name="&gt;&gt;openToolStripMenuItem.Name" xml:space="preserve">
+    <value>openToolStripMenuItem</value>
   </data>
-  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 24</value>
+  <data name="&gt;&gt;openToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
-    <value>1</value>
+  <data name="&gt;&gt;addToolStripMenuItem.Name" xml:space="preserve">
+    <value>addToolStripMenuItem</value>
   </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>204, 510</value>
+  <data name="&gt;&gt;addToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;外观ToolStripMenuItem.Name" xml:space="preserve">
-    <value>外观ToolStripMenuItem</value>
+  <data name="&gt;&gt;informationToolStripMenuItem.Name" xml:space="preserve">
+    <value>informationToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;自定义ToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;informationToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;closeToolStripMenuItem.Name" xml:space="preserve">
+    <value>closeToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;closeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;nextToolStripMenuItem.Name" xml:space="preserve">
+    <value>nextToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;nextToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;openDirectoryToolStripMenuItem.Name" xml:space="preserve">
+    <value>openDirectoryToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;openDirectoryToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;managerToolStripMenuItem.Name" xml:space="preserve">
+    <value>managerToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;managerToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;showToolStripMenuItem.Name" xml:space="preserve">
+    <value>showToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;showToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;fullscreenToolStripMenuItem.Name" xml:space="preserve">
+    <value>fullscreenToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;fullscreenToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;languageToolStripMenuItem.Name" xml:space="preserve">
+    <value>languageToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;languageToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;中文ToolStripMenuItem.Name" xml:space="preserve">
     <value>中文ToolStripMenuItem</value>
   </data>
-  <data name="语言ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>317, 44</value>
-  </data>
-  <data name="全屏ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>317, 44</value>
-  </data>
-  <data name="&gt;&gt;label5.Parent" xml:space="preserve">
-    <value>panel1</value>
-  </data>
-  <data name="自定义ToolStripMenuItem.Text" xml:space="preserve">
-    <value>自定义</value>
-  </data>
-  <data name="&gt;&gt;listBox1.Name" xml:space="preserve">
-    <value>listBox1</value>
-  </data>
-  <data name="&gt;&gt;显示ToolStripMenuItem.Name" xml:space="preserve">
-    <value>显示ToolStripMenuItem</value>
-  </data>
-  <data name="listBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
-  </data>
-  <data name="axWindowsMediaPlayer1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Fill</value>
-  </data>
-  <data name="录制ToolStripMenuItem.Text" xml:space="preserve">
-    <value>录制</value>
-  </data>
-  <data name="label1.AutoSize" type="System.Boolean, mscorlib">
-    <value>True</value>
-  </data>
-  <data name="&gt;&gt;浅橘色ToolStripMenuItem.Name" xml:space="preserve">
-    <value>浅橘色ToolStripMenuItem</value>
-  </data>
-  <data name="&gt;&gt;原皮肤ToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;中文ToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <metadata name="$this.Language" type="System.Globalization.CultureInfo, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>en</value>
-  </metadata>
-  <metadata name="$this.Localizable" type="System.Boolean, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>True</value>
-  </metadata>
-  <metadata name="saveFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>281, 17</value>
-  </metadata>
-  <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>537, 17</value>
-  </metadata>
-  <metadata name="openFileDialog1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>17, 17</value>
-  </metadata>
-  <metadata name="skinEngine1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
-    <value>746, 17</value>
-  </metadata>
-  <metadata name="$this.TrayHeight" type="System.Int32, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089">
-    <value>147</value>
-  </metadata>
+  <data name="&gt;&gt;englishToolStripMenuItem.Name" xml:space="preserve">
+    <value>englishToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;englishToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;倍速ToolStripMenuItem.Name" xml:space="preserve">
+    <value>倍速ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;倍速ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Name" xml:space="preserve">
+    <value>toolStripMenuItem1</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem2.Name" xml:space="preserve">
+    <value>toolStripMenuItem2</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem3.Name" xml:space="preserve">
+    <value>toolStripMenuItem3</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem3.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem4.Name" xml:space="preserve">
+    <value>toolStripMenuItem4</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem4.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem5.Name" xml:space="preserve">
+    <value>toolStripMenuItem5</value>
+  </data>
+  <data name="&gt;&gt;toolStripMenuItem5.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem6.Name" xml:space="preserve">
+    <value>ToolStripMenuItem6</value>
+  </data>
+  <data name="&gt;&gt;ToolStripMenuItem6.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;outlookToolStripMenuItem.Name" xml:space="preserve">
+    <value>outlookToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;outlookToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;skinToolStripMenuItem.Name" xml:space="preserve">
+    <value>skinToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;skinToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;originToolStripMenuItem.Name" xml:space="preserve">
+    <value>originToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;originToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;orangeToolStripMenuItem.Name" xml:space="preserve">
+    <value>orangeToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;orangeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;blueToolStripMenuItem.Name" xml:space="preserve">
+    <value>blueToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;blueToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;silverToolStripMenuItem.Name" xml:space="preserve">
+    <value>silverToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;silverToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;录制ToolStripMenuItem.Name" xml:space="preserve">
+    <value>录制ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;录制ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;视频截图ToolStripMenuItem.Name" xml:space="preserve">
+    <value>视频截图ToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;视频截图ToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;playmodeToolStripMenuItem.Name" xml:space="preserve">
+    <value>playmodeToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;playmodeToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;sequenceToolStripMenuItem.Name" xml:space="preserve">
+    <value>sequenceToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;sequenceToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;randomToolStripMenuItem.Name" xml:space="preserve">
+    <value>randomToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;randomToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;selfToolStripMenuItem.Name" xml:space="preserve">
+    <value>selfToolStripMenuItem</value>
+  </data>
+  <data name="&gt;&gt;selfToolStripMenuItem.Type" xml:space="preserve">
+    <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;skinEngine1.Name" xml:space="preserve">
+    <value>skinEngine1</value>
+  </data>
+  <data name="&gt;&gt;skinEngine1.Type" xml:space="preserve">
+    <value>Sunisoft.IrisSkin.SkinEngine, IrisSkin4, Version=2006.3.22.45, Culture=neutral, PublicKeyToken=127be25a6db25e07</value>
+  </data>
+  <data name="&gt;&gt;$this.Name" xml:space="preserve">
+    <value>PlayerForm</value>
+  </data>
+  <data name="&gt;&gt;$this.Type" xml:space="preserve">
+    <value>System.Windows.Forms.Form, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
 </root>
