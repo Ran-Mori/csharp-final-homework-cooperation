@@ -20,6 +20,8 @@ namespace VideoPlayerAndManager
 
         private ImageViewer m_ActiveImageViewer;
 
+        private int trackIndex = 0;//新增参数，防止未选择图片拉动调整大小控件报错
+
         private int ImageSize
         {
             get
@@ -65,6 +67,7 @@ namespace VideoPlayerAndManager
                
              
             }
+            trackIndex++;
         }
 
         private void m_Controller_OnStart(object sender, GetImageThumbnailEventArgs e)
@@ -138,7 +141,16 @@ namespace VideoPlayerAndManager
 
         private void trackBarSize_ValueChanged(object sender, EventArgs e)
         {
-            this.OnImageSizeChanged(this, new ImageThumbnailEventArgs(ImageSize));
+            if (trackIndex == 0)
+            {
+
+            }
+            else
+            {
+                this.OnImageSizeChanged(this, new ImageThumbnailEventArgs(ImageSize));//bug
+                trackIndex++;
+            }
+           
         }
 
         private void flowLayoutPanelMain_Paint(object sender, PaintEventArgs e)
