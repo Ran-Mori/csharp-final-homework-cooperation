@@ -17,6 +17,7 @@ namespace VideoPlayerAndManager
         public string KeyWord { get; set; }//输入的搜索内容
         public string Path { get; set; }//扫描的路径
         VideoService service;
+        List<string> imageNames;
 
         public MainForm()
         {
@@ -32,7 +33,7 @@ namespace VideoPlayerAndManager
             InitListBoxItem();
 
 
-            List<string> imageNames = service.GetAllVideos();
+            imageNames = service.GetAllVideos();
             ListViewUpdate(imageNames);
         }
 
@@ -101,7 +102,7 @@ namespace VideoPlayerAndManager
             {
                 imageList1.Images.Clear();
                 listView1.Clear();
-                List<string> imageNames = service.QueryByName(KeyWord);
+                imageNames = service.QueryByName(KeyWord);
                 ListViewUpdate(imageNames);
             }
         }
@@ -157,12 +158,12 @@ namespace VideoPlayerAndManager
         {
             if (listBox1.SelectedIndex == 0)//全部视频
             {
-                List<string> imageNames = service.GetAllVideos();
+                imageNames = service.GetAllVideos();
                 ListViewUpdate(imageNames);
             }
             else if (listBox1.SelectedIndex == 1)//收藏夹
             {
-                List<string> imageNames = service.GetCollection();
+                imageNames = service.GetCollection();
                 ListViewUpdate(imageNames);
             }
            
@@ -195,7 +196,7 @@ namespace VideoPlayerAndManager
                                 MessageBox.Show("删除成功！");
                             }
                         }
-                        List<string> imageNames = service.GetCollection();
+                        imageNames = service.GetCollection();
                         ListViewUpdate(imageNames);
                     }
                     else
@@ -218,7 +219,23 @@ namespace VideoPlayerAndManager
 
         private void ListView1_MouseDoubleClick(object sender, MouseEventArgs e)//进行播放
         {
-
+            ListViewHitTestInfo info = this.listView1.HitTest(e.X, e.Y);
+            if (info.Item != null)
+            {
+                string url = info.Item.Name;
+                string name = System.IO.Path.GetFileNameWithoutExtension(url);
+                MoviePlayer.Video video = new MoviePlayer.Video(name, url);
+                List<MoviePlayer.Video> lists = new List<MoviePlayer.Video>();
+                foreach (string movieurl in imageNames)
+                {
+                    string moviename = System.IO.Path.GetFileNameWithoutExtension(movieurl);
+                    MoviePlayer.Video v = new MoviePlayer.Video(moviename, movieurl);
+                    //MoviePlayer.Video videos = new MoviePlayer.Video("2.4", "Z:\\下载\\2.4.mp4");
+                    lists.Add(v);
+                }
+                MoviePlayer.PlayerForm player = new MoviePlayer.PlayerForm(video, lists);
+                player.Show();
+            }
         }
 
         private void textBox1_TextChanged(object sender, EventArgs e)

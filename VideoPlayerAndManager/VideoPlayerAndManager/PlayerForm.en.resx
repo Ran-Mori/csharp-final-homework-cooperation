@@ -1,0 +1,348 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+  <!-- 
+    Microsoft ResX Schema 
+    
+    Version 2.0
+    
+    The primary goals of this format is to allow a simple XML format 
+    that is mostly human readable. The generation and parsing of the 
+    various data types are done through the TypeConverter classes 
+    associated with the data types.
+    
+    Example:
+    
+    ... ado.net/XML headers & schema ...
+    <resheader name="resmimetype">text/microsoft-resx</resheader>
+    <resheader name="version">2.0</resheader>
+    <resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+    <resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+    <data name="Name1"><value>this is my long string</value><comment>this is a comment</comment></data>
+    <data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+    <data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+        <value>[base64 mime encoded serialized .NET Framework object]</value>
+    </data>
+    <data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+        <value>[base64 mime encoded string representing a byte array form of the .NET Framework object]</value>
+        <comment>This is a comment</comment>
+    </data>
+                
+    There are any number of "resheader" rows that contain simple 
+    name/value pairs.
+    
+    Each data row contains a name, and value. The row also contains a 
+    type or mimetype. Type corresponds to a .NET class that support 
+    text/value conversion through the TypeConverter architecture. 
+    Classes that don't support this are serialized and stored with the 
+    mimetype set.
+    
+    The mimetype is used for serialized objects, and tells the 
+    ResXResourceReader how to depersist the object. This is currently not 
+    extensible. For a given mimetype the value must be set accordingly:
+    
+    Note - application/x-microsoft.net.object.binary.base64 is the format 
+    that the ResXResourceWriter will generate, however the reader can 
+    read any of the formats listed below.
+    
+    mimetype: application/x-microsoft.net.object.binary.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Binary.BinaryFormatter
+            : and then encoded with base64 encoding.
+    
+    mimetype: application/x-microsoft.net.object.soap.base64
+    value   : The object must be serialized with 
+            : System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+            : and then encoded with base64 encoding.
+
+    mimetype: application/x-microsoft.net.object.bytearray.base64
+    value   : The object must be serialized into a byte array 
+            : using a System.ComponentModel.TypeConverter
+            : and then encoded with base64 encoding.
+    -->
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
+    <xsd:element name="root" msdata:IsDataSet="true">
+      <xsd:complexType>
+        <xsd:choice maxOccurs="unbounded">
+          <xsd:element name="metadata">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" />
+              </xsd:sequence>
+              <xsd:attribute name="name" use="required" type="xsd:string" />
+              <xsd:attribute name="type" type="xsd:string" />
+              <xsd:attribute name="mimetype" type="xsd:string" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="assembly">
+            <xsd:complexType>
+              <xsd:attribute name="alias" type="xsd:string" />
+              <xsd:attribute name="name" type="xsd:string" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="data">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+                <xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" msdata:Ordinal="1" />
+              <xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+              <xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+              <xsd:attribute ref="xml:space" />
+            </xsd:complexType>
+          </xsd:element>
+          <xsd:element name="resheader">
+            <xsd:complexType>
+              <xsd:sequence>
+                <xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+              </xsd:sequence>
+              <xsd:attribute name="name" type="xsd:string" use="required" />
+            </xsd:complexType>
+          </xsd:element>
+        </xsd:choice>
+      </xsd:complexType>
+    </xsd:element>
+  </xsd:schema>
+  <resheader name="resmimetype">
+    <value>text/microsoft-resx</value>
+  </resheader>
+  <resheader name="version">
+    <value>2.0</value>
+  </resheader>
+  <resheader name="reader">
+    <value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <resheader name="writer">
+    <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </resheader>
+  <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
+  <data name="listBox1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>182, 454</value>
+  </data>
+  <data name="打开ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 44</value>
+  </data>
+  <data name="打开ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="收藏ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 44</value>
+  </data>
+  <data name="收藏ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Like</value>
+  </data>
+  <data name="信息ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 44</value>
+  </data>
+  <data name="信息ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Information</value>
+  </data>
+  <data name="关闭ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 44</value>
+  </data>
+  <data name="关闭ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Quit</value>
+  </data>
+  <data name="下一个ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 44</value>
+  </data>
+  <data name="下一个ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="打开文件夹ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 44</value>
+  </data>
+  <data name="打开文件夹ToolStripMenuItem.Text" xml:space="preserve">
+    <value>OpenFile</value>
+  </data>
+  <data name="管理器ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>281, 44</value>
+  </data>
+  <data name="管理器ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Manager</value>
+  </data>
+  <data name="文件ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>73, 38</value>
+  </data>
+  <data name="文件ToolStripMenuItem.Text" xml:space="preserve">
+    <value>File</value>
+  </data>
+  <data name="全屏ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Fullscreen</value>
+  </data>
+  <data name="语言ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Language/语言</value>
+  </data>
+  <data name="toolStripMenuItem5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 44</value>
+  </data>
+  <data name="toolStripMenuItem6.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 44</value>
+  </data>
+  <data name="toolStripMenuItem7.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 44</value>
+  </data>
+  <data name="toolStripMenuItem8.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 44</value>
+  </data>
+  <data name="toolStripMenuItem9.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 44</value>
+  </data>
+  <data name="自定义ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>316, 44</value>
+  </data>
+  <data name="自定义ToolStripMenuItem.Text" xml:space="preserve">
+    <value>SelfDenfinition</value>
+  </data>
+  <data name="倍速ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Rate</value>
+  </data>
+  <data name="显示ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>133, 38</value>
+  </data>
+  <data name="显示ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Showing</value>
+  </data>
+  <data name="原皮肤ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 44</value>
+  </data>
+  <data name="原皮肤ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Simple</value>
+  </data>
+  <data name="浅橘色ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 44</value>
+  </data>
+  <data name="浅橘色ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="钻石蓝ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 44</value>
+  </data>
+  <data name="钻石蓝ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="炫酷银ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>233, 44</value>
+  </data>
+  <data name="炫酷银ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Silver</value>
+  </data>
+  <data name="皮肤ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>359, 44</value>
+  </data>
+  <data name="皮肤ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Skin</value>
+  </data>
+  <data name="外观ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>127, 38</value>
+  </data>
+  <data name="外观ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Outlook</value>
+  </data>
+  <data name="视频截图ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>275, 44</value>
+  </data>
+  <data name="视频截图ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Screenshot</value>
+  </data>
+  <data name="录制ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>99, 38</value>
+  </data>
+  <data name="录制ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Catch</value>
+  </data>
+  <data name="顺序播放ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 44</value>
+  </data>
+  <data name="顺序播放ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Sequence</value>
+  </data>
+  <data name="随机播放ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 44</value>
+  </data>
+  <data name="随机播放ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Random</value>
+  </data>
+  <data name="循环播放ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>260, 44</value>
+  </data>
+  <data name="循环播放ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Self</value>
+  </data>
+  <data name="模式ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>101, 38</value>
+  </data>
+  <data name="模式ToolStripMenuItem.Text" xml:space="preserve">
+    <value>Mode</value>
+  </data>
+  <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>1054, 42</value>
+  </data>
+  <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>188, 460</value>
+  </data>
+  <data name="tabPage1.Text" xml:space="preserve">
+    <value>List</value>
+  </data>
+  <data name="label6.Text" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 24</value>
+  </data>
+  <data name="label5.Text" xml:space="preserve">
+    <value>Author</value>
+  </data>
+  <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
+    <value>106, 24</value>
+  </data>
+  <data name="label4.Text" xml:space="preserve">
+    <value>Duration</value>
+  </data>
+  <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>130, 24</value>
+  </data>
+  <data name="label1.Text" xml:space="preserve">
+    <value>VideoTitle</value>
+  </data>
+  <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
+    <value>166, 24</value>
+  </data>
+  <data name="label3.Text" xml:space="preserve">
+    <value>VideoDuration</value>
+  </data>
+  <data name="label2.Text" xml:space="preserve">
+    <value>Title</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Detail</value>
+  </data>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>850, 42</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>204, 507</value>
+  </data>
+  <data name="axWindowsMediaPlayer1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>0, 42</value>
+  </data>
+  <data name="axWindowsMediaPlayer1.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
+    <value>
+        AAEAAAD/////AQAAAAAAAAAMAgAAAFdTeXN0ZW0uV2luZG93cy5Gb3JtcywgVmVyc2lvbj00LjAuMC4w
+        LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPWI3N2E1YzU2MTkzNGUwODkFAQAAACFTeXN0
+        ZW0uV2luZG93cy5Gb3Jtcy5BeEhvc3QrU3RhdGUBAAAABERhdGEHAgIAAAAJAwAAAA8DAAAAtwAAAAIB
+        AAAAAQAAAAAAAAAAAAAAAKIAAAAAAwAACAAAAAAABQAAAAAAAADwPwMAAAAAAAUAAAAAAAAAAAAIAAIA
+        AAAAAAMAAQAAAAsA//8DAAAAAAALAP//CAACAAAAAAADADIAAAALAAAACAAKAAAAbQBpAG4AaQAAAAsA
+        //8LAAAACwD//wsA//8LAAAACAACAAAAAAAIAAIAAAAAAAgAAgAAAAAACAACAAAAAAALAAAA7SsAAFsa
+        AAAL
+</value>
+  </data>
+  <data name="axWindowsMediaPlayer1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>850, 507</value>
+  </data>
+  <data name="$this.Text" xml:space="preserve">
+    <value>VideoPlayer</value>
+  </data>
+</root>

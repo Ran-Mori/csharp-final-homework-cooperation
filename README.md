@@ -1,4 +1,4 @@
-# CSharpFinalHomework-Cooperation
+﻿# CSharpFinalHomework-Cooperation
 团队协作完成C#期末大作业
 *********************
 ## 目录文件夹基本结构
@@ -21,3 +21,7 @@
   * .Net Framework 4.6.1
   * SqLite for .Net Framework 1.0.112.0 (3.30.1)
     * 使用方法，先安装dll库，项目中添加依赖，类中`using System.Data.SQLite;`
+
+### 对于视频播放器的视频播放器dll和皮肤dll的问题
+
+*使用：需要将VideoPlayerandManager文件夹中的两个dll文件添加到引用当中；皮肤的IrisSkin4.dll同样添加后还要把三个ssk文件放进主项目的bin/debug中
