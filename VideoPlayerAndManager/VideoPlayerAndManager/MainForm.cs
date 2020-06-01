@@ -183,36 +183,7 @@ namespace VideoPlayerAndManager
             {
                 if (listView1.SelectedItems.Count > 0)
                 {
-                    if (listBox1.SelectedIndex == 1) 
-                    {
-                        foreach (ListViewItem item in this.listView1.SelectedItems)
-                        {
-                            string itemName = item.Text;
-                            string msg = "确定将 " + itemName + " 移出收藏夹？";
-
-                            if ((int)MessageBox.Show(msg, "提示", MessageBoxButtons.OKCancel) == 1)
-                            {
-                                service.UpdateCollected(item.Name, false);
-                                MessageBox.Show("删除成功！");
-                            }
-                        }
-                        imageNames = service.GetCollection();
-                        ListViewUpdate(imageNames);
-                    }
-                    else
-                    {
-                        foreach (ListViewItem item in this.listView1.SelectedItems)
-                        {
-                            string itemName = item.Text;
-                            string msg = "确定将 " + itemName + " 添入收藏夹？";
-
-                            if ((int)MessageBox.Show(msg, "提示", MessageBoxButtons.OKCancel) == 1)
-                            {
-                                service.UpdateCollected(item.Name, true);
-                                MessageBox.Show("添加成功！");
-                            }
-                        }
-                    }                   
+                    contextMenuStrip1.Show(MousePosition.X, MousePosition.Y);
                 }
             }
         }
@@ -238,27 +209,57 @@ namespace VideoPlayerAndManager
             }
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void listView1_SelectedIndexChanged(object sender, EventArgs e)
-        {
-
-        }
-
-        private void MainForm_Load(object sender, EventArgs e)
-        {
-
-        }
-
-     
-
         private void button4_Click(object sender, EventArgs e)
         {
             ImageDialogMain imageDialog = new ImageDialogMain();
             imageDialog.ShowDialog();
+        }
+
+        private void contextMenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
+        {
+            if (((ContextMenuStrip)sender).Items[0] == e.ClickedItem)
+            {
+                if (listBox1.SelectedIndex == 1)
+                {
+                    foreach (ListViewItem item in this.listView1.SelectedItems)
+                    {
+                        string itemName = item.Text;
+                        string msg = "确定将 " + itemName + " 移出收藏夹？";
+
+                        if ((int)MessageBox.Show(msg, "提示", MessageBoxButtons.OKCancel) == 1)
+                        {
+                            service.UpdateCollected(item.Name, false);
+                            MessageBox.Show("删除成功！");
+                        }
+                    }
+                    List<string> imageNames = service.GetCollection();
+                    ListViewUpdate(imageNames);
+                }
+                else
+                {
+                    foreach (ListViewItem item in this.listView1.SelectedItems)
+                    {
+                        string itemName = item.Text;
+                        string msg = "确定将 " + itemName + " 添入收藏夹？";
+
+                        if ((int)MessageBox.Show(msg, "提示", MessageBoxButtons.OKCancel) == 1)
+                        {
+                            service.UpdateCollected(item.Name, true);
+                            MessageBox.Show("添加成功！");
+                        }
+                    }
+                }
+            }
+            else if (((ContextMenuStrip)sender).Items[1] == e.ClickedItem)
+            {
+                foreach (ListViewItem item in this.listView1.SelectedItems)
+                {
+                    string itemName = item.Text;
+                    string note = service.SeekNote(itemName);
+                    Notebox notebox = new Notebox(itemName, note);
+                    notebox.Show();
+                }
+            }
         }
     }
 }

@@ -10,6 +10,7 @@ namespace DBInterface
         public DateTime Time { get; set; }
         public bool Collected { get; set; }
         public int ListID { get; set; }//收藏列表的序列号
+        public string Note { get; set; }//视频备注
 
         //主要用于向数据库添加文件时用的构造方法
         public Video(string address)
@@ -19,15 +20,17 @@ namespace DBInterface
             this.Time = DateTime.Now;
             this.Collected = false;
             this.ListID = 0;
+            this.Note = "";
         }
 
-        public Video(string address, string name, DateTime time, bool collected, int listID)
+        public Video(string address, string name, DateTime time, bool collected, int listID, string note)
         {
             this.Address = address;
             this.Name = name;
             this.Time = time;
             this.Collected = collected;
             this.ListID = listID;
+            this.Note = note;
         }
 
         //地址相同就相等

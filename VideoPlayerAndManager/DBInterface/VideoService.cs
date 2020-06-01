@@ -23,7 +23,7 @@ namespace DBInterface
             }
             Video video = new Video(filePath);
             helper.InsertValues("video",
-                new string[] { video.Address, video.Name, video.Time.ToString(), video.Collected.ToString(), video.ListID.ToString() });
+                new string[] { video.Address, video.Name, video.Time.ToString(), video.Collected.ToString(), video.ListID.ToString(), video.Note });
             return true;
         }
 
@@ -53,6 +53,20 @@ namespace DBInterface
             return result;
         }
 
+        //视频名查询,返回对应视频的备注
+        public string SeekNote(string name)
+        {
+            //string sql = $"select * from video where name like '%{name}%'";
+            string sname = $"%{name}%";
+            System.Data.SQLite.SQLiteDataReader sr = helper.Query("video", "name", "like", sname);
+            string note = "";
+            while (sr.Read())
+            {
+                note = sr.GetString(sr.GetOrdinal("note"));
+            }
+            return note;
+        }
+
         //相似日期查询,返回文件地址的list,time使用DateTime格式
         public List<string> QueryByDate(string time)
         {
@@ -80,7 +94,7 @@ namespace DBInterface
             }
             return result;
         }
-        
+
         //获取给定视频地址的Video对象list
         public List<Video> GetVideo(string address)
         {
@@ -92,7 +106,8 @@ namespace DBInterface
                 DateTime time = Convert.ToDateTime(sr.GetString(sr.GetOrdinal("date")));
                 bool collected = sr.GetBoolean(sr.GetOrdinal("collected"));
                 int id = sr.GetInt16(sr.GetOrdinal("listid"));
-                Video video = new Video(address, name, time, collected, id);
+                string note = sr.GetString(sr.GetOrdinal("note"));
+                Video video = new Video(address, name, time, collected, id, note);
                 result.Add(video);
             }
             return result;
@@ -118,6 +133,13 @@ namespace DBInterface
         {
             string id = listid.ToString();
             string sql = $"update video set listid = '{id}' where address = '{fileAddress}'";
+            helper.ExecuteQuery(sql);
+        }
+
+        //变更视频备注
+        public void UpdateNote(string name, string newNote)
+        {
+            string sql = $"update video set note = '{newNote}' where name = '{name}'";
             helper.ExecuteQuery(sql);
         }
 

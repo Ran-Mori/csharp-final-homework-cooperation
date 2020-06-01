@@ -54,7 +54,7 @@
       <HintPath>..\..\..\..\VS2017安装包\CSkin 16.1.14.3\CSkin 4.0\CSkin.dll</HintPath>
     </Reference>
     <Reference Include="IrisSkin4">
-      <HintPath>..\..\..\..\source\repos\winform\winform\bin\Debug\IrisSkin4.dll</HintPath>
+      <HintPath>.\IrisSkin4.dll</HintPath>
     </Reference>
     <Reference Include="System" />
     <Reference Include="System.Core" />
@@ -113,6 +113,12 @@
     <Compile Include="MainForm.designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
+    <Compile Include="Notebox.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Notebox.Designer.cs">
+      <DependentUpon>Notebox.cs</DependentUpon>
+    </Compile>
     <Compile Include="PlayerForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -148,6 +154,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Notebox.resx">
+      <DependentUpon>Notebox.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="PlayerForm.en.resx">
       <DependentUpon>PlayerForm.cs</DependentUpon>
@@ -211,15 +220,6 @@
       <Lcid>0</Lcid>
       <WrapperTool>aximp</WrapperTool>
       <Isolated>False</Isolated>
-    </COMReference>
-    <COMReference Include="WMPLib">
-      <Guid>{6BF52A50-394A-11D3-B153-00C04F79FAA6}</Guid>
-      <VersionMajor>1</VersionMajor>
-      <VersionMinor>0</VersionMinor>
-      <Lcid>0</Lcid>
-      <WrapperTool>tlbimp</WrapperTool>
-      <Isolated>False</Isolated>
-      <EmbedInteropTypes>True</EmbedInteropTypes>
     </COMReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
