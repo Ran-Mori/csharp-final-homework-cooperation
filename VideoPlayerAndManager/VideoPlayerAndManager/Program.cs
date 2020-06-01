@@ -17,7 +17,7 @@ namespace VideoPlayerAndManager
         {
             Application.EnableVisualStyles();
             Application.SetCompatibleTextRenderingDefault(false);
-            Application.Run(new MoviePlayer.PlayerForm());
+            Application.Run(new MainForm());
         }
     }
 }

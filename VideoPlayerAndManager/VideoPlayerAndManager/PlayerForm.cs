@@ -172,7 +172,6 @@ namespace MoviePlayer
                 skinEngine1.Active = true;
             }
             this.skinEngine1.SkinFile = "GlassOrange.ssk";
-            MessageBox.Show(System.IO.Directory.GetCurrentDirectory());
         }
 
         private void 炫酷银ToolStripMenuItem_Click(object sender, EventArgs e)
