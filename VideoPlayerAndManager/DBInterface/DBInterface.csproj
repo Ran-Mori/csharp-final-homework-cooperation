@@ -38,8 +38,8 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="SqLiteHelper.cs" />
-    <Compile Include="Video.cs" />
-    <Compile Include="VideoList.cs" />
+    <Compile Include="Entity\Video.cs" />
+    <Compile Include="Entity\VideoList.cs" />
     <Compile Include="VideoService.cs" />
   </ItemGroup>
   <ItemGroup>

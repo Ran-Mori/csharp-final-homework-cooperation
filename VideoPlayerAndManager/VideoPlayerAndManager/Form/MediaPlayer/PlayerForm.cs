@@ -488,4 +488,17 @@ namespace MoviePlayer
     }
 
     public enum playMode { Sequence = 1, Random = 2, Self = 3 };
+
+    public class Video
+    {
+        public string name { get; set; }
+
+        public string url { get; set; }
+
+        public Video(string name, string url)
+        {
+            this.name = name;
+            this.url = url;
+        }
+    }
 }

@@ -70,98 +70,97 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="AddListForm.cs">
+    <Compile Include="Form\ListManage\AddListForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="AddListForm.designer.cs">
+    <Compile Include="Form\ListManage\AddListForm.designer.cs">
       <DependentUpon>AddListForm.cs</DependentUpon>
     </Compile>
     <Compile Include="GetFile.cs" />
-    <Compile Include="ImageDialog.cs">
+    <Compile Include="Form\PicScan\ImageDialog.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ImageDialog.Designer.cs">
+    <Compile Include="Form\PicScan\ImageDialog.Designer.cs">
       <DependentUpon>ImageDialog.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImageDialogMain.cs">
+    <Compile Include="Form\PicScan\ImageDialogMain.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ImageDialogMain.Designer.cs">
+    <Compile Include="Form\PicScan\ImageDialogMain.Designer.cs">
       <DependentUpon>ImageDialogMain.cs</DependentUpon>
     </Compile>
-    <Compile Include="ImageViewer.cs">
+    <Compile Include="Form\PicScan\ImageViewer.cs">
       <SubType>UserControl</SubType>
     </Compile>
-    <Compile Include="ImageViewer.Designer.cs">
+    <Compile Include="Form\PicScan\ImageViewer.Designer.cs">
       <DependentUpon>ImageViewer.cs</DependentUpon>
     </Compile>
-    <Compile Include="InformationForm.cs">
+    <Compile Include="Form\MediaPlayer\InformationForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="InformationForm.designer.cs">
+    <Compile Include="Form\MediaPlayer\InformationForm.designer.cs">
       <DependentUpon>InformationForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="ListDetailForm.cs">
+    <Compile Include="Form\ListManage\ListDetailForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="ListDetailForm.designer.cs">
+    <Compile Include="Form\ListManage\ListDetailForm.designer.cs">
       <DependentUpon>ListDetailForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="MainForm.cs">
+    <Compile Include="Form\MainForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="MainForm.designer.cs">
+    <Compile Include="Form\MainForm.designer.cs">
       <DependentUpon>MainForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Notebox.cs">
+    <Compile Include="Form\Notebox.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Notebox.Designer.cs">
+    <Compile Include="Form\Notebox.Designer.cs">
       <DependentUpon>Notebox.cs</DependentUpon>
     </Compile>
-    <Compile Include="PlayerForm.cs">
+    <Compile Include="Form\MediaPlayer\PlayerForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="PlayerForm.designer.cs">
+    <Compile Include="Form\MediaPlayer\PlayerForm.designer.cs">
       <DependentUpon>PlayerForm.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="SpeedForm.cs">
+    <Compile Include="Form\MediaPlayer\SpeedForm.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="SpeedForm.designer.cs">
+    <Compile Include="Form\MediaPlayer\SpeedForm.designer.cs">
       <DependentUpon>SpeedForm.cs</DependentUpon>
     </Compile>
-    <Compile Include="Video.cs" />
-    <EmbeddedResource Include="AddListForm.resx">
+    <EmbeddedResource Include="Form\ListManage\AddListForm.resx">
       <DependentUpon>AddListForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageDialog.resx">
+    <EmbeddedResource Include="Form\PicScan\ImageDialog.resx">
       <DependentUpon>ImageDialog.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageDialogMain.resx">
+    <EmbeddedResource Include="Form\PicScan\ImageDialogMain.resx">
       <DependentUpon>ImageDialogMain.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ImageViewer.resx">
+    <EmbeddedResource Include="Form\PicScan\ImageViewer.resx">
       <DependentUpon>ImageViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="InformationForm.resx">
+    <EmbeddedResource Include="Form\MediaPlayer\InformationForm.resx">
       <DependentUpon>InformationForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="ListDetailForm.resx">
+    <EmbeddedResource Include="Form\ListManage\ListDetailForm.resx">
       <DependentUpon>ListDetailForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="MainForm.resx">
+    <EmbeddedResource Include="Form\MainForm.resx">
       <DependentUpon>MainForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Notebox.resx">
+    <EmbeddedResource Include="Form\Notebox.resx">
       <DependentUpon>Notebox.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PlayerForm.en.resx">
+    <EmbeddedResource Include="Form\MediaPlayer\PlayerForm.en.resx">
       <DependentUpon>PlayerForm.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="PlayerForm.resx">
+    <EmbeddedResource Include="Form\MediaPlayer\PlayerForm.resx">
       <DependentUpon>PlayerForm.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
@@ -174,7 +173,7 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
-    <EmbeddedResource Include="SpeedForm.resx">
+    <EmbeddedResource Include="Form\MediaPlayer\SpeedForm.resx">
       <DependentUpon>SpeedForm.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
