@@ -1,4 +1,4 @@
-﻿namespace MoviePlayer
+﻿namespace VideoPlayerAndManager
 {
     partial class PlayerForm
     {
@@ -59,7 +59,7 @@
             this.orangeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.blueToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.silverToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.录制ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.screenshotToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.视频截图ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.playmodeToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.sequenceToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -106,7 +106,7 @@
             this.FileToolStripMenuItem,
             this.showToolStripMenuItem,
             this.outlookToolStripMenuItem,
-            this.录制ToolStripMenuItem,
+            this.screenshotToolStripMenuItem,
             this.playmodeToolStripMenuItem});
             resources.ApplyResources(this.menuStrip1, "menuStrip1");
             this.menuStrip1.Name = "menuStrip1";
@@ -243,7 +243,6 @@
             // 
             this.toolStripMenuItem5.Name = "toolStripMenuItem5";
             resources.ApplyResources(this.toolStripMenuItem5, "toolStripMenuItem5");
-            this.toolStripMenuItem5.Click += new System.EventHandler(this.toolStripMenuItem9_Click);
             // 
             // ToolStripMenuItem6
             // 
@@ -274,32 +273,28 @@
             this.originToolStripMenuItem.CheckState = System.Windows.Forms.CheckState.Checked;
             this.originToolStripMenuItem.Name = "originToolStripMenuItem";
             resources.ApplyResources(this.originToolStripMenuItem, "originToolStripMenuItem");
-            this.originToolStripMenuItem.Click += new System.EventHandler(this.originToolStripMenuItem_Click);
             // 
             // orangeToolStripMenuItem
             // 
             this.orangeToolStripMenuItem.Name = "orangeToolStripMenuItem";
             resources.ApplyResources(this.orangeToolStripMenuItem, "orangeToolStripMenuItem");
-            this.orangeToolStripMenuItem.Click += new System.EventHandler(this.orangeToolStripMenuItem_Click);
             // 
             // blueToolStripMenuItem
             // 
             this.blueToolStripMenuItem.Name = "blueToolStripMenuItem";
             resources.ApplyResources(this.blueToolStripMenuItem, "blueToolStripMenuItem");
-            this.blueToolStripMenuItem.Click += new System.EventHandler(this.blueToolStripMenuItem_Click);
             // 
             // silverToolStripMenuItem
             // 
             this.silverToolStripMenuItem.Name = "silverToolStripMenuItem";
             resources.ApplyResources(this.silverToolStripMenuItem, "silverToolStripMenuItem");
-            this.silverToolStripMenuItem.Click += new System.EventHandler(this.silverToolStripMenuItem_Click);
             // 
-            // 录制ToolStripMenuItem
+            // screenshotToolStripMenuItem
             // 
-            this.录制ToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.screenshotToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.视频截图ToolStripMenuItem});
-            this.录制ToolStripMenuItem.Name = "录制ToolStripMenuItem";
-            resources.ApplyResources(this.录制ToolStripMenuItem, "录制ToolStripMenuItem");
+            this.screenshotToolStripMenuItem.Name = "screenshotToolStripMenuItem";
+            resources.ApplyResources(this.screenshotToolStripMenuItem, "screenshotToolStripMenuItem");
             // 
             // 视频截图ToolStripMenuItem
             // 
@@ -463,7 +458,7 @@
         private System.Windows.Forms.ToolStripMenuItem 倍速ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem outlookToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem skinToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 录制ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem screenshotToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem 视频截图ToolStripMenuItem;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem1;
         private System.Windows.Forms.ToolStripMenuItem toolStripMenuItem2;

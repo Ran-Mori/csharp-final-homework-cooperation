@@ -136,7 +136,7 @@
     <value>3, 3</value>
   </data>
   <data name="listBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 457</value>
+    <value>260, 734</value>
   </data>
   <data name="listBox1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -156,11 +156,47 @@
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>537, 17</value>
   </metadata>
+  <data name="FileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 38</value>
+  </data>
+  <data name="FileToolStripMenuItem.Text" xml:space="preserve">
+    <value>文件</value>
+  </data>
+  <data name="showToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 38</value>
+  </data>
+  <data name="showToolStripMenuItem.Text" xml:space="preserve">
+    <value>显示</value>
+  </data>
+  <data name="outlookToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 38</value>
+  </data>
+  <data name="outlookToolStripMenuItem.Text" xml:space="preserve">
+    <value>外观</value>
+  </data>
+  <data name="视频截图ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>359, 44</value>
+  </data>
+  <data name="视频截图ToolStripMenuItem.Text" xml:space="preserve">
+    <value>视频截图</value>
+  </data>
+  <data name="screenshotToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 38</value>
+  </data>
+  <data name="screenshotToolStripMenuItem.Text" xml:space="preserve">
+    <value>截图</value>
+  </data>
+  <data name="playmodeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>82, 38</value>
+  </data>
+  <data name="playmodeToolStripMenuItem.Text" xml:space="preserve">
+    <value>模式</value>
+  </data>
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1054, 39</value>
+    <value>1374, 42</value>
   </data>
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -179,12 +215,6 @@
   </data>
   <data name="&gt;&gt;menuStrip1.ZOrder" xml:space="preserve">
     <value>2</value>
-  </data>
-  <data name="FileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 35</value>
-  </data>
-  <data name="FileToolStripMenuItem.Text" xml:space="preserve">
-    <value>文件</value>
   </data>
   <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>267, 44</value>
@@ -227,12 +257,6 @@
   </data>
   <data name="managerToolStripMenuItem.Text" xml:space="preserve">
     <value>管理器</value>
-  </data>
-  <data name="showToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 35</value>
-  </data>
-  <data name="showToolStripMenuItem.Text" xml:space="preserve">
-    <value>显示</value>
   </data>
   <data name="fullscreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>317, 44</value>
@@ -300,59 +324,35 @@
   <data name="ToolStripMenuItem6.Text" xml:space="preserve">
     <value>自定义</value>
   </data>
-  <data name="outlookToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 35</value>
-  </data>
-  <data name="outlookToolStripMenuItem.Text" xml:space="preserve">
-    <value>外观</value>
-  </data>
   <data name="skinToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 44</value>
+    <value>359, 44</value>
   </data>
   <data name="skinToolStripMenuItem.Text" xml:space="preserve">
     <value>皮肤</value>
   </data>
   <data name="originToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
+    <value>359, 44</value>
   </data>
   <data name="originToolStripMenuItem.Text" xml:space="preserve">
     <value>原皮肤</value>
   </data>
   <data name="orangeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
+    <value>359, 44</value>
   </data>
   <data name="orangeToolStripMenuItem.Text" xml:space="preserve">
     <value>浅橘色</value>
   </data>
   <data name="blueToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
+    <value>359, 44</value>
   </data>
   <data name="blueToolStripMenuItem.Text" xml:space="preserve">
     <value>钻石蓝</value>
   </data>
   <data name="silverToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
+    <value>359, 44</value>
   </data>
   <data name="silverToolStripMenuItem.Text" xml:space="preserve">
     <value>炫酷银</value>
-  </data>
-  <data name="录制ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 35</value>
-  </data>
-  <data name="录制ToolStripMenuItem.Text" xml:space="preserve">
-    <value>截图</value>
-  </data>
-  <data name="视频截图ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>359, 44</value>
-  </data>
-  <data name="视频截图ToolStripMenuItem.Text" xml:space="preserve">
-    <value>视频截图</value>
-  </data>
-  <data name="playmodeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 35</value>
-  </data>
-  <data name="playmodeToolStripMenuItem.Text" xml:space="preserve">
-    <value>模式</value>
   </data>
   <data name="sequenceToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
     <value>243, 44</value>
@@ -375,6 +375,54 @@
   <metadata name="skinEngine1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>746, 17</value>
   </metadata>
+  <data name="&gt;&gt;tabPage1.Name" xml:space="preserve">
+    <value>tabPage1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage1.ZOrder" xml:space="preserve">
+    <value>0</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Name" xml:space="preserve">
+    <value>tabPage2</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabPage, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.Parent" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
+  <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
+    <value>Right</value>
+  </data>
+  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
+    <value>1092, 42</value>
+  </data>
+  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
+    <value>282, 787</value>
+  </data>
+  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
+    <value>8</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
+    <value>tabControl1</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
+    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
+    <value>$this</value>
+  </data>
+  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
+    <value>1</value>
+  </data>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
     <value>8, 39</value>
   </data>
@@ -382,7 +430,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>222, 463</value>
+    <value>266, 740</value>
   </data>
   <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -421,7 +469,7 @@
     <value>3, 3, 3, 3</value>
   </data>
   <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 460</value>
+    <value>266, 740</value>
   </data>
   <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -439,30 +487,6 @@
     <value>tabControl1</value>
   </data>
   <data name="&gt;&gt;tabPage2.ZOrder" xml:space="preserve">
-    <value>1</value>
-  </data>
-  <data name="tabControl1.Dock" type="System.Windows.Forms.DockStyle, System.Windows.Forms">
-    <value>Right</value>
-  </data>
-  <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>816, 39</value>
-  </data>
-  <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>238, 510</value>
-  </data>
-  <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
-    <value>8</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Name" xml:space="preserve">
-    <value>tabControl1</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Type" xml:space="preserve">
-    <value>System.Windows.Forms.TabControl, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.Parent" xml:space="preserve">
-    <value>$this</value>
-  </data>
-  <data name="&gt;&gt;tabControl1.ZOrder" xml:space="preserve">
     <value>1</value>
   </data>
   <data name="&gt;&gt;panel2.Name" xml:space="preserve">
@@ -772,7 +796,7 @@
     <value>True</value>
   </data>
   <data name="axWindowsMediaPlayer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 39</value>
+    <value>0, 42</value>
   </data>
   <data name="axWindowsMediaPlayer1.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -786,7 +810,7 @@
 </value>
   </data>
   <data name="axWindowsMediaPlayer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>816, 510</value>
+    <value>1092, 787</value>
   </data>
   <data name="axWindowsMediaPlayer1.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -816,7 +840,7 @@
     <value>GrowAndShrink</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1054, 549</value>
+    <value>1374, 829</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>视频播放器</value>
@@ -989,10 +1013,10 @@
   <data name="&gt;&gt;silverToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
-  <data name="&gt;&gt;录制ToolStripMenuItem.Name" xml:space="preserve">
-    <value>录制ToolStripMenuItem</value>
+  <data name="&gt;&gt;screenshotToolStripMenuItem.Name" xml:space="preserve">
+    <value>screenshotToolStripMenuItem</value>
   </data>
-  <data name="&gt;&gt;录制ToolStripMenuItem.Type" xml:space="preserve">
+  <data name="&gt;&gt;screenshotToolStripMenuItem.Type" xml:space="preserve">
     <value>System.Windows.Forms.ToolStripMenuItem, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="&gt;&gt;视频截图ToolStripMenuItem.Name" xml:space="preserve">

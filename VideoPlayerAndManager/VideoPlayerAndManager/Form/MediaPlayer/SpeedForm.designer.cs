@@ -1,4 +1,4 @@
-﻿namespace MoviePlayer
+﻿namespace VideoPlayerAndManager
 {
     partial class SpeedForm
     {

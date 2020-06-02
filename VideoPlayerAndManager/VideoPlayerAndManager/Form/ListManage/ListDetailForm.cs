@@ -20,6 +20,7 @@ namespace VideoPlayerAndManager
         public string oldName; //之前的名字
         VideoService service;
         ListBox lb;
+        List<string> videos;
 
         public ListDetailForm()
         {
@@ -46,7 +47,7 @@ namespace VideoPlayerAndManager
 
             List<String> listID = service.GetVideoList(name);
             ListID = listID[0];
-            List<String> videos = service.GetFileFromList(ListID);
+            videos = service.GetFileFromList(ListID);
             ListViewUpdate(videos);
         }
 
@@ -118,8 +119,6 @@ namespace VideoPlayerAndManager
             oldName = listNameText.Text;
         }
 
-       
-
         // 从文件中扫描视频
         private void addVideoButton_Click(object sender, EventArgs e)
         {
@@ -140,13 +139,13 @@ namespace VideoPlayerAndManager
                     if (listBox1.SelectedIndex == 0)
                     {
                         service.AddVideosToList(s, ListID);
-                        List<string> videos = service.GetFileFromList(ListID);
+                        videos = service.GetFileFromList(ListID);
                         ListViewUpdate(videos);
                     }
                     else if (listBox1.SelectedIndex == 1)
                     {
                         service.AddFile(s);
-                        List<string> videos = service.GetAllVideos();
+                        videos = service.GetAllVideos();
                         ListViewUpdate(videos);
 
                     }
@@ -159,7 +158,22 @@ namespace VideoPlayerAndManager
         //播放视频
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
-
+            ListViewHitTestInfo info = this.listView1.HitTest(e.X, e.Y);
+            if (info.Item != null)
+            {
+                string url = info.Item.Name;
+                string name = System.IO.Path.GetFileNameWithoutExtension(url);
+                Video video = new Video(name, url);
+                List<Video> lists = new List<Video>();
+                foreach (string movieurl in videos)
+                {
+                    string moviename = System.IO.Path.GetFileNameWithoutExtension(movieurl);
+                    Video v = new Video(moviename, movieurl);
+                    lists.Add(v);
+                }
+                PlayerForm player = new PlayerForm(video, lists);
+                player.Show();
+            }
         }
 
         //右击视频移入、移出视频列表
@@ -197,8 +211,8 @@ namespace VideoPlayerAndManager
 
                             }
                         }
-                        List<string> imageNames = service.GetFileFromList(ListID);
-                        ListViewUpdate(imageNames);
+                        videos = service.GetFileFromList(ListID);
+                        ListViewUpdate(videos);
                         listBox1.SelectedIndex = 0;
                     }
                 }
@@ -213,7 +227,7 @@ namespace VideoPlayerAndManager
 
             if ((int)MessageBox.Show(msg, "提示", MessageBoxButtons.OKCancel) == 1)
             {
-                List<string> videos = service.GetFileFromList(ListID);
+                videos = service.GetFileFromList(ListID);
                 List<string> lists = service.GetVideoList();
                 foreach (string video in videos)
                 {
@@ -253,13 +267,13 @@ namespace VideoPlayerAndManager
            
                 if (listBox1.SelectedIndex == 0)//当前列表内视频
                 {
-                    List<string> imageNames = service.GetFileFromList(ListID);
-                    ListViewUpdate(imageNames);
+                    videos = service.GetFileFromList(ListID);
+                    ListViewUpdate(videos);
                 }
                 else if (listBox1.SelectedIndex == 1)//全部视频
                 {
-                    List<string> imageNames = service.GetAllVideos();
-                    ListViewUpdate(imageNames);
+                    videos = service.GetAllVideos();
+                    ListViewUpdate(videos);
                 }
             
         }

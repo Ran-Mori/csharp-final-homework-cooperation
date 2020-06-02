@@ -16,13 +16,14 @@ namespace VideoPlayerAndManager
     {
         public string KeyWord { get; set; }//输入的搜索内容
         public string Path { get; set; }//扫描的路径
-        VideoService service;
-        List<string> imageNames;
+
+        VideoService service = new VideoService();
+
+        List<string> videoNames;
 
         public MainForm()
         {
             InitializeComponent();
-            service = new VideoService();
             textBox1.DataBindings.Add("Text", this, "KeyWord");
             listView1.View = View.LargeIcon;
             listView1.LargeImageList = this.imageList1;
@@ -33,8 +34,8 @@ namespace VideoPlayerAndManager
             InitListBoxItem();
 
 
-            imageNames = service.GetAllVideos();
-            ListViewUpdate(imageNames);
+            videoNames = service.GetAllVideos();
+            ListViewUpdate(videoNames);
         }
 
         //初始化listBox
@@ -102,8 +103,8 @@ namespace VideoPlayerAndManager
             {
                 imageList1.Images.Clear();
                 listView1.Clear();
-                imageNames = service.QueryByName(KeyWord);
-                ListViewUpdate(imageNames);
+                videoNames = service.QueryByName(KeyWord);
+                ListViewUpdate(videoNames);
             }
         }
 
@@ -158,13 +159,13 @@ namespace VideoPlayerAndManager
         {
             if (listBox1.SelectedIndex == 0)//全部视频
             {
-                imageNames = service.GetAllVideos();
-                ListViewUpdate(imageNames);
+                videoNames = service.GetAllVideos();
+                ListViewUpdate(videoNames);
             }
             else if (listBox1.SelectedIndex == 1)//收藏夹
             {
-                imageNames = service.GetCollection();
-                ListViewUpdate(imageNames);
+                videoNames = service.GetCollection();
+                ListViewUpdate(videoNames);
             }
            
             else //其他列表
@@ -195,17 +196,17 @@ namespace VideoPlayerAndManager
             {
                 string url = info.Item.Name;
                 string name = System.IO.Path.GetFileNameWithoutExtension(url);
-                MoviePlayer.Video video = new MoviePlayer.Video(name, url);
-                List<MoviePlayer.Video> lists = new List<MoviePlayer.Video>();
-                foreach (string movieurl in imageNames)
+                VideoPlayerAndManager.Video video = new VideoPlayerAndManager.Video(name, url);
+                List<VideoPlayerAndManager.Video> lists = new List<VideoPlayerAndManager.Video>();
+                foreach (string movieurl in videoNames)
                 {
                     string moviename = System.IO.Path.GetFileNameWithoutExtension(movieurl);
-                    MoviePlayer.Video v = new MoviePlayer.Video(moviename, movieurl);
-                    //MoviePlayer.Video videos = new MoviePlayer.Video("2.4", "Z:\\下载\\2.4.mp4");
+                    VideoPlayerAndManager.Video v = new VideoPlayerAndManager.Video(moviename, movieurl);
                     lists.Add(v);
                 }
-                MoviePlayer.PlayerForm player = new MoviePlayer.PlayerForm(video, lists);
+                VideoPlayerAndManager.PlayerForm player = new VideoPlayerAndManager.PlayerForm(video, lists);
                 player.Show();
+                player.AddtoLike += AddLike;
             }
         }
 
@@ -213,6 +214,15 @@ namespace VideoPlayerAndManager
         {
             ImageDialogMain imageDialog = new ImageDialogMain();
             imageDialog.ShowDialog();
+        }
+
+        private void AddLike(string url) {
+            string msg = "确定将 " + url + " 添入收藏夹？";
+            if ((int)MessageBox.Show(msg, "提示", MessageBoxButtons.OKCancel) == 1)
+            {
+                service.UpdateCollected(url, true);
+                MessageBox.Show("添加成功！");
+            }
         }
 
         private void contextMenuStrip1_ItemClicked(object sender, ToolStripItemClickedEventArgs e)
@@ -239,14 +249,7 @@ namespace VideoPlayerAndManager
                 {
                     foreach (ListViewItem item in this.listView1.SelectedItems)
                     {
-                        string itemName = item.Text;
-                        string msg = "确定将 " + itemName + " 添入收藏夹？";
-
-                        if ((int)MessageBox.Show(msg, "提示", MessageBoxButtons.OKCancel) == 1)
-                        {
-                            service.UpdateCollected(item.Name, true);
-                            MessageBox.Show("添加成功！");
-                        }
+                        AddLike(item.Name);
                     }
                 }
             }

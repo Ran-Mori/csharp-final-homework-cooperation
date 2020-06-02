@@ -5,11 +5,11 @@ using System.Windows.Forms;
 using System.Resources;
 //using System.Runtime.InteropServices;
 
-namespace MoviePlayer
+namespace VideoPlayerAndManager
 {
     public partial class PlayerForm : Form
     {
-        public event Action<object> AddtoLike;
+        public event Action<string> AddtoLike;
 
         private playMode mode=playMode.Sequence;
 
@@ -109,48 +109,11 @@ namespace MoviePlayer
             this.Close();
         }
 
-        private void toolStripMenuItem9_Click(object sender, EventArgs e)
-        {
-            this.Close();
-        }
         
         private void addToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            AddtoLike(currentMovie);
+            AddtoLike(currentMovie.url);
             MessageBox.Show("添加成功");
-        }
-
-        
-        private void originToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            skinEngine1.Active = false;
-        }
-        private void blueToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (skinEngine1.Active == false)
-            {
-                skinEngine1.Active = true;
-            }
-            skinEngine1.SkinFile = "DiamondBlue.ssk";
-        }
-
-        private void orangeToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-           
-            if (skinEngine1.Active == false)
-            {
-                skinEngine1.Active = true;
-            }
-            this.skinEngine1.SkinFile = "GlassOrange.ssk";
-        }
-
-        private void silverToolStripMenuItem_Click(object sender, EventArgs e)
-        {
-            if (skinEngine1.Active == false)
-            {
-                skinEngine1.Active = true;
-            }
-            this.skinEngine1.SkinFile = "XPSilver.ssk";
         }
 
         [System.Runtime.InteropServices.DllImportAttribute("gdi32.dll")]
@@ -461,15 +424,22 @@ namespace MoviePlayer
                 if (item.Name == e.ClickedItem.Name)
                 {
                     item.Checked = true;
+                    if (skinEngine1.Active == false)
+                    {
+                        skinEngine1.Active = true;
+                    }
                     switch (e.ClickedItem.Name) {
-                        case "sequenceToolStripMenuItem":
-                            mode = playMode.Sequence;
+                        case "originToolStripMenuItem":
+                            skinEngine1.Active = false;
                             break;
-                        case "selfToolStripMenuItem":
-                            mode = playMode.Self;
+                        case "blueToolStripMenuItem":
+                            skinEngine1.SkinFile= "DiamondBlue.ssk"; 
                             break;
-                        case "randomToolStripMenuItem":
-                            mode = playMode.Random;
+                        case "orangeToolStripMenuItem":
+                            skinEngine1.SkinFile = "GlassOrange.ssk"; ; 
+                            break;
+                        case "silverToolStripMenuItem":
+                            skinEngine1.SkinFile = "XPSliver.ssk" ;
                             break;
                     }
                 }
@@ -480,10 +450,10 @@ namespace MoviePlayer
         {
             this.Hide();
         }
-
     }
 
-    public enum playMode { Sequence = 1, Random = 2, Self = 3 };
+    public enum playMode { Sequence, Random , Self};
+
 
     public class Video
     {

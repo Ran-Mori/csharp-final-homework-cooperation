@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace MoviePlayer
+namespace VideoPlayerAndManager
 {
     public partial class SpeedForm : Form
     {
