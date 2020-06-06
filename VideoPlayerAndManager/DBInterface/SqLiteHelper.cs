@@ -5,24 +5,20 @@ namespace DBInterface
 {
     public class SqLiteHelper
     {
-        /// <summary>
+
         /// 数据库连接定义
-        /// </summary>
         public SQLiteConnection dbConnection = null;
 
-        /// <summary>
+
         /// SQL命令定义
-        /// </summary>
         private SQLiteCommand dbCommand = null;
 
-        /// <summary>
+
         /// 数据读取定义
-        /// </summary>
         private SQLiteDataReader dataReader = null;
 
-        /// <summary>
+       
         /// 构造函数
-        /// </summary>
         /// <param name="connectionString">连接SQLite库字符串</param>
         public SqLiteHelper(string connectionString)
         {
@@ -30,9 +26,8 @@ namespace DBInterface
             dbConnection.Open();
         }
 
-        /// <summary>
+
         /// 执行SQL命令
-        /// </summary>
         /// <returns>The query.</returns>
         /// <param name="queryString">SQL命令字符串</param>
         public SQLiteDataReader ExecuteQuery(string queryString)
@@ -50,9 +45,8 @@ namespace DBInterface
             return dataReader;
         }
 
-        /// <summary>
+        
         /// 关闭数据库连接
-        /// </summary>
         public void CloseConnection()
         {
             //销毁Command
@@ -76,9 +70,7 @@ namespace DBInterface
 
         }
 
-        /// <summary>
         /// 读取整张数据表
-        /// </summary>
         /// <returns>The full table.</returns>
         /// <param name="tableName">数据表名称</param>
         public SQLiteDataReader ReadFullTable(string tableName)
@@ -87,9 +79,8 @@ namespace DBInterface
             return ExecuteQuery(queryString);
         }
 
-        /// <summary>
+        
         /// 向指定数据表中插入数据
-        /// </summary>
         /// <returns>The values.</returns>
         /// <param name="tableName">数据表名称</param>
         /// <param name="values">插入的数值</param>
@@ -99,9 +90,7 @@ namespace DBInterface
             //int fieldCount = ReadFullTable(tableName).FieldCount;
             ////当插入的数据长度不等于字段数目时引发异常
             //if (values.Length != fieldCount)
-            //{
             //    throw new SQLiteException("values.Length!=fieldCount");
-            //}
             string queryString = "INSERT INTO " + tableName + " VALUES (" + "'" + values[0] + "'";
             for (int i = 1; i < values.Length; i++)
             {
@@ -111,16 +100,9 @@ namespace DBInterface
             return ExecuteQuery(queryString);
         }
 
-        /// <summary>
+
         /// 更新指定数据表内的数据
-        /// </summary>
         /// <returns>The values.</returns>
-        /// <param name="tableName">数据表名称</param>
-        /// <param name="colNames">字段名</param>
-        /// <param name="colValues">字段名对应的数据</param>
-        /// <param name="colConditionNames">关键字</param>
-        /// <param name="conditionOperations">运算符：=,<,>,...，默认“=”</param>
-        /// <param name="colConditionValues">关键字对应的值</param>
         public SQLiteDataReader UpdateValues(string tableName, string[] colNames, string[] colValues, string[] colConditionNames, string[] conditionOperations, string[] colConditionValues)
         {
             // operation="=";  //默认
@@ -142,14 +124,10 @@ namespace DBInterface
             }
             return ExecuteQuery(queryString);
         }
+        
 
-        /// <summary>
         /// 删除指定数据表内的数据
-        /// </summary>
         /// <returns>The values.</returns>
-        /// <param name="tableName">数据表名称</param>
-        /// <param name="colNames">字段名</param>
-        /// <param name="colValues">字段名对应的数据</param>
         public SQLiteDataReader DeleteValuesOR(string tableName, string[] colNames, string[] operations, string[] colValues)
         {
             //当字段名称和字段数值不对应时引发异常
@@ -166,13 +144,9 @@ namespace DBInterface
             return ExecuteQuery(queryString);
         }
 
-        /// <summary>
+
+
         /// 删除指定数据表内的数据
-        /// </summary>
-        /// <returns>The values.</returns>
-        /// <param name="tableName">数据表名称</param>
-        /// <param name="colNames">字段名</param>
-        /// <param name="colValues">字段名对应的数据</param>
         public SQLiteDataReader DeleteValuesAND(string tableName, string[] colNames, string[] operations, string[] colValues)
         {
             //当字段名称和字段数值不对应时引发异常
@@ -190,9 +164,8 @@ namespace DBInterface
             return ExecuteQuery(queryString);
         }
 
-        /// <summary>
+
         /// 创建数据表
-        /// </summary> +
         /// <returns>The table.</returns>
         /// <param name="tableName">数据表名</param>
         /// <param name="colNames">字段名</param>
@@ -215,9 +188,8 @@ namespace DBInterface
             return ExecuteQuery(sql);
         }
 
-        /// <summary>
+
         /// Reads the table.
-        /// </summary>
         /// <returns>The table.</returns>
         /// <param name="tableName">Table name.</param>
         /// <param name="items">Items.</param>
@@ -239,9 +211,8 @@ namespace DBInterface
             return ExecuteQuery(queryString);
         }
 
-        /// <summary>
+
         /// 本类log
-        /// </summary>
         /// <param name="s"></param>
         static void Log(string s)
         {
