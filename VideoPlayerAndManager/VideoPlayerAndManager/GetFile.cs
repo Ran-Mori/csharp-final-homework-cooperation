@@ -38,7 +38,7 @@ namespace VideoPlayerAndManager
             return FileList;
         }
 
-        public string DocumentFilter
+        public static string DocumentFilter
         {
             get { return "(*.doc;*.docx)|*.doc;*.docx|(*.ppt;*.pptx)|*.ppt;*.pptx|(*.pdf)|*.pdf";}
         }
