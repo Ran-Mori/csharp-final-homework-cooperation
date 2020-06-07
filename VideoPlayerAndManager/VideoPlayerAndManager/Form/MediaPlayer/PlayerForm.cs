@@ -170,6 +170,7 @@ namespace VideoPlayerAndManager
             //绘制listbox的项
             private void listBox1_DrawItem_1(object sender, DrawItemEventArgs e)
         {
+            /*
             Color[] colors = new Color[5] { Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Blue };
             if (e.Index >= 0)
             {
@@ -179,10 +180,59 @@ namespace VideoPlayerAndManager
                 e.Graphics.FillRectangle(new SolidBrush(bgColor), e.Bounds);
                 e.Graphics.DrawString(listBox1.Items[e.Index].ToString(), e.Font, myBrush, e.Bounds, StringFormat.GenericDefault);
                 e.DrawFocusRectangle();
+            }*/
+            Brush myBrush = Brushes.Black;
+            if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
+            {
+                myBrush = new SolidBrush(Color.Blue);
             }
+            else if (e.Index % 2 == 0)
+            {
+                myBrush = new SolidBrush(Color.Blue);
+            }
+            else
+            {
+                myBrush = new SolidBrush(Color.White);
+            }
+            e.Graphics.FillRectangle(myBrush, e.Bounds);
+            e.DrawFocusRectangle();//焦点框 
+
+            //绘制图标 
+            Image image = Image.FromFile("1.jpg");
+            Graphics g = e.Graphics;
+            Rectangle bounds = e.Bounds;
+            Rectangle imageRect = new Rectangle(
+            bounds.X,
+            bounds.Y,
+            bounds.Height,
+            bounds.Height);
+            Rectangle textRect = new Rectangle(
+            imageRect.Right,
+            bounds.Y,
+            bounds.Width - imageRect.Right,
+            bounds.Height);
+
+            if (image != null)
+            {
+                g.DrawImage(
+                image,
+                imageRect,
+                0,
+                0,
+                image.Width,
+                image.Height,
+                GraphicsUnit.Pixel);
+            }
+
+            //文本 
+            StringFormat strFormat = new StringFormat();
+            //strFormat.Alignment = StringAlignment.Center; 
+            strFormat.LineAlignment = StringAlignment.Center;
+            e.Graphics.DrawString(listBox1.Items[e.Index].ToString(), e.Font, new SolidBrush(e.ForeColor), textRect, strFormat);
+
         }
 
-        //中文切换，读取中国版本的资源
+        //中文切换，读取中国版本的资源,还没改
         private void 中文ToolStripMenuItem_Click(object sender, EventArgs e)
         {
             System.Threading.Thread.CurrentThread.CurrentCulture = new System.Globalization.CultureInfo("zh-CN");
