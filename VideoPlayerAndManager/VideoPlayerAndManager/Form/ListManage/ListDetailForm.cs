@@ -277,5 +277,33 @@ namespace VideoPlayerAndManager
                 }
             
         }
+
+        //点击添加其他文件（pdf,ppt,word）
+        private void addDocument_Click(object sender, EventArgs e)
+        {
+            OpenFileDialog od1 = new OpenFileDialog();
+            od1.InitialDirectory = "c:\\";
+            od1.Filter = GetFile.DocumentFilter;
+            od1.FilterIndex = 2;
+            od1.RestoreDirectory = true;
+            if (od1.ShowDialog() == DialogResult.OK)
+            {
+                Path = od1.FileName;
+                MessageBox.Show("已选择文件:" + Path, "选择文件提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+            }
+            if (listBox1.SelectedIndex != 1)
+            {
+                service.AddDocument(Path, ListID);
+                videos = service.GetFileFromList(ListID);
+                ListViewUpdate(videos);
+            }
+            else 
+            {
+                service.AddDocument(Path);
+                videos = service.GetAllVideos();
+                ListViewUpdate(videos);
+
+            }
+        }
     }
 }

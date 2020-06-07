@@ -232,6 +232,8 @@ namespace DBInterface
         }
 
         //以下是对Document表的操作
+        
+        //添加到默认列表
         public bool AddDocument(string filePath)
         {
             System.Data.SQLite.SQLiteDataReader sr = helper.Query("document", "address", "=", filePath);
@@ -242,6 +244,20 @@ namespace DBInterface
             Document document = new Document(filePath);
             helper.InsertValues("document",
                 new string[] { document.Address, document.Name, document.ListID.ToString() });
+            return true;
+        }
+
+        //添加到指定列表
+        public bool AddDocument(string filePath, string listId)
+        {
+            System.Data.SQLite.SQLiteDataReader sr = helper.Query("document", "address", "=", filePath);
+            if (sr.HasRows)
+            {
+                return false;
+            }
+            Document document = new Document(filePath);
+            helper.InsertValues("document",
+                new string[] { document.Address, document.Name, listId });
             return true;
         }
 
