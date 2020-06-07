@@ -231,6 +231,52 @@ namespace DBInterface
             return true;
         }
 
+        //以下是对Document表的操作
+        public bool AddDocument(string filePath)
+        {
+            System.Data.SQLite.SQLiteDataReader sr = helper.Query("document", "address", "=", filePath);
+            if (sr.HasRows)
+            {
+                return false;
+            }
+            Document document = new Document(filePath);
+            helper.InsertValues("document",
+                new string[] { document.Address, document.Name, document.ListID.ToString() });
+            return true;
+        }
+
+        //获取所有document的地址
+        public List<string> GetAllDocument()
+        {
+            string sql = $"select * from document";
+            System.Data.SQLite.SQLiteDataReader sr = helper.ExecuteQuery(sql);
+            List<string> result = new List<string>();
+            while (sr.Read())
+            {
+                result.Add(sr.GetString(sr.GetOrdinal("address")));
+            }
+            return result;
+        }
+
+        //从列表id获取document
+        public List<string> GetDocument(int listid)
+        {
+            string ID = listid.ToString();
+            System.Data.SQLite.SQLiteDataReader sr = helper.Query("document", "listid", "=", ID);
+            List<string> result = new List<string>();
+            while (sr.Read())
+            {
+                result.Add(sr.GetString(sr.GetOrdinal("address")));
+            }
+            return result;
+        }
+
+        //移除document
+        public void RemoveDocument(string fileAddress)
+        {
+            helper.DeleteValuesAND("document", new string[] { "address" }, new string[] { "=" }, new string[] { fileAddress });
+        }
+
         public void Close()
         {
             helper.CloseConnection();

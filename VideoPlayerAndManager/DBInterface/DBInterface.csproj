@@ -36,7 +36,7 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Entity\DocumentImage.cs" />
+    <Compile Include="Entity\Document.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="SqLiteHelper.cs" />
     <Compile Include="Entity\Video.cs" />
