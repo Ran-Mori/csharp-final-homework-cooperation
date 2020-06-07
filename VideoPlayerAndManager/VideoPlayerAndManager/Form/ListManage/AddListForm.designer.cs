@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(AddListForm));
             this.tableLayoutPanel1 = new System.Windows.Forms.TableLayoutPanel();
             this.label1 = new System.Windows.Forms.Label();
             this.listnameText = new System.Windows.Forms.TextBox();
@@ -45,7 +46,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.07563F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.92437F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 316F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 143F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.listnameText, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.addListButton, 2, 0);
@@ -65,7 +66,7 @@
             this.label1.Location = new System.Drawing.Point(20, 42);
             this.label1.Margin = new System.Windows.Forms.Padding(20, 0, 10, 0);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(142, 15);
+            this.label1.Size = new System.Drawing.Size(141, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "输入新建列表名称";
             this.label1.Click += new System.EventHandler(this.label1_Click);
@@ -73,7 +74,7 @@
             // listnameText
             // 
             this.listnameText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.listnameText.Location = new System.Drawing.Point(175, 37);
+            this.listnameText.Location = new System.Drawing.Point(174, 37);
             this.listnameText.Name = "listnameText";
             this.listnameText.Size = new System.Drawing.Size(413, 25);
             this.listnameText.TabIndex = 1;
@@ -84,7 +85,10 @@
             // addListButton
             // 
             this.addListButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.addListButton.Location = new System.Drawing.Point(641, 34);
+            this.addListButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addListButton.BackgroundImage")));
+            this.addListButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.addListButton.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.addListButton.Location = new System.Drawing.Point(640, 34);
             this.addListButton.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
             this.addListButton.Name = "addListButton";
             this.addListButton.Size = new System.Drawing.Size(216, 32);
@@ -96,9 +100,12 @@
             // addVideosButton
             // 
             this.addVideosButton.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.addVideosButton.Location = new System.Drawing.Point(910, 35);
+            this.addVideosButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addVideosButton.BackgroundImage")));
+            this.addVideosButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
+            this.addVideosButton.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.addVideosButton.Location = new System.Drawing.Point(909, 35);
             this.addVideosButton.Name = "addVideosButton";
-            this.addVideosButton.Size = new System.Drawing.Size(138, 30);
+            this.addVideosButton.Size = new System.Drawing.Size(139, 30);
             this.addVideosButton.TabIndex = 3;
             this.addVideosButton.Text = "扫描磁盘";
             this.addVideosButton.UseVisualStyleBackColor = true;
