@@ -21,7 +21,7 @@ namespace VideoPlayerAndManager
         VideoService service;
         ListBox lb;
         List<string> videos;
-
+        List<string> documents;
         public ListDetailForm()
         {
             InitializeComponent();
@@ -42,14 +42,29 @@ namespace VideoPlayerAndManager
             listBox1.DrawMode = DrawMode.OwnerDrawVariable;
             listBox1.DrawItem += ListBox1_DrawItem;
             listBox1.MeasureItem += ListBox1_MeasureItem;
-            listBox1.Items.Add("当前列表");
-            listBox1.Items.Add("全部视频");
 
-            List<String> listID = service.GetVideoList(name);
+            InitListBoxItem();
+
+            List<string> listID = service.GetVideoList(name);
             ListID = listID[0];
             videos = service.GetFileFromList(ListID);
+            documents = service.GetDocument(ListID);
             ListViewUpdate(videos);
             ListViewUpdate(ListID);
+        }
+
+        //初始化listBox
+        private void InitListBoxItem()
+        {
+            listBox1.Items.Add("当前列表");
+            listBox1.Items.Add("全部视频");
+            List<string> lists = service.GetVideoList();
+            foreach (string list in lists)
+            {
+                if (list.Equals(ListName))
+                    continue;
+                listBox1.Items.Add(list);
+            }
         }
 
         //更新listview中的内容,listview中是该列表的视频
@@ -203,7 +218,6 @@ namespace VideoPlayerAndManager
                         ListViewUpdate(videos);
 
                     }
-
                 }
             }
 
@@ -233,14 +247,12 @@ namespace VideoPlayerAndManager
         //右击视频移入、移出视频列表
         private void listView1_MouseClick(object sender, MouseEventArgs e)
         {
-            List<string> videos = service.GetFileFromList(ListID);
-            List<string> documents = service.GetDocument(ListID);
+            
 
             if (e.Button == MouseButtons.Right)
             {
                 if (listView1.SelectedItems.Count > 0)
                 {
-
                     foreach (ListViewItem item in this.listView1.SelectedItems)
                     {
                         string itemName = item.Name;
@@ -292,10 +304,15 @@ namespace VideoPlayerAndManager
             if ((int)MessageBox.Show(msg, "提示", MessageBoxButtons.OKCancel) == 1)
             {
                 videos = service.GetFileFromList(ListID);
+                documents = service.GetDocument(ListID);
                 List<string> lists = service.GetVideoList();
                 foreach (string video in videos)
                 {
                     service.UpdateFileList(video, 0);
+                }
+                foreach(string doc in documents)
+                {
+                    service.RemoveDocument(doc);
                 }
                 service.RemoveVideoList(int.Parse(ListID));
                 lists.Remove(listNameText.Text);
@@ -305,10 +322,16 @@ namespace VideoPlayerAndManager
                     List<String> oldID = service.GetVideoList(lists[i]);
                     string old = oldID[0];
                     List<string> thevideos = service.GetFileFromList(old);
+                    List<string> thedocs = service.GetDocument(old);
                     foreach (string video in thevideos)
                     {
                         service.UpdateFileList(video, int.Parse(newID));
                     }
+                    foreach (string doc in thedocs)
+                    {
+                        service.UpdateDocList(doc, int.Parse(newID));
+                    }
+
                     service.UpdateListID(newID, lists[i]);
 
                 }
@@ -333,11 +356,19 @@ namespace VideoPlayerAndManager
                 ListViewUpdate(videos);
                 ListViewUpdate(ListID);
             }
-            else if (listBox1.SelectedIndex == 1)//全部视频
+            else if(listBox1.SelectedIndex == 1)
             {
                 videos = service.GetAllVideos();
                 ListViewUpdate(videos);
-                
+
+            }
+            else
+            {
+                string ListName = listBox1.SelectedItem.ToString();
+                string id = service.GetVideoList(ListName)[0];
+                videos = service.GetFileFromList(id);
+                ListViewUpdate(videos);
+                ListViewUpdate(id);
             }
             
         }
