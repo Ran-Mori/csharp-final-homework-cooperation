@@ -162,9 +162,9 @@ namespace DBInterface
         }
 
         //读取所有videolist
-        public List<String> GetVideoList()
+        public List<string> GetVideoList()
         {
-            List<String> lists = new List<String>();
+            List<string> lists = new List<string>();
             System.Data.SQLite.SQLiteDataReader sr = helper.ExecuteQuery("select * from videolist");
             while (sr.Read())
             {
@@ -175,9 +175,9 @@ namespace DBInterface
         }
 
         //查询指定name的listid
-        public List<String> GetVideoList(string name)
+        public List<string> GetVideoList(string name)
         {
-            List<String> result = new List<String>();
+            List<string> result = new List<string>();
             System.Data.SQLite.SQLiteDataReader sr = helper.Query("videolist", "name", "=", name);
             while (sr.Read())
             {

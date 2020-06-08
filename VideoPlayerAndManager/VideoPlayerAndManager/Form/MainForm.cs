@@ -48,7 +48,6 @@ namespace VideoPlayerAndManager
             {
                 listBox1.Items.Add(list);
             }
-
         }
 
         private void ListViewUpdate(List<string> imageNames)//更新listview中的内容
