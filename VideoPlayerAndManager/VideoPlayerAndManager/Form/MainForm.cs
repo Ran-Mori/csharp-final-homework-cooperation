@@ -50,6 +50,7 @@ namespace VideoPlayerAndManager
             }
 
         }
+
         private void ListViewUpdate(List<string> imageNames)//更新listview中的内容
         {
             imageList1.Images.Clear();

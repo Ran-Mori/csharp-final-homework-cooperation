@@ -49,6 +49,7 @@ namespace VideoPlayerAndManager
             ListID = listID[0];
             videos = service.GetFileFromList(ListID);
             ListViewUpdate(videos);
+            ListViewUpdate(ListID);
         }
 
         //更新listview中的内容,listview中是该列表的视频
@@ -80,6 +81,59 @@ namespace VideoPlayerAndManager
                 lvi.Name = imageNames[i];
                 lvi.Text = System.IO.Path.GetFileNameWithoutExtension(imageNames[i]);
 
+                listView1.Items.Add(lvi);
+            }
+
+            listView1.EndUpdate();
+        }
+
+        private void ListViewUpdate(string listid)//更新文件于listview上
+        {
+            List<string> Document = service.GetDocument(listid);
+            if (Document.Count == 0)
+                return;
+            for (int i = Document.Count - 1; i >= 0; i--)
+            {
+                if (!File.Exists(Document[i]))
+                {
+                    service.RemoveDocument(Document[i]);
+                    Document.Remove(Document[i]);
+                    continue;
+                }
+                string extension = Document[i].Substring(Document[i].LastIndexOf(".") + 1,
+                    Document[i].Length - Document[i].LastIndexOf(".") - 1);
+                Image img;               
+                switch (extension)
+                {
+                    case "pdf":
+                        img = imageList2.Images[0];
+                        imageList1.Images.Add(img);
+                        break;
+                    case "ppt":
+                        img = imageList2.Images[1];
+                        imageList1.Images.Add(img);
+                        break;
+                    case "pptx":
+                        img = imageList2.Images[1];
+                        imageList1.Images.Add(img);
+                        break;
+                    case "doc":
+                        img = imageList2.Images[2];
+                        imageList1.Images.Add(img);
+                        break;
+                    case "docx":
+                        img = imageList2.Images[2];
+                        imageList1.Images.Add(img);
+                        break;
+                }
+            }
+            int count = imageList1.Images.Count;
+            for (int i = Document.Count - 1; i >= 0; i--)
+            {
+                ListViewItem lvi = new ListViewItem();
+                lvi.ImageIndex = count - 1 - i;
+                lvi.Name = Document[i];
+                lvi.Text = System.IO.Path.GetFileNameWithoutExtension(Document[i]);
                 listView1.Items.Add(lvi);
             }
 
@@ -262,19 +316,19 @@ namespace VideoPlayerAndManager
 
         //视频列表切换，listView中切换内容
         private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {
-            
-           
-                if (listBox1.SelectedIndex == 0)//当前列表内视频
-                {
-                    videos = service.GetFileFromList(ListID);
-                    ListViewUpdate(videos);
-                }
-                else if (listBox1.SelectedIndex == 1)//全部视频
-                {
-                    videos = service.GetAllVideos();
-                    ListViewUpdate(videos);
-                }
+        {    
+            if (listBox1.SelectedIndex == 0)//当前列表内视频
+            {
+                videos = service.GetFileFromList(ListID);
+                ListViewUpdate(videos);
+                ListViewUpdate(ListID);
+            }
+            else if (listBox1.SelectedIndex == 1)//全部视频
+            {
+                videos = service.GetAllVideos();
+                ListViewUpdate(videos);
+                ListViewUpdate(ListID);
+            }
             
         }
 
@@ -296,13 +350,14 @@ namespace VideoPlayerAndManager
                 service.AddDocument(Path, ListID);
                 videos = service.GetFileFromList(ListID);
                 ListViewUpdate(videos);
+                ListViewUpdate(ListID);
             }
             else 
             {
                 service.AddDocument(Path);
                 videos = service.GetAllVideos();
                 ListViewUpdate(videos);
-
+                ListViewUpdate(ListID);
             }
         }
     }

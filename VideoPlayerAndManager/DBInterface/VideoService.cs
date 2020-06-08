@@ -275,9 +275,9 @@ namespace DBInterface
         }
 
         //从列表id获取document
-        public List<string> GetDocument(int listid)
+        public List<string> GetDocument(string listid)
         {
-            string ID = listid.ToString();
+            string ID = listid;
             System.Data.SQLite.SQLiteDataReader sr = helper.Query("document", "listid", "=", ID);
             List<string> result = new List<string>();
             while (sr.Read())

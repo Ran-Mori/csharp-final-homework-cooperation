@@ -39,6 +39,7 @@
             this.addDocument = new System.Windows.Forms.Button();
             this.listView1 = new System.Windows.Forms.ListView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
+            this.imageList2 = new System.Windows.Forms.ImageList(this.components);
             this.tableLayoutPanel1.SuspendLayout();
             this.SuspendLayout();
             // 
@@ -50,7 +51,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 221F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 177F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 137F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 138F));
             this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.listNameText, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.addVideoButton, 2, 0);
@@ -86,7 +87,7 @@
             this.listNameText.Location = new System.Drawing.Point(182, 37);
             this.listNameText.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.listNameText.Name = "listNameText";
-            this.listNameText.Size = new System.Drawing.Size(212, 25);
+            this.listNameText.Size = new System.Drawing.Size(211, 25);
             this.listNameText.TabIndex = 1;
             // 
             // addVideoButton
@@ -95,7 +96,7 @@
             this.addVideoButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addVideoButton.BackgroundImage")));
             this.addVideoButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addVideoButton.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.addVideoButton.Location = new System.Drawing.Point(434, 30);
+            this.addVideoButton.Location = new System.Drawing.Point(433, 30);
             this.addVideoButton.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.addVideoButton.Name = "addVideoButton";
             this.addVideoButton.Size = new System.Drawing.Size(181, 39);
@@ -109,7 +110,7 @@
             this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(638, 3);
+            this.listBox1.Location = new System.Drawing.Point(637, 3);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(119, 94);
             this.listBox1.TabIndex = 3;
@@ -121,7 +122,7 @@
             this.deleteButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteButton.BackgroundImage")));
             this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.deleteButton.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.deleteButton.Location = new System.Drawing.Point(765, 29);
+            this.deleteButton.Location = new System.Drawing.Point(764, 29);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(167, 42);
@@ -136,10 +137,10 @@
             this.addDocument.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addDocument.BackgroundImage")));
             this.addDocument.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addDocument.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.addDocument.Location = new System.Drawing.Point(947, 31);
+            this.addDocument.Location = new System.Drawing.Point(946, 31);
             this.addDocument.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.addDocument.Name = "addDocument";
-            this.addDocument.Size = new System.Drawing.Size(118, 38);
+            this.addDocument.Size = new System.Drawing.Size(119, 38);
             this.addDocument.TabIndex = 5;
             this.addDocument.Text = "添加其他文件";
             this.addDocument.UseVisualStyleBackColor = true;
@@ -162,6 +163,14 @@
             this.imageList1.ColorDepth = System.Windows.Forms.ColorDepth.Depth8Bit;
             this.imageList1.ImageSize = new System.Drawing.Size(250, 147);
             this.imageList1.TransparentColor = System.Drawing.Color.Transparent;
+            // 
+            // imageList2
+            // 
+            this.imageList2.ImageStream = ((System.Windows.Forms.ImageListStreamer)(resources.GetObject("imageList2.ImageStream")));
+            this.imageList2.TransparentColor = System.Drawing.Color.Transparent;
+            this.imageList2.Images.SetKeyName(0, "pdf.jpg");
+            this.imageList2.Images.SetKeyName(1, "ppt.jpg");
+            this.imageList2.Images.SetKeyName(2, "doc.jpg");
             // 
             // ListDetailForm
             // 
@@ -189,5 +198,6 @@
         private System.Windows.Forms.ListBox listBox1;
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button addDocument;
+        private System.Windows.Forms.ImageList imageList2;
     }
 }

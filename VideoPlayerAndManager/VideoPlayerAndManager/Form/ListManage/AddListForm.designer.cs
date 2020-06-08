@@ -46,7 +46,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 29.07563F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Percent, 70.92437F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 316F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 144F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 145F));
             this.tableLayoutPanel1.Controls.Add(this.label1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.listnameText, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.addListButton, 2, 0);
@@ -76,7 +76,7 @@
             this.listnameText.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.listnameText.Location = new System.Drawing.Point(174, 37);
             this.listnameText.Name = "listnameText";
-            this.listnameText.Size = new System.Drawing.Size(413, 25);
+            this.listnameText.Size = new System.Drawing.Size(412, 25);
             this.listnameText.TabIndex = 1;
             this.listnameText.TextChanged += new System.EventHandler(this.listnameText_TextChanged);
             this.listnameText.Enter += new System.EventHandler(this.listnameText_Enter);
@@ -88,10 +88,10 @@
             this.addListButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addListButton.BackgroundImage")));
             this.addListButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addListButton.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.addListButton.Location = new System.Drawing.Point(640, 34);
+            this.addListButton.Location = new System.Drawing.Point(639, 35);
             this.addListButton.Margin = new System.Windows.Forms.Padding(50, 3, 50, 3);
             this.addListButton.Name = "addListButton";
-            this.addListButton.Size = new System.Drawing.Size(216, 32);
+            this.addListButton.Size = new System.Drawing.Size(216, 30);
             this.addListButton.TabIndex = 2;
             this.addListButton.Text = "确认添加";
             this.addListButton.UseVisualStyleBackColor = true;
@@ -103,9 +103,9 @@
             this.addVideosButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addVideosButton.BackgroundImage")));
             this.addVideosButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addVideosButton.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.addVideosButton.Location = new System.Drawing.Point(909, 35);
+            this.addVideosButton.Location = new System.Drawing.Point(908, 35);
             this.addVideosButton.Name = "addVideosButton";
-            this.addVideosButton.Size = new System.Drawing.Size(139, 30);
+            this.addVideosButton.Size = new System.Drawing.Size(140, 30);
             this.addVideosButton.TabIndex = 3;
             this.addVideosButton.Text = "扫描磁盘";
             this.addVideosButton.UseVisualStyleBackColor = true;

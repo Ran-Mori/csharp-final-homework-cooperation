@@ -50,6 +50,7 @@ namespace VideoPlayerAndManager
             listnameText.Text = "列表名称";
             listnameText.ForeColor = Color.Gray;
         }
+
         private void ListViewUpdate(List<string> imageNames)//更新listview中的内容,listview中是已扫描过的视频
         {
             imageList1.Images.Clear();
@@ -83,6 +84,7 @@ namespace VideoPlayerAndManager
 
             listView1.EndUpdate();
         }
+
         private void AddListForm_Load(object sender, EventArgs e)
         {
             SetDefault();

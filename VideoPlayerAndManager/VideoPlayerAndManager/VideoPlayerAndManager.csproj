@@ -223,8 +223,11 @@
   </ItemGroup>
   <ItemGroup />
   <ItemGroup>
-    <Content Include="BtnBG\bgpic.jpg" />
-    <Content Include="BtnBG\bgpic2.jpg" />
+    <Content Include="img\bgpic.jpg" />
+    <Content Include="img\bgpic2.jpg" />
+    <Content Include="img\doc.jpg" />
+    <Content Include="img\pdf.jpg" />
+    <Content Include="img\ppt.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
