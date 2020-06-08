@@ -42,7 +42,7 @@ namespace VideoPlayerAndManager
             listBox1.DrawMode = DrawMode.OwnerDrawVariable;
             listBox1.DrawItem += ListBox1_DrawItem;
             listBox1.MeasureItem += ListBox1_MeasureItem;
-            listBox1.Items.Add("当前列表内视频");
+            listBox1.Items.Add("当前列表");
             listBox1.Items.Add("全部视频");
 
             List<String> listID = service.GetVideoList(name);
@@ -87,7 +87,7 @@ namespace VideoPlayerAndManager
             listView1.EndUpdate();
         }
 
-        private void ListViewUpdate(string listid)//更新文件于listview上
+        private void ListViewUpdate(string listid)//更新其他文件于listview上
         {
             List<string> Document = service.GetDocument(listid);
             if (Document.Count == 0)
@@ -234,6 +234,7 @@ namespace VideoPlayerAndManager
         private void listView1_MouseClick(object sender, MouseEventArgs e)
         {
             List<string> videos = service.GetFileFromList(ListID);
+            List<string> documents = service.GetDocument(ListID);
 
             if (e.Button == MouseButtons.Right)
             {
@@ -243,15 +244,23 @@ namespace VideoPlayerAndManager
                     foreach (ListViewItem item in this.listView1.SelectedItems)
                     {
                         string itemName = item.Name;
-                        if (videos.Contains(itemName))
+                        if (videos.Contains(itemName)||documents.Contains(itemName))
                         {
                             string msg = "确定将 " + itemName + " 移出" + ListName + "?";
 
                             if ((int)MessageBox.Show(msg, "提示", MessageBoxButtons.OKCancel) == 1)
                             {
-                                service.UpdateFileList(itemName, 0);
+                                if (videos.Contains(itemName))
+                                {
+                                    service.UpdateFileList(itemName, 0);
+                                   
+                                }
+                                else if (documents.Contains(itemName))
+                                {
+                                    service.RemoveDocument(itemName);
+                                    
+                                }
                                 MessageBox.Show("删除成功！");
-
                             }
                         }
                         else
@@ -267,6 +276,7 @@ namespace VideoPlayerAndManager
                         }
                         videos = service.GetFileFromList(ListID);
                         ListViewUpdate(videos);
+                        ListViewUpdate(ListID);
                         listBox1.SelectedIndex = 0;
                     }
                 }
@@ -317,7 +327,7 @@ namespace VideoPlayerAndManager
         //视频列表切换，listView中切换内容
         private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
         {    
-            if (listBox1.SelectedIndex == 0)//当前列表内视频
+            if (listBox1.SelectedIndex == 0)//当前列表内视频和其他文件
             {
                 videos = service.GetFileFromList(ListID);
                 ListViewUpdate(videos);
@@ -327,7 +337,7 @@ namespace VideoPlayerAndManager
             {
                 videos = service.GetAllVideos();
                 ListViewUpdate(videos);
-                ListViewUpdate(ListID);
+                
             }
             
         }
@@ -340,25 +350,18 @@ namespace VideoPlayerAndManager
             od1.Filter = GetFile.DocumentFilter;
             od1.FilterIndex = 2;
             od1.RestoreDirectory = true;
+            
             if (od1.ShowDialog() == DialogResult.OK)
             {
                 Path = od1.FileName;
                 MessageBox.Show("已选择文件:" + Path, "选择文件提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
-            if (listBox1.SelectedIndex != 1)
-            {
-                service.AddDocument(Path, ListID);
-                videos = service.GetFileFromList(ListID);
-                ListViewUpdate(videos);
-                ListViewUpdate(ListID);
-            }
-            else 
-            {
-                service.AddDocument(Path);
-                videos = service.GetAllVideos();
-                ListViewUpdate(videos);
-                ListViewUpdate(ListID);
-            }
+
+            service.AddDocument(Path,ListID);
+            videos = service.GetFileFromList(ListID);
+            ListViewUpdate(videos);
+            ListViewUpdate(ListID);
+            listBox1.SelectedIndex = 0;
         }
     }
 }
