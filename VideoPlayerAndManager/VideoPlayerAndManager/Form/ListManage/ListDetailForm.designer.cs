@@ -89,7 +89,7 @@
             this.listNameText.Name = "listNameText";
             this.listNameText.Size = new System.Drawing.Size(211, 25);
             this.listNameText.TabIndex = 1;
-            this.listNameText.TextChanged += new System.EventHandler(this.listNameText_TextChanged);
+            
             // 
             // addVideoButton
             // 

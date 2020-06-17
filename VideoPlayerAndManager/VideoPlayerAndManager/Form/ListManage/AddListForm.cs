@@ -119,6 +119,7 @@ namespace VideoPlayerAndManager
                 VideoList newList = new VideoList(lists.Count + 1, listnameText.Text);
                 if (service.AddVideoList(newList))
                 {
+
                     lb.Items.Add(listnameText.Text);
                     MessageBox.Show("添加成功！");
                 }
@@ -156,6 +157,8 @@ namespace VideoPlayerAndManager
 
         private void addVideosButton_Click(object sender, EventArgs e)
         {
+            List<string> ListID = service.GetVideoList(ListName);
+            string listId = ListID[0];
             FolderBrowserDialog dialog = new FolderBrowserDialog();
             dialog.Description = "请选择文件路径";
             if (dialog.ShowDialog() == DialogResult.OK)
@@ -170,10 +173,10 @@ namespace VideoPlayerAndManager
             {
                 if (s != null)
                 {
-                    service.AddFile(s);
+                    service.AddVideosToList(s, listId);
                 }
             }
-            List<string> videos = service.GetAllVideos();
+            List<string> videos = service.GetFileFromList(listId);
             ListViewUpdate(videos);
         }
 

@@ -58,13 +58,7 @@ namespace VideoPlayerAndManager
         {
             listBox1.Items.Add("当前列表");
             listBox1.Items.Add("全部视频");
-            List<string> lists = service.GetVideoList();
-            foreach (string list in lists)
-            {
-                if (list.Equals(ListName))
-                    continue;
-                listBox1.Items.Add(list);
-            }
+
         }
 
         //更新listview中的内容,listview中是该列表的视频
@@ -117,7 +111,7 @@ namespace VideoPlayerAndManager
                 }
                 string extension = Document[i].Substring(Document[i].LastIndexOf(".") + 1,
                     Document[i].Length - Document[i].LastIndexOf(".") - 1);
-                Image img;               
+                Image img;
                 switch (extension)
                 {
                     case "pdf":
@@ -182,7 +176,7 @@ namespace VideoPlayerAndManager
             try { lb.Items.Remove(oldName); }
             catch
             {
-            }            
+            }
             lb.Items.Add(listNameText.Text);
             MessageBox.Show("修改成功！");
             oldName = listNameText.Text;
@@ -205,19 +199,22 @@ namespace VideoPlayerAndManager
             {
                 if (s != null)
                 {
-                    if (listBox1.SelectedIndex == 0)
+                    if (listBox1.SelectedIndex != 1)
                     {
                         service.AddVideosToList(s, ListID);
                         videos = service.GetFileFromList(ListID);
                         ListViewUpdate(videos);
+                        ListViewUpdate(ListID);
+                        listBox1.SelectedIndex = 0;
                     }
-                    else if (listBox1.SelectedIndex == 1)
+                    else
                     {
                         service.AddFile(s);
-                        videos = service.GetAllVideos();
-                        ListViewUpdate(videos);
-
+                        List<string> allVideos = service.GetAllVideos();
+                        ListViewUpdate(allVideos);
                     }
+
+
                 }
             }
 
@@ -247,7 +244,7 @@ namespace VideoPlayerAndManager
         //右击视频移入、移出视频列表
         private void listView1_MouseClick(object sender, MouseEventArgs e)
         {
-            
+
 
             if (e.Button == MouseButtons.Right)
             {
@@ -256,7 +253,8 @@ namespace VideoPlayerAndManager
                     foreach (ListViewItem item in this.listView1.SelectedItems)
                     {
                         string itemName = item.Name;
-                        if (videos.Contains(itemName)||documents.Contains(itemName))
+
+                        if (videos.Contains(itemName) || documents.Contains(itemName))
                         {
                             string msg = "确定将 " + itemName + " 移出" + ListName + "?";
 
@@ -265,12 +263,12 @@ namespace VideoPlayerAndManager
                                 if (videos.Contains(itemName))
                                 {
                                     service.UpdateFileList(itemName, 0);
-                                   
+
                                 }
                                 else if (documents.Contains(itemName))
                                 {
                                     service.RemoveDocument(itemName);
-                                    
+
                                 }
                                 MessageBox.Show("删除成功！");
                             }
@@ -310,7 +308,7 @@ namespace VideoPlayerAndManager
                 {
                     service.UpdateFileList(video, 0);
                 }
-                foreach(string doc in documents)
+                foreach (string doc in documents)
                 {
                     service.RemoveDocument(doc);
                 }
@@ -349,28 +347,21 @@ namespace VideoPlayerAndManager
 
         //视频列表切换，listView中切换内容
         private void listBox1_SelectedIndexChanged_1(object sender, EventArgs e)
-        {    
+        {
             if (listBox1.SelectedIndex == 0)//当前列表内视频和其他文件
             {
                 videos = service.GetFileFromList(ListID);
                 ListViewUpdate(videos);
                 ListViewUpdate(ListID);
             }
-            else if(listBox1.SelectedIndex == 1)
+            else if (listBox1.SelectedIndex == 1)
             {
-                videos = service.GetAllVideos();
-                ListViewUpdate(videos);
+                List<string> allVideos = service.GetAllVideos();
+                ListViewUpdate(allVideos);
 
             }
-            else
-            {
-                string ListName = listBox1.SelectedItem.ToString();
-                string id = service.GetVideoList(ListName)[0];
-                videos = service.GetFileFromList(id);
-                ListViewUpdate(videos);
-                ListViewUpdate(id);
-            }
-            
+
+
         }
 
         //点击添加其他文件（pdf,ppt,word）
@@ -381,23 +372,18 @@ namespace VideoPlayerAndManager
             od1.Filter = GetFile.DocumentFilter;
             od1.FilterIndex = 2;
             od1.RestoreDirectory = true;
-            
+
             if (od1.ShowDialog() == DialogResult.OK)
             {
                 Path = od1.FileName;
                 MessageBox.Show("已选择文件:" + Path, "选择文件提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
             }
 
-            service.AddDocument(Path,ListID);
+            service.AddDocument(Path, ListID);
             videos = service.GetFileFromList(ListID);
             ListViewUpdate(videos);
             ListViewUpdate(ListID);
             listBox1.SelectedIndex = 0;
-        }
-
-        private void listNameText_TextChanged(object sender, EventArgs e)
-        {
-
         }
     }
 }
