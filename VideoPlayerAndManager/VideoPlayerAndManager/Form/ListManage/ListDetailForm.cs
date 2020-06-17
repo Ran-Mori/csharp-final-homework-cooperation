@@ -394,5 +394,10 @@ namespace VideoPlayerAndManager
             ListViewUpdate(ListID);
             listBox1.SelectedIndex = 0;
         }
+
+        private void listNameText_TextChanged(object sender, EventArgs e)
+        {
+
+        }
     }
 }

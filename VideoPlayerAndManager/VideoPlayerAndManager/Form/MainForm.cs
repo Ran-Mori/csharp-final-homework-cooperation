@@ -108,7 +108,8 @@ namespace VideoPlayerAndManager
             }
         }
 
-        private void Button2_Click(object sender, EventArgs e)//扫描磁盘中所有磁盘文件
+        //扫描磁盘中所有磁盘文件
+        private void Button2_Click(object sender, EventArgs e)
         {
             FolderBrowserDialog dialog = new FolderBrowserDialog();
             dialog.Description = "请选择文件路径";
@@ -120,13 +121,29 @@ namespace VideoPlayerAndManager
 
             List<string> imageFiles = new List<string>();
             imageFiles = GetFile.GetVideo(Path, imageFiles);
-            foreach(string s in imageFiles)
+
+            List<string> lists = service.GetVideoList();//为扫描获得的视频建立一个列表
+            int listid = lists.Count + 1;
+
+            int nullNum = 1;
+            string listname = "未命名列表" + nullNum;
+            VideoList newList = new VideoList(listid, listname);
+            while(!service.AddVideoList(newList))
+            {
+                nullNum++;
+                listname = listname.Substring(0, listname.Length - 1) + nullNum;
+                newList.Name = listname;
+            }
+            listBox1.Items.Add(listname);
+
+            foreach (string s in imageFiles)
             {
                 if(s != null)
                 {
-                    service.AddFile(s);
+                    service.AddFile(s);                    
+                    service.UpdateFileList(s, listid);
                 }               
-            }
+            }    
         }
 
         private void Button3_Click(object sender, EventArgs e)//创建新的视频列表
@@ -261,6 +278,22 @@ namespace VideoPlayerAndManager
                     string note = service.SeekNote(itemName);
                     Notebox notebox = new Notebox(itemName, note);
                     notebox.Show();
+                }
+            }
+            else if (((ContextMenuStrip)sender).Items[2] == e.ClickedItem)
+            {
+                foreach (ListViewItem item in this.listView1.SelectedItems)
+                {
+                    string itemName = item.Text;
+                    string msg = "确定将 " + itemName + " 删除？";
+
+                    if ((int)MessageBox.Show(msg, "提示", MessageBoxButtons.OKCancel) == 1)
+                    {
+                        service.RemoveFlie(item.Name);
+                        MessageBox.Show("删除成功！");
+                        videoNames = service.GetAllVideos();
+                        ListViewUpdate(videoNames);
+                    }
                 }
             }
         }

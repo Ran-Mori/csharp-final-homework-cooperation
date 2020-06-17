@@ -119,7 +119,6 @@ namespace VideoPlayerAndManager
                 VideoList newList = new VideoList(lists.Count + 1, listnameText.Text);
                 if (service.AddVideoList(newList))
                 {
-
                     lb.Items.Add(listnameText.Text);
                     MessageBox.Show("添加成功！");
                 }
