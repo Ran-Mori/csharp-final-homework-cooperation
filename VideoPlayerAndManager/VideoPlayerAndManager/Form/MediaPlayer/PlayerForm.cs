@@ -15,23 +15,24 @@ namespace VideoPlayerAndManager
 
         private Video currentMovie = null;
 
-        private List<Video> movieList = new List<Video>();//string日后可以替换为电影类
+        private List<Video> movieList = new List<Video>();//电影类
 
         //不同的构造函数可以调用
         public PlayerForm()
         {
             InitializeComponent();
             listBox1.DrawMode = DrawMode.OwnerDrawFixed;
-            listBox1.ItemHeight = 35;
         }
 
-        public PlayerForm(Video movie, List<Video> movies)
+        public PlayerForm(Video movie, List<Video> movies,ImageList.ImageCollection imgs)
         {
             InitializeComponent();
             listBox1.DrawMode = DrawMode.OwnerDrawFixed;
-            listBox1.ItemHeight = 35;
             currentMovie = movie;
             movieList = movies;
+            foreach (Image i in imgs) {
+                imageList1.Images.Add(i);
+            }
             foreach (Video one in movies)
             {
                 listBox1.Items.Add(one.name);
@@ -51,7 +52,6 @@ namespace VideoPlayerAndManager
         {
             InitializeComponent();
             listBox1.DrawMode = DrawMode.OwnerDrawFixed;
-            listBox1.ItemHeight = 35;
             currentMovie = movie;
             foreach (Video one in movieList)
             {
@@ -92,6 +92,9 @@ namespace VideoPlayerAndManager
                     currentMovie = new Video(fileName, openFileDialog1.FileName);
                     if (!listBox1.Items.Contains(openFileDialog1.SafeFileName))
                     {
+                        Bitmap bm = WindowsThumbnailProvider.GetThumbnail(url, 256, 256, ThumbnailOptions.None);
+                        Image img = Image.FromHbitmap(bm.GetHbitmap());
+                        imageList1.Images.Add(img);
                         listBox1.Items.Add(fileName);
                         movieList.Add(currentMovie);
                     }
@@ -170,25 +173,15 @@ namespace VideoPlayerAndManager
             //绘制listbox的项
             private void listBox1_DrawItem_1(object sender, DrawItemEventArgs e)
         {
-            /*
-            Color[] colors = new Color[5] { Color.Red, Color.Orange, Color.Yellow, Color.Green, Color.Blue };
-            if (e.Index >= 0)
-            {
-                e.DrawBackground();
-                Brush myBrush = Brushes.Black;
-                Color bgColor = colors[e.Index % 5];
-                e.Graphics.FillRectangle(new SolidBrush(bgColor), e.Bounds);
-                e.Graphics.DrawString(listBox1.Items[e.Index].ToString(), e.Font, myBrush, e.Bounds, StringFormat.GenericDefault);
-                e.DrawFocusRectangle();
-            }*/
+           
             Brush myBrush = Brushes.Black;
             if ((e.State & DrawItemState.Selected) == DrawItemState.Selected)
             {
-                myBrush = new SolidBrush(Color.Blue);
+                myBrush = new SolidBrush(Color.CornflowerBlue);
             }
             else if (e.Index % 2 == 0)
             {
-                myBrush = new SolidBrush(Color.Blue);
+                myBrush = new SolidBrush(Color.CornflowerBlue);
             }
             else
             {
@@ -198,7 +191,7 @@ namespace VideoPlayerAndManager
             e.DrawFocusRectangle();//焦点框 
 
             //绘制图标 
-            Image image = Image.FromFile("1.jpg");
+            Image image = imageList1.Images[e.Index];
             Graphics g = e.Graphics;
             Rectangle bounds = e.Bounds;
             Rectangle imageRect = new Rectangle(
@@ -499,6 +492,11 @@ namespace VideoPlayerAndManager
         private void managerToolStripMenuItem_Click(object sender, EventArgs e)
         {
             this.Hide();
+        }
+
+        private void listBox1_MeasureItem(object sender, MeasureItemEventArgs e)
+        {
+            listBox1.ItemHeight = 40;
         }
     }
 

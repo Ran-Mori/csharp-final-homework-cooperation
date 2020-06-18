@@ -118,197 +118,191 @@
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
-  <data name="打开ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 44</value>
+  <data name="FileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>46, 24</value>
   </data>
-  <data name="打开ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Open</value>
-  </data>
-  <data name="收藏ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 44</value>
-  </data>
-  <data name="收藏ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Like</value>
-  </data>
-  <data name="信息ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 44</value>
-  </data>
-  <data name="信息ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Information</value>
-  </data>
-  <data name="关闭ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 44</value>
-  </data>
-  <data name="关闭ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Quit</value>
-  </data>
-  <data name="下一个ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 44</value>
-  </data>
-  <data name="下一个ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Next</value>
-  </data>
-  <data name="打开文件夹ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 44</value>
-  </data>
-  <data name="打开文件夹ToolStripMenuItem.Text" xml:space="preserve">
-    <value>OpenFile</value>
-  </data>
-  <data name="管理器ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>281, 44</value>
-  </data>
-  <data name="管理器ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Manager</value>
-  </data>
-  <data name="文件ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>73, 35</value>
-  </data>
-  <data name="文件ToolStripMenuItem.Text" xml:space="preserve">
+  <data name="FileToolStripMenuItem.Text" xml:space="preserve">
     <value>File</value>
   </data>
-  <data name="全屏ToolStripMenuItem.Text" xml:space="preserve">
+  <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="openToolStripMenuItem.Text" xml:space="preserve">
+    <value>Open</value>
+  </data>
+  <data name="addToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="addToolStripMenuItem.Text" xml:space="preserve">
+    <value>Addtolike</value>
+  </data>
+  <data name="informationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="informationToolStripMenuItem.Text" xml:space="preserve">
+    <value>About</value>
+  </data>
+  <data name="closeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="closeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Close</value>
+  </data>
+  <data name="nextToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="nextToolStripMenuItem.Text" xml:space="preserve">
+    <value>Next</value>
+  </data>
+  <data name="openDirectoryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="openDirectoryToolStripMenuItem.Text" xml:space="preserve">
+    <value>Openfile</value>
+  </data>
+  <data name="managerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="managerToolStripMenuItem.Text" xml:space="preserve">
+    <value>Manager</value>
+  </data>
+  <data name="showToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>61, 24</value>
+  </data>
+  <data name="showToolStripMenuItem.Text" xml:space="preserve">
+    <value>Show</value>
+  </data>
+  <data name="fullscreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="fullscreenToolStripMenuItem.Text" xml:space="preserve">
     <value>Fullscreen</value>
   </data>
-  <data name="语言ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Language/语言</value>
+  <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
   </data>
-  <data name="toolStripMenuItem5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 44</value>
+  <data name="中文ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
   </data>
-  <data name="toolStripMenuItem6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 44</value>
+  <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
   </data>
-  <data name="toolStripMenuItem7.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 44</value>
-  </data>
-  <data name="toolStripMenuItem8.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 44</value>
-  </data>
-  <data name="toolStripMenuItem9.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 44</value>
-  </data>
-  <data name="自定义ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>316, 44</value>
-  </data>
-  <data name="自定义ToolStripMenuItem.Text" xml:space="preserve">
-    <value>SelfDenfinition</value>
+  <data name="倍速ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
   </data>
   <data name="倍速ToolStripMenuItem.Text" xml:space="preserve">
     <value>Rate</value>
   </data>
-  <data name="显示ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>133, 35</value>
+  <data name="outlookToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>57, 24</value>
   </data>
-  <data name="显示ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Showing</value>
+  <data name="outlookToolStripMenuItem.Text" xml:space="preserve">
+    <value>Look</value>
   </data>
-  <data name="原皮肤ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 44</value>
+  <data name="skinToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
   </data>
-  <data name="原皮肤ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Simple</value>
-  </data>
-  <data name="浅橘色ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 44</value>
-  </data>
-  <data name="浅橘色ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Orange</value>
-  </data>
-  <data name="钻石蓝ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 44</value>
-  </data>
-  <data name="钻石蓝ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Blue</value>
-  </data>
-  <data name="炫酷银ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>233, 44</value>
-  </data>
-  <data name="炫酷银ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Silver</value>
-  </data>
-  <data name="皮肤ToolStripMenuItem.Text" xml:space="preserve">
+  <data name="skinToolStripMenuItem.Text" xml:space="preserve">
     <value>Skin</value>
   </data>
-  <data name="外观ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>127, 35</value>
+  <data name="originToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
   </data>
-  <data name="外观ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Outlook</value>
+  <data name="originToolStripMenuItem.Text" xml:space="preserve">
+    <value>Origin</value>
+  </data>
+  <data name="orangeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="orangeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Orange</value>
+  </data>
+  <data name="blueToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="blueToolStripMenuItem.Text" xml:space="preserve">
+    <value>Blue</value>
+  </data>
+  <data name="silverToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
+  </data>
+  <data name="silverToolStripMenuItem.Text" xml:space="preserve">
+    <value>Silver</value>
+  </data>
+  <data name="screenshotToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>55, 24</value>
+  </data>
+  <data name="screenshotToolStripMenuItem.Text" xml:space="preserve">
+    <value>Shot</value>
   </data>
   <data name="视频截图ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>275, 44</value>
+    <value>216, 26</value>
   </data>
   <data name="视频截图ToolStripMenuItem.Text" xml:space="preserve">
     <value>Screenshot</value>
   </data>
-  <data name="录制ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>99, 35</value>
+  <data name="playmodeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>65, 24</value>
   </data>
-  <data name="录制ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Catch</value>
+  <data name="playmodeToolStripMenuItem.Text" xml:space="preserve">
+    <value>Mode</value>
   </data>
-  <data name="顺序播放ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 44</value>
+  <data name="sequenceToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
   </data>
-  <data name="顺序播放ToolStripMenuItem.Text" xml:space="preserve">
+  <data name="sequenceToolStripMenuItem.Text" xml:space="preserve">
     <value>Sequence</value>
   </data>
-  <data name="随机播放ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 44</value>
+  <data name="randomToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
   </data>
-  <data name="随机播放ToolStripMenuItem.Text" xml:space="preserve">
+  <data name="randomToolStripMenuItem.Text" xml:space="preserve">
     <value>Random</value>
   </data>
-  <data name="循环播放ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 44</value>
+  <data name="selfToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
+    <value>216, 26</value>
   </data>
-  <data name="循环播放ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Self</value>
-  </data>
-  <data name="模式ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>101, 35</value>
-  </data>
-  <data name="模式ToolStripMenuItem.Text" xml:space="preserve">
-    <value>Mode</value>
+  <data name="selfToolStripMenuItem.Text" xml:space="preserve">
+    <value>Loop</value>
   </data>
   <data name="tabPage1.Text" xml:space="preserve">
     <value>List</value>
+  </data>
+  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
+    <value>180, 463</value>
+  </data>
+  <data name="tabPage2.Text" xml:space="preserve">
+    <value>Detail</value>
   </data>
   <data name="label6.Text" xml:space="preserve">
     <value>Author</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 24</value>
+    <value>55, 15</value>
   </data>
   <data name="label5.Text" xml:space="preserve">
     <value>Author</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 24</value>
+    <value>71, 15</value>
   </data>
   <data name="label4.Text" xml:space="preserve">
     <value>Duration</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>130, 24</value>
+    <value>87, 15</value>
   </data>
   <data name="label1.Text" xml:space="preserve">
     <value>VideoTitle</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>166, 24</value>
+    <value>111, 15</value>
   </data>
   <data name="label3.Text" xml:space="preserve">
     <value>VideoDuration</value>
   </data>
   <data name="label2.Text" xml:space="preserve">
     <value>Title</value>
-  </data>
-  <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>188, 460</value>
-  </data>
-  <data name="tabPage2.Text" xml:space="preserve">
-    <value>Detail</value>
   </data>
   <data name="axWindowsMediaPlayer1.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>

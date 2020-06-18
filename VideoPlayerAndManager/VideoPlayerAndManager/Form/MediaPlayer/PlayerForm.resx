@@ -129,14 +129,17 @@
   </data>
   <assembly alias="mscorlib" name="mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="listBox1.ItemHeight" type="System.Int32, mscorlib">
-    <value>24</value>
+    <value>15</value>
   </data>
   <assembly alias="System.Drawing" name="System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a" />
   <data name="listBox1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>3, 3</value>
+    <value>2, 2</value>
+  </data>
+  <data name="listBox1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="listBox1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>260, 737</value>
+    <value>176, 459</value>
   </data>
   <data name="listBox1.TabIndex" type="System.Int32, mscorlib">
     <value>4</value>
@@ -157,193 +160,193 @@
     <value>537, 17</value>
   </metadata>
   <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 44</value>
+    <value>159, 26</value>
   </data>
   <data name="openToolStripMenuItem.Text" xml:space="preserve">
     <value>打开</value>
   </data>
   <data name="addToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 44</value>
+    <value>159, 26</value>
   </data>
   <data name="addToolStripMenuItem.Text" xml:space="preserve">
     <value>收藏</value>
   </data>
   <data name="informationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 44</value>
+    <value>159, 26</value>
   </data>
   <data name="informationToolStripMenuItem.Text" xml:space="preserve">
     <value>信息</value>
   </data>
   <data name="closeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 44</value>
+    <value>159, 26</value>
   </data>
   <data name="closeToolStripMenuItem.Text" xml:space="preserve">
     <value>关闭</value>
   </data>
   <data name="nextToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 44</value>
+    <value>159, 26</value>
   </data>
   <data name="nextToolStripMenuItem.Text" xml:space="preserve">
     <value>下一个</value>
   </data>
   <data name="openDirectoryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 44</value>
+    <value>159, 26</value>
   </data>
   <data name="openDirectoryToolStripMenuItem.Text" xml:space="preserve">
     <value>打开文件夹</value>
   </data>
   <data name="managerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>267, 44</value>
+    <value>159, 26</value>
   </data>
   <data name="managerToolStripMenuItem.Text" xml:space="preserve">
     <value>管理器</value>
   </data>
   <data name="FileToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 35</value>
+    <value>51, 24</value>
   </data>
   <data name="FileToolStripMenuItem.Text" xml:space="preserve">
     <value>文件</value>
   </data>
   <data name="fullscreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>317, 44</value>
+    <value>216, 26</value>
   </data>
   <data name="fullscreenToolStripMenuItem.Text" xml:space="preserve">
     <value>全屏</value>
   </data>
   <data name="中文ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 44</value>
+    <value>135, 26</value>
   </data>
   <data name="中文ToolStripMenuItem.Text" xml:space="preserve">
     <value>中文</value>
   </data>
   <data name="englishToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>228, 44</value>
+    <value>135, 26</value>
   </data>
   <data name="englishToolStripMenuItem.Text" xml:space="preserve">
     <value>English</value>
   </data>
   <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>317, 44</value>
+    <value>216, 26</value>
   </data>
   <data name="languageToolStripMenuItem.Text" xml:space="preserve">
     <value>语言/Language</value>
   </data>
   <data name="toolStripMenuItem1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
+    <value>129, 26</value>
   </data>
   <data name="toolStripMenuItem1.Text" xml:space="preserve">
     <value>1.0</value>
   </data>
   <data name="toolStripMenuItem2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
+    <value>129, 26</value>
   </data>
   <data name="toolStripMenuItem2.Text" xml:space="preserve">
     <value>1.25</value>
   </data>
   <data name="toolStripMenuItem3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
+    <value>129, 26</value>
   </data>
   <data name="toolStripMenuItem3.Text" xml:space="preserve">
     <value>1.5</value>
   </data>
   <data name="toolStripMenuItem4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
+    <value>129, 26</value>
   </data>
   <data name="toolStripMenuItem4.Text" xml:space="preserve">
     <value>1.75</value>
   </data>
   <data name="toolStripMenuItem5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
+    <value>129, 26</value>
   </data>
   <data name="toolStripMenuItem5.Text" xml:space="preserve">
     <value>2.0</value>
   </data>
   <data name="ToolStripMenuItem6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
+    <value>129, 26</value>
   </data>
   <data name="ToolStripMenuItem6.Text" xml:space="preserve">
     <value>自定义</value>
   </data>
   <data name="倍速ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>317, 44</value>
+    <value>216, 26</value>
   </data>
   <data name="倍速ToolStripMenuItem.Text" xml:space="preserve">
     <value>倍速</value>
   </data>
   <data name="showToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 35</value>
+    <value>51, 24</value>
   </data>
   <data name="showToolStripMenuItem.Text" xml:space="preserve">
     <value>显示</value>
   </data>
   <data name="originToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
+    <value>129, 26</value>
   </data>
   <data name="originToolStripMenuItem.Text" xml:space="preserve">
     <value>原皮肤</value>
   </data>
   <data name="orangeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
+    <value>129, 26</value>
   </data>
   <data name="orangeToolStripMenuItem.Text" xml:space="preserve">
     <value>浅橘色</value>
   </data>
   <data name="blueToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
+    <value>129, 26</value>
   </data>
   <data name="blueToolStripMenuItem.Text" xml:space="preserve">
     <value>钻石蓝</value>
   </data>
   <data name="silverToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>219, 44</value>
+    <value>129, 26</value>
   </data>
   <data name="silverToolStripMenuItem.Text" xml:space="preserve">
     <value>炫酷银</value>
   </data>
   <data name="skinToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>195, 44</value>
+    <value>114, 26</value>
   </data>
   <data name="skinToolStripMenuItem.Text" xml:space="preserve">
     <value>皮肤</value>
   </data>
   <data name="outlookToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 35</value>
+    <value>51, 24</value>
   </data>
   <data name="outlookToolStripMenuItem.Text" xml:space="preserve">
     <value>外观</value>
   </data>
   <data name="视频截图ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 44</value>
+    <value>144, 26</value>
   </data>
   <data name="视频截图ToolStripMenuItem.Text" xml:space="preserve">
     <value>视频截图</value>
   </data>
   <data name="screenshotToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 35</value>
+    <value>51, 24</value>
   </data>
   <data name="screenshotToolStripMenuItem.Text" xml:space="preserve">
     <value>截图</value>
   </data>
   <data name="sequenceToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 44</value>
+    <value>144, 26</value>
   </data>
   <data name="sequenceToolStripMenuItem.Text" xml:space="preserve">
     <value>顺序播放</value>
   </data>
   <data name="randomToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 44</value>
+    <value>144, 26</value>
   </data>
   <data name="randomToolStripMenuItem.Text" xml:space="preserve">
     <value>随机播放</value>
   </data>
   <data name="selfToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>243, 44</value>
+    <value>144, 26</value>
   </data>
   <data name="selfToolStripMenuItem.Text" xml:space="preserve">
     <value>循环播放</value>
   </data>
   <data name="playmodeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>82, 35</value>
+    <value>51, 24</value>
   </data>
   <data name="playmodeToolStripMenuItem.Text" xml:space="preserve">
     <value>模式</value>
@@ -351,8 +354,11 @@
   <data name="menuStrip1.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="menuStrip1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>4, 1, 0, 1</value>
+  </data>
   <data name="menuStrip1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1374, 39</value>
+    <value>916, 26</value>
   </data>
   <data name="menuStrip1.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -376,13 +382,16 @@
     <value>746, 17</value>
   </metadata>
   <data name="tabPage1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 39</value>
+    <value>4, 25</value>
+  </data>
+  <data name="tabPage1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="tabPage1.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="tabPage1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 743</value>
+    <value>180, 463</value>
   </data>
   <data name="tabPage1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -411,8 +420,11 @@
   <data name="label6.Location" type="System.Drawing.Point, System.Drawing">
     <value>0, 0</value>
   </data>
+  <data name="label6.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
+  </data>
   <data name="label6.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 160</value>
+    <value>105, 100</value>
   </data>
   <data name="label6.TabIndex" type="System.Int32, mscorlib">
     <value>7</value>
@@ -433,10 +445,13 @@
     <value>0</value>
   </data>
   <data name="panel2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>19, 279</value>
+    <value>13, 174</value>
+  </data>
+  <data name="panel2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="panel2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>157, 160</value>
+    <value>105, 100</value>
   </data>
   <data name="panel2.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -460,10 +475,13 @@
     <value>NoControl</value>
   </data>
   <data name="label5.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 224</value>
+    <value>10, 140</value>
+  </data>
+  <data name="label5.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="label5.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 24</value>
+    <value>67, 15</value>
   </data>
   <data name="label5.TabIndex" type="System.Int32, mscorlib">
     <value>6</value>
@@ -490,10 +508,13 @@
     <value>NoControl</value>
   </data>
   <data name="label4.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 168</value>
+    <value>10, 105</value>
+  </data>
+  <data name="label4.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="label4.Size" type="System.Drawing.Size, System.Drawing">
-    <value>58, 24</value>
+    <value>37, 15</value>
   </data>
   <data name="label4.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -517,10 +538,13 @@
     <value>True</value>
   </data>
   <data name="label1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 15</value>
+    <value>10, 9</value>
+  </data>
+  <data name="label1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="label1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 24</value>
+    <value>67, 15</value>
   </data>
   <data name="label1.TabIndex" type="System.Int32, mscorlib">
     <value>0</value>
@@ -547,10 +571,13 @@
     <value>NoControl</value>
   </data>
   <data name="label3.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 119</value>
+    <value>10, 74</value>
+  </data>
+  <data name="label3.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="label3.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 24</value>
+    <value>67, 15</value>
   </data>
   <data name="label3.TabIndex" type="System.Int32, mscorlib">
     <value>2</value>
@@ -574,10 +601,13 @@
     <value>NoControl</value>
   </data>
   <data name="label2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>15, 63</value>
+    <value>10, 39</value>
+  </data>
+  <data name="label2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 0, 2, 0</value>
   </data>
   <data name="label2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>106, 28</value>
+    <value>71, 18</value>
   </data>
   <data name="label2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -598,10 +628,13 @@
     <value>5</value>
   </data>
   <data name="panel1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>6, 6</value>
+    <value>4, 4</value>
+  </data>
+  <data name="panel1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="panel1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>194, 452</value>
+    <value>129, 282</value>
   </data>
   <data name="panel1.TabIndex" type="System.Int32, mscorlib">
     <value>3</value>
@@ -619,13 +652,16 @@
     <value>0</value>
   </data>
   <data name="tabPage2.Location" type="System.Drawing.Point, System.Drawing">
-    <value>8, 39</value>
+    <value>4, 25</value>
+  </data>
+  <data name="tabPage2.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="tabPage2.Padding" type="System.Windows.Forms.Padding, System.Windows.Forms">
-    <value>3, 3, 3, 3</value>
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="tabPage2.Size" type="System.Drawing.Size, System.Drawing">
-    <value>266, 740</value>
+    <value>180, 463</value>
   </data>
   <data name="tabPage2.TabIndex" type="System.Int32, mscorlib">
     <value>1</value>
@@ -649,10 +685,13 @@
     <value>Right</value>
   </data>
   <data name="tabControl1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>1092, 39</value>
+    <value>728, 26</value>
+  </data>
+  <data name="tabControl1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="tabControl1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>282, 790</value>
+    <value>188, 492</value>
   </data>
   <data name="tabControl1.TabIndex" type="System.Int32, mscorlib">
     <value>8</value>
@@ -676,7 +715,10 @@
     <value>True</value>
   </data>
   <data name="axWindowsMediaPlayer1.Location" type="System.Drawing.Point, System.Drawing">
-    <value>0, 39</value>
+    <value>0, 26</value>
+  </data>
+  <data name="axWindowsMediaPlayer1.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="axWindowsMediaPlayer1.OcxState" mimetype="application/x-microsoft.net.object.binary.base64">
     <value>
@@ -690,7 +732,7 @@
 </value>
   </data>
   <data name="axWindowsMediaPlayer1.Size" type="System.Drawing.Size, System.Drawing">
-    <value>1092, 790</value>
+    <value>728, 492</value>
   </data>
   <data name="axWindowsMediaPlayer1.TabIndex" type="System.Int32, mscorlib">
     <value>9</value>
@@ -720,13 +762,16 @@
     <value>147</value>
   </metadata>
   <data name="$this.AutoScaleDimensions" type="System.Drawing.SizeF, System.Drawing">
-    <value>12, 24</value>
+    <value>8, 15</value>
   </data>
   <data name="$this.AutoSizeMode" type="System.Windows.Forms.AutoSizeMode, System.Windows.Forms">
     <value>GrowAndShrink</value>
   </data>
   <data name="$this.ClientSize" type="System.Drawing.Size, System.Drawing">
-    <value>1374, 829</value>
+    <value>916, 518</value>
+  </data>
+  <data name="$this.Margin" type="System.Windows.Forms.Padding, System.Windows.Forms">
+    <value>2, 2, 2, 2</value>
   </data>
   <data name="$this.Text" xml:space="preserve">
     <value>视频播放器</value>

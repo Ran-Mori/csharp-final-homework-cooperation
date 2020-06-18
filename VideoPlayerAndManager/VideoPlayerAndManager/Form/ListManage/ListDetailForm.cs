@@ -9,6 +9,7 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 using System.IO;
 using DBInterface;
+using System.Diagnostics;
 
 namespace VideoPlayerAndManager
 {
@@ -70,7 +71,7 @@ namespace VideoPlayerAndManager
             List<string> ImageNames=new List<string>();
             int pic_size = 256;
 
-            for (int i = Videos.Count - 1; i >= 0; i--)
+            for (int i = 0; i <=Videos.Count-1 ; i++)
                {
                 string imageName = Videos[i];
                 if (!File.Exists(imageName))
@@ -86,7 +87,7 @@ namespace VideoPlayerAndManager
                
                 if (BindedVideos.Contains(imageName)){
                     List<string> Document = service.GetFilesOfVideo(ListID,imageName);
-                    for (int j = Document.Count - 1; j >= 0; j--)
+                    for (int j = 0; j <= Document.Count-1; j++)
                     {
                             if (!File.Exists(Document[j]))
                             {
@@ -128,7 +129,7 @@ namespace VideoPlayerAndManager
                 
             }
 
-            for (int i = 0; i<ImageNames.Count; i++)
+            for (int i = 0; i<=ImageNames.Count-1; i++)
             {
                 ListViewItem lvi = new ListViewItem();
                 lvi.ImageIndex = i;
@@ -147,7 +148,7 @@ namespace VideoPlayerAndManager
             if (Document.Count == 0)
                 return;
            
-            for (int i = Document.Count - 1; i >= 0; i--)
+            for (int i = 0; i <= Document.Count-1; i++)
             {
                 if (!File.Exists(Document[i]))
                 {
@@ -183,10 +184,10 @@ namespace VideoPlayerAndManager
                 }
             }
             int count = imageList1.Images.Count;
-            for (int i = Document.Count - 1; i >= 0; i--)
+            for (int i = 0; i <=Document.Count-1; i++)
             {
                 ListViewItem lvi = new ListViewItem();
-                lvi.ImageIndex = count - 1 - i;
+                lvi.ImageIndex =  i;
                 lvi.Name = Document[i];
                 lvi.Text = System.IO.Path.GetFileNameWithoutExtension(Document[i]);
                 listView1.Items.Add(lvi);
@@ -266,27 +267,38 @@ namespace VideoPlayerAndManager
 
         }
 
-        //播放视频
+        //播放视频或打开文件
         private void listView1_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             ListViewHitTestInfo info = this.listView1.HitTest(e.X, e.Y);
             if (info.Item != null)
             {
                 string url = info.Item.Name;
+                string extension = url.Substring(url.LastIndexOf(".") + 1,
+                    url.Length - url.LastIndexOf(".") - 1);
                 string name = System.IO.Path.GetFileNameWithoutExtension(url);
-                Video video = new Video(name, url);
-                List<Video> lists = new List<Video>();
-                foreach (string movieurl in videos)
+                if (extension == "mp4" || extension == "avi" || extension == "mkv")
                 {
-                    string moviename = System.IO.Path.GetFileNameWithoutExtension(movieurl);
-                    Video v = new Video(moviename, movieurl);
-                    lists.Add(v);
+                    player(url, name);
                 }
-                PlayerForm player = new PlayerForm(video, lists);
-                player.Show();
+                else {
+                    Process.Start(url);
+                }
             }
         }
 
+        private void player(string url,string name) {
+            Video video = new Video(name, url);
+            List<Video> lists = new List<Video>();
+            foreach (string movieurl in videos)
+            {
+                string moviename = System.IO.Path.GetFileNameWithoutExtension(movieurl);
+                Video v = new Video(moviename, movieurl);
+                lists.Add(v);
+            }
+            PlayerForm player = new PlayerForm(video, lists, imageList1.Images);
+            player.Show();
+        }
         //右击出现操作菜单
         private void listView1_MouseClick(object sender, MouseEventArgs e)
         {
