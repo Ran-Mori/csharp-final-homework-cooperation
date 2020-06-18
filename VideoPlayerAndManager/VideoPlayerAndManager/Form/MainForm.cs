@@ -18,21 +18,18 @@ namespace VideoPlayerAndManager
         public string Path { get; set; }//扫描的路径
 
         VideoService service = new VideoService();
-
         List<string> videoNames;
+
+        private BackgroundWorker backgroundWorker1 = null;
 
         public MainForm()
         {
-            InitializeComponent();
-            textBox1.DataBindings.Add("Text", this, "KeyWord");
-            listView1.View = View.LargeIcon;
-            listView1.LargeImageList = this.imageList1;
-
-            listBox1.DrawMode = DrawMode.OwnerDrawVariable;
-            listBox1.DrawItem += ListBox1_DrawItem;
-            listBox1.MeasureItem += ListBox1_MeasureItem;
+            InitializeComponent();            
+            InitListView();
             InitListBoxItem();
+            InitBackgroundWorker();
 
+            textBox1.DataBindings.Add("Text", this, "KeyWord");
 
             videoNames = service.GetAllVideos();
             ListViewUpdate(videoNames);
@@ -41,6 +38,9 @@ namespace VideoPlayerAndManager
         //初始化listBox
         private void InitListBoxItem()
         {
+            listBox1.DrawMode = DrawMode.OwnerDrawVariable;
+            listBox1.DrawItem += ListBox1_DrawItem;
+            listBox1.MeasureItem += ListBox1_MeasureItem;
             listBox1.Items.Add("全部视频");
             listBox1.Items.Add("收藏夹");//始终存在所以直接添加
             List<string> lists = service.GetVideoList();
@@ -50,6 +50,71 @@ namespace VideoPlayerAndManager
             }
         }
 
+        //初始化ListView
+        private void InitListView()
+        {
+            listView1.View = View.LargeIcon;
+            listView1.LargeImageList = imageList1;
+        }
+        //初始化BackgroundWorker
+        private void InitBackgroundWorker()
+        {
+            backgroundWorker1 = new BackgroundWorker();
+            //设置报告进度更新
+            backgroundWorker1.WorkerReportsProgress = true;
+            //注册线程主体方法
+            backgroundWorker1.DoWork +=
+                new DoWorkEventHandler(backgroundWorker1_DoWork);
+            //注册更新UI方法
+            backgroundWorker1.ProgressChanged +=
+                new ProgressChangedEventHandler(backgroundWorker1_ProgressChanged);
+            //注册线程结束后方法
+            backgroundWorker1.RunWorkerCompleted +=
+                new RunWorkerCompletedEventHandler(bgWorker_WorkerCompleted);
+        }
+
+        //异步实现视频缩略图的获取和主界面listview的刷新
+        //--------------------------------------------------------------------------
+        public void backgroundWorker1_DoWork(object sender, DoWorkEventArgs e)
+        {
+            //...执行线程任务                        
+            List<string> imageNames = service.GetAllVideos();
+            int pic_size = 256;
+            for (int i = imageNames.Count - 1; i >= 0; i--)
+            {                
+                if (!File.Exists(imageNames[i]))
+                {
+                    service.RemoveFlie(imageNames[i]);
+                    imageNames.Remove(imageNames[i]);
+                    continue;
+                }
+                Bitmap bm = WindowsThumbnailProvider.GetThumbnail(imageNames[i], pic_size, pic_size, ThumbnailOptions.None);
+                Image img = Image.FromHbitmap(bm.GetHbitmap());
+                //在线程中更新UI（通过ReportProgress方法）
+                backgroundWorker1.ReportProgress((1-i/imageNames.Count)*100, img);               
+            }
+        }
+        public void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
+        {
+            Image img = (Image)e.UserState;
+            imageList1.Images.Add(img);
+        }
+
+        public void bgWorker_WorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
+        {
+            List<string> imageNames = service.GetAllVideos();
+            for (int i = imageNames.Count - 1; i >= 0; i--)
+            {
+                ListViewItem lvi = new ListViewItem();
+                lvi.ImageIndex = imageNames.Count - 1 - i;
+                lvi.Name = imageNames[i];
+                lvi.Text = System.IO.Path.GetFileNameWithoutExtension(imageNames[i]);
+                listView1.Items.Add(lvi);
+            }
+            listView1.EndUpdate();
+        }
+        //----------------------------------------------------------------------------------
+     
         private void ListViewUpdate(List<string> imageNames)//更新listview中的内容
         {
             imageList1.Images.Clear();
@@ -176,8 +241,15 @@ namespace VideoPlayerAndManager
         {
             if (listBox1.SelectedIndex == 0)//全部视频
             {
-                videoNames = service.GetAllVideos();
-                ListViewUpdate(videoNames);
+                //DateTime beforeDT = System.DateTime.Now;
+                imageList1.Images.Clear();
+                listView1.Clear();
+                backgroundWorker1.RunWorkerAsync();
+                //videoNames = service.GetAllVideos();
+                //ListViewUpdate(videoNames);
+                //DateTime afterDT = System.DateTime.Now;
+                //TimeSpan dt = afterDT.Subtract(beforeDT);
+                //MessageBox.Show("程序耗时:"+ dt.ToString() + "秒");                
             }
             else if (listBox1.SelectedIndex == 1)//收藏夹
             {
