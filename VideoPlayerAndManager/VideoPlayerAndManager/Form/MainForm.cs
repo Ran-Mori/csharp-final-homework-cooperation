@@ -56,6 +56,7 @@ namespace VideoPlayerAndManager
             listView1.View = View.LargeIcon;
             listView1.LargeImageList = imageList1;
         }
+
         //初始化BackgroundWorker
         private void InitBackgroundWorker()
         {
@@ -96,12 +97,16 @@ namespace VideoPlayerAndManager
         }
         public void backgroundWorker1_ProgressChanged(object sender, ProgressChangedEventArgs e)
         {
+            progressBar1.Visible = true;
+            progressBar1.Value = e.ProgressPercentage;
             Image img = (Image)e.UserState;
             imageList1.Images.Add(img);
         }
 
         public void bgWorker_WorkerCompleted(object sender, RunWorkerCompletedEventArgs e)
         {
+            progressBar1.Visible = false;
+            progressBar1.Value = 0;
             List<string> imageNames = service.GetAllVideos();
             for (int i = imageNames.Count - 1; i >= 0; i--)
             {
@@ -157,6 +162,7 @@ namespace VideoPlayerAndManager
             }
             progressBar1.Value = 100;
             progressBar1.Visible = false;
+            progressBar1.Value = 0;
             listView1.EndUpdate();
         }
 
