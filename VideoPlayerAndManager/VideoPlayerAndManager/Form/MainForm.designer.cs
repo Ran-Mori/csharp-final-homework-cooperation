@@ -129,25 +129,25 @@
             this.备注ToolStripMenuItem,
             this.删除ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(109, 76);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 104);
             this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
             // 
             // 收藏ToolStripMenuItem
             // 
             this.收藏ToolStripMenuItem.Name = "收藏ToolStripMenuItem";
-            this.收藏ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
+            this.收藏ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.收藏ToolStripMenuItem.Text = "收藏";
             // 
             // 备注ToolStripMenuItem
             // 
             this.备注ToolStripMenuItem.Name = "备注ToolStripMenuItem";
-            this.备注ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
+            this.备注ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.备注ToolStripMenuItem.Text = "备注";
             // 
             // 删除ToolStripMenuItem
             // 
             this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
-            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
+            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
             this.删除ToolStripMenuItem.Text = "删除";
             // 
             // imageList1

@@ -40,7 +40,14 @@
             this.listView1 = new System.Windows.Forms.ListView();
             this.imageList1 = new System.Windows.Forms.ImageList(this.components);
             this.imageList2 = new System.Windows.Forms.ImageList(this.components);
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.移入或移出ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.添加相关文件ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip2 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.移入或移出ToolStripMenuItem1 = new System.Windows.Forms.ToolStripMenuItem();
             this.tableLayoutPanel1.SuspendLayout();
+            this.contextMenuStrip1.SuspendLayout();
+            this.contextMenuStrip2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tableLayoutPanel1
@@ -51,7 +58,7 @@
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 221F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 125F));
             this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 177F));
-            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 139F));
+            this.tableLayoutPanel1.ColumnStyles.Add(new System.Windows.Forms.ColumnStyle(System.Windows.Forms.SizeType.Absolute, 140F));
             this.tableLayoutPanel1.Controls.Add(this.button1, 0, 0);
             this.tableLayoutPanel1.Controls.Add(this.listNameText, 1, 0);
             this.tableLayoutPanel1.Controls.Add(this.addVideoButton, 2, 0);
@@ -87,9 +94,8 @@
             this.listNameText.Location = new System.Drawing.Point(181, 37);
             this.listNameText.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.listNameText.Name = "listNameText";
-            this.listNameText.Size = new System.Drawing.Size(211, 25);
+            this.listNameText.Size = new System.Drawing.Size(210, 25);
             this.listNameText.TabIndex = 1;
-            
             // 
             // addVideoButton
             // 
@@ -97,7 +103,7 @@
             this.addVideoButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addVideoButton.BackgroundImage")));
             this.addVideoButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addVideoButton.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.addVideoButton.Location = new System.Drawing.Point(432, 30);
+            this.addVideoButton.Location = new System.Drawing.Point(431, 30);
             this.addVideoButton.Margin = new System.Windows.Forms.Padding(20, 3, 20, 3);
             this.addVideoButton.Name = "addVideoButton";
             this.addVideoButton.Size = new System.Drawing.Size(181, 39);
@@ -111,7 +117,7 @@
             this.listBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
             this.listBox1.FormattingEnabled = true;
             this.listBox1.ItemHeight = 15;
-            this.listBox1.Location = new System.Drawing.Point(636, 3);
+            this.listBox1.Location = new System.Drawing.Point(635, 3);
             this.listBox1.Name = "listBox1";
             this.listBox1.Size = new System.Drawing.Size(119, 94);
             this.listBox1.TabIndex = 3;
@@ -123,7 +129,7 @@
             this.deleteButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("deleteButton.BackgroundImage")));
             this.deleteButton.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.deleteButton.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.deleteButton.Location = new System.Drawing.Point(763, 29);
+            this.deleteButton.Location = new System.Drawing.Point(762, 29);
             this.deleteButton.Margin = new System.Windows.Forms.Padding(5, 3, 5, 3);
             this.deleteButton.Name = "deleteButton";
             this.deleteButton.Size = new System.Drawing.Size(167, 42);
@@ -138,10 +144,10 @@
             this.addDocument.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("addDocument.BackgroundImage")));
             this.addDocument.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.addDocument.Font = new System.Drawing.Font("黑体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.addDocument.Location = new System.Drawing.Point(945, 31);
+            this.addDocument.Location = new System.Drawing.Point(944, 31);
             this.addDocument.Margin = new System.Windows.Forms.Padding(10, 3, 10, 3);
             this.addDocument.Name = "addDocument";
-            this.addDocument.Size = new System.Drawing.Size(120, 38);
+            this.addDocument.Size = new System.Drawing.Size(121, 38);
             this.addDocument.TabIndex = 5;
             this.addDocument.Text = "添加其他文件";
             this.addDocument.UseVisualStyleBackColor = true;
@@ -173,6 +179,44 @@
             this.imageList2.Images.SetKeyName(1, "ppt.jpg");
             this.imageList2.Images.SetKeyName(2, "doc.jpg");
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip1.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.移入或移出ToolStripMenuItem,
+            this.添加相关文件ToolStripMenuItem});
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(169, 52);
+            // 
+            // 移入或移出ToolStripMenuItem
+            // 
+            this.移入或移出ToolStripMenuItem.Name = "移入或移出ToolStripMenuItem";
+            this.移入或移出ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.移入或移出ToolStripMenuItem.Text = "移入或移出";
+            this.移入或移出ToolStripMenuItem.Click += new System.EventHandler(this.移入或移出ToolStripMenuItem_Click);
+            // 
+            // 添加相关文件ToolStripMenuItem
+            // 
+            this.添加相关文件ToolStripMenuItem.Name = "添加相关文件ToolStripMenuItem";
+            this.添加相关文件ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.添加相关文件ToolStripMenuItem.Text = "添加相关文件";
+            this.添加相关文件ToolStripMenuItem.Click += new System.EventHandler(this.添加相关文件ToolStripMenuItem_Click);
+            // 
+            // contextMenuStrip2
+            // 
+            this.contextMenuStrip2.ImageScalingSize = new System.Drawing.Size(20, 20);
+            this.contextMenuStrip2.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.移入或移出ToolStripMenuItem1});
+            this.contextMenuStrip2.Name = "contextMenuStrip2";
+            this.contextMenuStrip2.Size = new System.Drawing.Size(211, 56);
+            // 
+            // 移入或移出ToolStripMenuItem1
+            // 
+            this.移入或移出ToolStripMenuItem1.Name = "移入或移出ToolStripMenuItem1";
+            this.移入或移出ToolStripMenuItem1.Size = new System.Drawing.Size(210, 24);
+            this.移入或移出ToolStripMenuItem1.Text = "移入或移出";
+            this.移入或移出ToolStripMenuItem1.Click += new System.EventHandler(this.移入或移出ToolStripMenuItem1_Click);
+            // 
             // ListDetailForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
@@ -184,6 +228,8 @@
             this.Text = "ListDetailForm";
             this.tableLayoutPanel1.ResumeLayout(false);
             this.tableLayoutPanel1.PerformLayout();
+            this.contextMenuStrip1.ResumeLayout(false);
+            this.contextMenuStrip2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -200,5 +246,10 @@
         private System.Windows.Forms.Button deleteButton;
         private System.Windows.Forms.Button addDocument;
         private System.Windows.Forms.ImageList imageList2;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ToolStripMenuItem 移入或移出ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 添加相关文件ToolStripMenuItem;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip2;
+        private System.Windows.Forms.ToolStripMenuItem 移入或移出ToolStripMenuItem1;
     }
 }

@@ -11,6 +11,7 @@ namespace DBInterface
         public bool Collected { get; set; }
         public int ListID { get; set; }//收藏列表的序列号
         public string Note { get; set; }//视频备注
+        public bool IsBinded { get; set; }
 
         //主要用于向数据库添加文件时用的构造方法
         public Video(string address)
@@ -21,9 +22,10 @@ namespace DBInterface
             this.Collected = false;
             this.ListID = 0;
             this.Note = "";
+            this.IsBinded = false;
         }
 
-        public Video(string address, string name, DateTime time, bool collected, int listID, string note)
+        public Video(string address, string name, DateTime time, bool collected, int listID, string note,bool binded)
         {
             this.Address = address;
             this.Name = name;
@@ -31,6 +33,7 @@ namespace DBInterface
             this.Collected = collected;
             this.ListID = listID;
             this.Note = note;
+            this.IsBinded = binded;
         }
 
         //地址相同就相等

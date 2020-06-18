@@ -23,7 +23,7 @@ namespace DBInterface
             }
             Video video = new Video(filePath);
             helper.InsertValues("video",
-                new string[] { video.Address, video.Name, video.Time.ToString(), video.Collected.ToString(), video.ListID.ToString(), video.Note });
+                new string[] { video.Address, video.Name, video.Time.ToString(), video.Collected.ToString(), video.ListID.ToString(), video.Note,video.IsBinded.ToString() });
             return true;
         }
 
@@ -107,7 +107,8 @@ namespace DBInterface
                 bool collected = sr.GetBoolean(sr.GetOrdinal("collected"));
                 int id = sr.GetInt16(sr.GetOrdinal("listid"));
                 string note = sr.GetString(sr.GetOrdinal("note"));
-                Video video = new Video(address, name, time, collected, id, note);
+                bool binded = sr.GetBoolean(sr.GetOrdinal("isBinded"));
+                Video video = new Video(address, name, time, collected, id, note,binded);
                 result.Add(video);
             }
             return result;
@@ -227,8 +228,16 @@ namespace DBInterface
             }
             Video video = new Video(filePath);
             helper.InsertValues("video",
-                new string[] { video.Address, video.Name, video.Time.ToString(), video.Collected.ToString(), listId });
+                new string[] { video.Address, video.Name, video.Time.ToString(), video.Collected.ToString(), listId,video.Note,video.IsBinded.ToString() });
             return true;
+        }
+
+        //为列表中的视频添加绑定
+        public void AddBinding(string video,bool yes)
+        {
+            string b = yes.ToString();
+            string sql = $"update video set isBinded = '{b}' where address = '{video}'";
+            helper.ExecuteQuery(sql);
         }
 
         //以下是对Document表的操作
@@ -243,7 +252,7 @@ namespace DBInterface
             }
             Document document = new Document(filePath);
             helper.InsertValues("document",
-                new string[] { document.Address, document.Name, document.ListID.ToString() });
+                new string[] { document.Address, document.Name, document.ListID.ToString(),document.Binding });
             return true;
         }
 
@@ -257,7 +266,7 @@ namespace DBInterface
             }
             Document document = new Document(filePath);
             helper.InsertValues("document",
-                new string[] { document.Address, document.Name, listId });
+                new string[] { document.Address, document.Name, listId,document.Binding });
             return true;
         }
 
@@ -295,10 +304,72 @@ namespace DBInterface
             helper.ExecuteQuery(sql);
         }
 
+        public void UpdateBindedDocList(string video,int listid)
+        {
+            string id = listid.ToString();
+            string sql = $"update document set listid = '{id}' where binding = '{video}'";
+            helper.ExecuteQuery(sql);
+        }
+
         //移除document
         public void RemoveDocument(string fileAddress)
         {
             helper.DeleteValuesAND("document", new string[] { "address" }, new string[] { "=" }, new string[] { fileAddress });
+        }
+
+        //为视频添加绑定文件
+        public void BindFile(string filePath,string listId, string video)
+        {
+            System.Data.SQLite.SQLiteDataReader sr = helper.Query("document", "address", "=", filePath);
+            if (sr.HasRows)
+            {
+                return ;
+            }
+            Document document = new Document(filePath);
+            helper.InsertValues("document",
+                new string[] { document.Address, document.Name, listId ,video});
+           
+        }
+
+        //获取当前列表存在绑定文件的视频
+        public List<String> GetBindedVideos(string listid)
+        {
+            string b = true.ToString();
+            string sql = $"select * from video where listid = '{listid}' and isBinded = '{b}'";
+            System.Data.SQLite.SQLiteDataReader sr = helper.ExecuteQuery(sql);
+            List<string> result = new List<string>();
+            while (sr.Read())
+            {
+                result.Add(sr.GetString(sr.GetOrdinal("address")));
+            }
+            return result;
+        }
+
+        //获取指定列表指定视频的绑定文件
+        public List<string>GetFilesOfVideo(string listid,string video)
+        {
+
+            string sql = $"select * from document where listid = '{listid}' and binding = '{video}'";
+            System.Data.SQLite.SQLiteDataReader sr = helper.ExecuteQuery(sql);
+            List<string> result = new List<string>();
+            while (sr.Read())
+            {
+                result.Add(sr.GetString(sr.GetOrdinal("address")));
+            }
+            return result;
+        }
+
+        //获取指定列表没有绑定视频的文件
+        public List<string> GetFilesOfNoVideos(string listid)
+        {
+            string sql = $"select * from document where listid = '{listid}' and binding = ''";
+            System.Data.SQLite.SQLiteDataReader sr = helper.ExecuteQuery(sql);
+            List<string> result = new List<string>();
+            while (sr.Read())
+            {
+                result.Add(sr.GetString(sr.GetOrdinal("address")));
+            }
+            return result;
         }
 
         public void Close()

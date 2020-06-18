@@ -62,33 +62,78 @@ namespace VideoPlayerAndManager
         }
 
         //更新listview中的内容,listview中是该列表的视频
-        private void ListViewUpdate(List<string> imageNames)
+        private void ListViewUpdate(List<string> Videos)
         {
             imageList1.Images.Clear();
             listView1.Clear();
-
+            List<string> BindedVideos = service.GetBindedVideos(ListID);
+            List<string> ImageNames=new List<string>();
             int pic_size = 256;
 
-            for (int i = imageNames.Count - 1; i >= 0; i--)
-            {
-                if (!File.Exists(imageNames[i]))
+            for (int i = Videos.Count - 1; i >= 0; i--)
+               {
+                string imageName = Videos[i];
+                if (!File.Exists(imageName))
                 {
-                    service.RemoveFlie(imageNames[i]);
-                    imageNames.Remove(imageNames[i]);
+                    service.RemoveFlie(imageName);
+                    Videos.Remove(imageName);
                     continue;
                 }
-                Bitmap bm = WindowsThumbnailProvider.GetThumbnail(imageNames[i], pic_size, pic_size, ThumbnailOptions.None);
+                Bitmap bm = WindowsThumbnailProvider.GetThumbnail(imageName, pic_size, pic_size, ThumbnailOptions.None);
                 Image img = Image.FromHbitmap(bm.GetHbitmap());
                 imageList1.Images.Add(img);
+                ImageNames.Add(imageName);
+               
+                if (BindedVideos.Contains(imageName)){
+                    List<string> Document = service.GetFilesOfVideo(ListID,imageName);
+                    for (int j = Document.Count - 1; j >= 0; j--)
+                    {
+                            if (!File.Exists(Document[j]))
+                            {
+                                service.RemoveDocument(Document[j]);
+                                Document.Remove(Document[j]);
+                                continue;
+                            }
+                       
+                        string extension = Document[j].Substring(Document[j].LastIndexOf(".") + 1,
+                            Document[j].Length - Document[j].LastIndexOf(".") - 1);
+                        Image img1;
+                        switch (extension)
+                        {
+                            case "pdf":
+                                img1 = imageList2.Images[0];
+                                imageList1.Images.Add(img1);
+                                break;
+                            case "ppt":
+                                img1 = imageList2.Images[1];
+                                imageList1.Images.Add(img1);
+                                break;
+                            case "pptx":
+                                img1 = imageList2.Images[1];
+                                imageList1.Images.Add(img1);
+                                break;
+                            case "doc":
+                                img1 = imageList2.Images[2];
+                                imageList1.Images.Add(img1);
+                                break;
+                            case "docx":
+                                img1 = imageList2.Images[2];
+                                imageList1.Images.Add(img1);
+                                break;
+                        }
+                        ImageNames.Add(Document[j]);
 
+                    }
+                }
+                
             }
 
-            for (int i = imageNames.Count - 1; i >= 0; i--)
+            for (int i = 0; i<ImageNames.Count; i++)
             {
                 ListViewItem lvi = new ListViewItem();
-                lvi.ImageIndex = imageNames.Count - 1 - i;
-                lvi.Name = imageNames[i];
-                lvi.Text = System.IO.Path.GetFileNameWithoutExtension(imageNames[i]);
+                lvi.ImageIndex = i;
+                lvi.Name = ImageNames[i];
+                lvi.Text = System.IO.Path.GetFileNameWithoutExtension(ImageNames[i]);
 
                 listView1.Items.Add(lvi);
             }
@@ -98,9 +143,10 @@ namespace VideoPlayerAndManager
 
         private void ListViewUpdate(string listid)//更新其他文件于listview上
         {
-            List<string> Document = service.GetDocument(listid);
+            List<string> Document = service.GetFilesOfNoVideos(ListID);
             if (Document.Count == 0)
                 return;
+           
             for (int i = Document.Count - 1; i >= 0; i--)
             {
                 if (!File.Exists(Document[i]))
@@ -241,7 +287,7 @@ namespace VideoPlayerAndManager
             }
         }
 
-        //右击视频移入、移出视频列表
+        //右击出现操作菜单
         private void listView1_MouseClick(object sender, MouseEventArgs e)
         {
 
@@ -250,45 +296,11 @@ namespace VideoPlayerAndManager
             {
                 if (listView1.SelectedItems.Count > 0)
                 {
-                    foreach (ListViewItem item in this.listView1.SelectedItems)
-                    {
-                        string itemName = item.Name;
-
-                        if (videos.Contains(itemName) || documents.Contains(itemName))
-                        {
-                            string msg = "确定将 " + itemName + " 移出" + ListName + "?";
-
-                            if ((int)MessageBox.Show(msg, "提示", MessageBoxButtons.OKCancel) == 1)
-                            {
-                                if (videos.Contains(itemName))
-                                {
-                                    service.UpdateFileList(itemName, 0);
-
-                                }
-                                else if (documents.Contains(itemName))
-                                {
-                                    service.RemoveDocument(itemName);
-
-                                }
-                                MessageBox.Show("删除成功！");
-                            }
-                        }
-                        else
-                        {
-                            string msg = "确定将 " + itemName + " 添入" + ListName + " ? ";
-
-                            if ((int)MessageBox.Show(msg, "提示", MessageBoxButtons.OKCancel) == 1)
-                            {
-                                service.UpdateFileList(itemName, int.Parse(ListID));
-                                MessageBox.Show("添加成功！");
-
-                            }
-                        }
-                        videos = service.GetFileFromList(ListID);
-                        ListViewUpdate(videos);
-                        ListViewUpdate(ListID);
-                        listBox1.SelectedIndex = 0;
-                    }
+                    
+                    if (listBox1.SelectedIndex != 1)
+                        contextMenuStrip1.Show(MousePosition.X, MousePosition.Y);
+                    else if(listBox1.SelectedIndex==1)
+                        contextMenuStrip2.Show(MousePosition.X, MousePosition.Y);
                 }
             }
         }
@@ -384,6 +396,125 @@ namespace VideoPlayerAndManager
             ListViewUpdate(videos);
             ListViewUpdate(ListID);
             listBox1.SelectedIndex = 0;
+        }
+
+        private void 移入或移出ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in this.listView1.SelectedItems)
+            {
+                string itemName = item.Name;
+
+                if (videos.Contains(itemName) || documents.Contains(itemName))
+                {
+                    string msg = "确定将 " + itemName + " 移出" + ListName + "?";
+
+                    if ((int)MessageBox.Show(msg, "提示", MessageBoxButtons.OKCancel) == 1)
+                    {
+                        if (videos.Contains(itemName))
+                        {
+                            service.UpdateFileList(itemName, 0);
+                            service.UpdateBindedDocList(itemName, 0);
+                        }
+                        else if (documents.Contains(itemName))
+                        {
+                            service.RemoveDocument(itemName);
+
+                        }
+                        MessageBox.Show("删除成功！");
+                    }
+                }
+                else
+                {
+                    string msg = "确定将 " + itemName + " 添入" + ListName + " ? ";
+
+                    if ((int)MessageBox.Show(msg, "提示", MessageBoxButtons.OKCancel) == 1)
+                    {
+                        service.UpdateFileList(itemName, int.Parse(ListID));
+                        service.UpdateBindedDocList(itemName, int.Parse(ListID));
+                        MessageBox.Show("添加成功！");
+
+                    }
+                }
+                documents = service.GetDocument(ListID);
+                videos = service.GetFileFromList(ListID);
+                ListViewUpdate(videos);
+                ListViewUpdate(ListID);
+                listBox1.SelectedIndex = 0;
+            }
+        }
+
+        private void 添加相关文件ToolStripMenuItem_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in this.listView1.SelectedItems)
+            {
+                string itemName = item.Name;
+                OpenFileDialog od1 = new OpenFileDialog();
+                od1.InitialDirectory = "c:\\";
+                od1.Filter = GetFile.DocumentFilter;
+                od1.FilterIndex = 2;
+                od1.RestoreDirectory = true;
+
+                if (od1.ShowDialog() == DialogResult.OK)
+                {
+                    Path = od1.FileName;
+                    MessageBox.Show("已选择文件:" + Path, "选择文件提示", MessageBoxButtons.OK, MessageBoxIcon.Information);
+                }
+
+                service.BindFile(Path, ListID, itemName);
+                service.AddBinding(itemName,true);
+
+            }
+            documents = service.GetDocument(ListID);
+            videos = service.GetFileFromList(ListID);
+            ListViewUpdate(videos);
+            ListViewUpdate(ListID);
+            listBox1.SelectedIndex = 0;
+        }
+
+        private void 移入或移出ToolStripMenuItem1_Click(object sender, EventArgs e)
+        {
+            foreach (ListViewItem item in this.listView1.SelectedItems)
+            {
+                string itemName = item.Name;
+
+                if (videos.Contains(itemName) || documents.Contains(itemName))
+                {
+                    string msg = "确定将 " + itemName + " 移出" + ListName + "?";
+
+                    if ((int)MessageBox.Show(msg, "提示", MessageBoxButtons.OKCancel) == 1)
+                    {
+                        if (videos.Contains(itemName))
+                        {
+                            service.UpdateFileList(itemName, 0);
+                            service.UpdateBindedDocList(itemName, 0);
+
+                        }
+                        else if (documents.Contains(itemName))
+                        {
+                            service.RemoveDocument(itemName);
+
+                        }
+                        MessageBox.Show("删除成功！");
+                    }
+                }
+                else
+                {
+                    string msg = "确定将 " + itemName + " 添入" + ListName + " ? ";
+
+                    if ((int)MessageBox.Show(msg, "提示", MessageBoxButtons.OKCancel) == 1)
+                    {
+                        service.UpdateFileList(itemName, int.Parse(ListID));
+                        service.UpdateBindedDocList(itemName, int.Parse(ListID));
+                        MessageBox.Show("添加成功！");
+
+                    }
+                }
+                documents = service.GetDocument(ListID);
+                videos = service.GetFileFromList(ListID);
+                ListViewUpdate(videos);
+                ListViewUpdate(ListID);
+                listBox1.SelectedIndex = 0;
+            }
         }
     }
 }
