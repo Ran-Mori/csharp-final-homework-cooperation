@@ -71,7 +71,7 @@ namespace VideoPlayerAndManager
             List<string> ImageNames=new List<string>();
             int pic_size = 256;
 
-            for (int i = 0; i <=Videos.Count-1 ; i++)
+            for (int i = Videos.Count - 1; i >= 0; i--)
                {
                 string imageName = Videos[i];
                 if (!File.Exists(imageName))
@@ -87,7 +87,7 @@ namespace VideoPlayerAndManager
                
                 if (BindedVideos.Contains(imageName)){
                     List<string> Document = service.GetFilesOfVideo(ListID,imageName);
-                    for (int j = 0; j <= Document.Count-1; j++)
+                    for (int j = Document.Count - 1; j >= 0; j--)
                     {
                             if (!File.Exists(Document[j]))
                             {
@@ -129,7 +129,7 @@ namespace VideoPlayerAndManager
                 
             }
 
-            for (int i = 0; i<=ImageNames.Count-1; i++)
+            for (int i = 0; i<ImageNames.Count; i++)
             {
                 ListViewItem lvi = new ListViewItem();
                 lvi.ImageIndex = i;
@@ -148,7 +148,7 @@ namespace VideoPlayerAndManager
             if (Document.Count == 0)
                 return;
            
-            for (int i = 0; i <= Document.Count-1; i++)
+            for (int i = Document.Count - 1; i >= 0; i--)
             {
                 if (!File.Exists(Document[i]))
                 {
@@ -184,10 +184,10 @@ namespace VideoPlayerAndManager
                 }
             }
             int count = imageList1.Images.Count;
-            for (int i = 0; i <=Document.Count-1; i++)
+            for (int i = Document.Count - 1; i >= 0; i--)
             {
                 ListViewItem lvi = new ListViewItem();
-                lvi.ImageIndex =  i;
+                lvi.ImageIndex = count - 1 - i;
                 lvi.Name = Document[i];
                 lvi.Text = System.IO.Path.GetFileNameWithoutExtension(Document[i]);
                 listView1.Items.Add(lvi);
@@ -279,26 +279,24 @@ namespace VideoPlayerAndManager
                 string name = System.IO.Path.GetFileNameWithoutExtension(url);
                 if (extension == "mp4" || extension == "avi" || extension == "mkv")
                 {
-                    player(url, name);
+                    Video video = new Video(name, url);
+                    List<Video> lists = new List<Video>();
+                    foreach (string movieurl in videos)
+                    {
+                        string moviename = System.IO.Path.GetFileNameWithoutExtension(movieurl);
+                        Video v = new Video(moviename, movieurl);
+                        lists.Add(v);
+                    }
+                    PlayerForm player = new PlayerForm(video, lists, imageList1.Images);
+                    player.Show();
                 }
-                else {
+                else
+                {
                     Process.Start(url);
                 }
             }
         }
 
-        private void player(string url,string name) {
-            Video video = new Video(name, url);
-            List<Video> lists = new List<Video>();
-            foreach (string movieurl in videos)
-            {
-                string moviename = System.IO.Path.GetFileNameWithoutExtension(movieurl);
-                Video v = new Video(moviename, movieurl);
-                lists.Add(v);
-            }
-            PlayerForm player = new PlayerForm(video, lists, imageList1.Images);
-            player.Show();
-        }
         //右击出现操作菜单
         private void listView1_MouseClick(object sender, MouseEventArgs e)
         {

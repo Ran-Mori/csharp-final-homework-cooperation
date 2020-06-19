@@ -191,7 +191,7 @@ namespace VideoPlayerAndManager
             e.DrawFocusRectangle();//焦点框 
 
             //绘制图标 
-            Image image = imageList1.Images[e.Index];
+            Image image = imageList1.Images[imageList1.Images.Count-1-e.Index];
             Graphics g = e.Graphics;
             Rectangle bounds = e.Bounds;
             Rectangle imageRect = new Rectangle(

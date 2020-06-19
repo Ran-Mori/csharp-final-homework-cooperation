@@ -55,7 +55,6 @@ namespace VideoPlayerAndManager
         {
             listView1.View = View.LargeIcon;
             listView1.LargeImageList = imageList1;
-            MessageBox.Show(imageList1.Images.Count+"");
         }
 
         //初始化BackgroundWorker
@@ -82,7 +81,7 @@ namespace VideoPlayerAndManager
             //...执行线程任务                        
             List<string> imageNames = service.GetAllVideos();
             int pic_size = 256;
-            for (int i = 0; i <= imageList1.Images.Count-1 ; i++)
+            for (int i = imageNames.Count - 1; i >= 0; i--)
             {                
                 if (!File.Exists(imageNames[i]))
                 {
@@ -109,10 +108,10 @@ namespace VideoPlayerAndManager
             progressBar1.Visible = false;
             progressBar1.Value = 0;
             List<string> imageNames = service.GetAllVideos();
-            for (int i = 0; i <= imageList1.Images.Count-1; i++)
+            for (int i = imageNames.Count - 1; i >= 0; i--)
             {
                 ListViewItem lvi = new ListViewItem();
-                lvi.ImageIndex =  i;
+                lvi.ImageIndex = imageNames.Count - 1 - i;
                 lvi.Name = imageNames[i];
                 lvi.Text = System.IO.Path.GetFileNameWithoutExtension(imageNames[i]);
                 listView1.Items.Add(lvi);
@@ -134,7 +133,7 @@ namespace VideoPlayerAndManager
             }
 
             int pic_size = 256;
-            for (int i = 0; i <= imageList1.Images.Count-1; i++)
+            for (int i = imageNames.Count - 1; i >= 0; i--)
             {
                 if (!File.Exists(imageNames[i]))
                 {
@@ -149,10 +148,10 @@ namespace VideoPlayerAndManager
             }
 
 
-            for (int i = 0; i <= imageList1.Images.Count-1;i++)
+            for (int i = imageNames.Count - 1; i >= 0; i--)
             {
                 ListViewItem lvi = new ListViewItem();
-                lvi.ImageIndex =  i;
+                lvi.ImageIndex = imageNames.Count - 1 - i;
                 lvi.Name = imageNames[i];
                 lvi.Text = System.IO.Path.GetFileNameWithoutExtension(imageNames[i]);
                 //string str = imageNames[i];
@@ -215,8 +214,7 @@ namespace VideoPlayerAndManager
                     service.AddFile(s);                    
                     service.UpdateFileList(s, listid);
                 }               
-            }
-            MessageBox.Show(imageList1.Images.Count+"");
+            }    
         }
 
         private void Button3_Click(object sender, EventArgs e)//创建新的视频列表
@@ -301,7 +299,7 @@ namespace VideoPlayerAndManager
                     Video v = new Video(moviename, movieurl);
                     lists.Add(v);
                 }
-                PlayerForm player = new PlayerForm(video, lists,imageList1.Images);
+                PlayerForm player = new PlayerForm(video, lists, imageList1.Images);
                 player.Show();
                 player.AddtoLike += AddLike;
             }

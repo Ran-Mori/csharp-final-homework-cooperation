@@ -84,15 +84,15 @@
             this.panel1.Controls.Add(this.progressBar1);
             this.panel1.Controls.Add(this.listView1);
             this.panel1.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.panel1.Location = new System.Drawing.Point(0, 117);
+            this.panel1.Location = new System.Drawing.Point(0, 93);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(704, 510);
+            this.panel1.Size = new System.Drawing.Size(704, 534);
             this.panel1.TabIndex = 1;
             // 
             // progressBar1
             // 
             this.progressBar1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.progressBar1.Location = new System.Drawing.Point(321, 240);
+            this.progressBar1.Location = new System.Drawing.Point(321, 252);
             this.progressBar1.Name = "progressBar1";
             this.progressBar1.Size = new System.Drawing.Size(48, 23);
             this.progressBar1.TabIndex = 1;
@@ -115,7 +115,7 @@
             this.listView1.Location = new System.Drawing.Point(0, 0);
             this.listView1.Name = "listView1";
             this.listView1.ShowGroups = false;
-            this.listView1.Size = new System.Drawing.Size(704, 510);
+            this.listView1.Size = new System.Drawing.Size(704, 534);
             this.listView1.TabIndex = 0;
             this.listView1.UseCompatibleStateImageBehavior = false;
             this.listView1.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ListView1_MouseClick);
@@ -129,25 +129,25 @@
             this.备注ToolStripMenuItem,
             this.删除ToolStripMenuItem});
             this.contextMenuStrip1.Name = "contextMenuStrip1";
-            this.contextMenuStrip1.Size = new System.Drawing.Size(211, 104);
+            this.contextMenuStrip1.Size = new System.Drawing.Size(109, 76);
             this.contextMenuStrip1.ItemClicked += new System.Windows.Forms.ToolStripItemClickedEventHandler(this.contextMenuStrip1_ItemClicked);
             // 
             // 收藏ToolStripMenuItem
             // 
             this.收藏ToolStripMenuItem.Name = "收藏ToolStripMenuItem";
-            this.收藏ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.收藏ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
             this.收藏ToolStripMenuItem.Text = "收藏";
             // 
             // 备注ToolStripMenuItem
             // 
             this.备注ToolStripMenuItem.Name = "备注ToolStripMenuItem";
-            this.备注ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.备注ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
             this.备注ToolStripMenuItem.Text = "备注";
             // 
             // 删除ToolStripMenuItem
             // 
             this.删除ToolStripMenuItem.Name = "删除ToolStripMenuItem";
-            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(210, 24);
+            this.删除ToolStripMenuItem.Size = new System.Drawing.Size(108, 24);
             this.删除ToolStripMenuItem.Text = "删除";
             // 
             // imageList1
@@ -169,30 +169,32 @@
             this.tableLayoutPanel1.Name = "tableLayoutPanel1";
             this.tableLayoutPanel1.RowCount = 1;
             this.tableLayoutPanel1.RowStyles.Add(new System.Windows.Forms.RowStyle(System.Windows.Forms.SizeType.Percent, 50F));
-            this.tableLayoutPanel1.Size = new System.Drawing.Size(704, 117);
+            this.tableLayoutPanel1.Size = new System.Drawing.Size(704, 93);
             this.tableLayoutPanel1.TabIndex = 0;
             // 
             // textBox1
             // 
             this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Left | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Font = new System.Drawing.Font("宋体", 24F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.textBox1.Location = new System.Drawing.Point(30, 32);
+            this.textBox1.Font = new System.Drawing.Font("宋体", 15F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.textBox1.Location = new System.Drawing.Point(30, 28);
             this.textBox1.Margin = new System.Windows.Forms.Padding(30, 3, 30, 3);
             this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(461, 53);
+            this.textBox1.Size = new System.Drawing.Size(461, 36);
             this.textBox1.TabIndex = 0;
             // 
             // button1
             // 
+            this.button1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.button1.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("button1.BackgroundImage")));
-            this.button1.Dock = System.Windows.Forms.DockStyle.Fill;
             this.button1.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button1.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.button1.Location = new System.Drawing.Point(551, 30);
-            this.button1.Margin = new System.Windows.Forms.Padding(30);
+            this.button1.Location = new System.Drawing.Point(536, 15);
+            this.button1.Margin = new System.Windows.Forms.Padding(15);
             this.button1.Name = "button1";
             this.button1.Padding = new System.Windows.Forms.Padding(10);
-            this.button1.Size = new System.Drawing.Size(123, 57);
+            this.button1.Size = new System.Drawing.Size(153, 63);
             this.button1.TabIndex = 1;
             this.button1.Text = "查询";
             this.button1.UseVisualStyleBackColor = true;
@@ -206,9 +208,9 @@
             this.button4.FlatStyle = System.Windows.Forms.FlatStyle.Popup;
             this.button4.Font = new System.Drawing.Font("黑体", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.button4.ForeColor = System.Drawing.Color.Black;
-            this.button4.Location = new System.Drawing.Point(0, 559);
+            this.button4.Location = new System.Drawing.Point(0, 567);
             this.button4.Name = "button4";
-            this.button4.Size = new System.Drawing.Size(194, 68);
+            this.button4.Size = new System.Drawing.Size(194, 60);
             this.button4.TabIndex = 4;
             this.button4.Text = "浏览图片";
             this.button4.UseVisualStyleBackColor = false;

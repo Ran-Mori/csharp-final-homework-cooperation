@@ -208,7 +208,7 @@
     <value>文件</value>
   </data>
   <data name="fullscreenToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 26</value>
+    <value>191, 26</value>
   </data>
   <data name="fullscreenToolStripMenuItem.Text" xml:space="preserve">
     <value>全屏</value>
@@ -226,7 +226,7 @@
     <value>English</value>
   </data>
   <data name="languageToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 26</value>
+    <value>191, 26</value>
   </data>
   <data name="languageToolStripMenuItem.Text" xml:space="preserve">
     <value>语言/Language</value>
@@ -268,7 +268,7 @@
     <value>自定义</value>
   </data>
   <data name="倍速ToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>216, 26</value>
+    <value>191, 26</value>
   </data>
   <data name="倍速ToolStripMenuItem.Text" xml:space="preserve">
     <value>倍速</value>
