@@ -31,6 +31,7 @@ namespace VideoPlayerAndManager
         {
             InitializeComponent();
             listBox1.DrawMode = DrawMode.OwnerDrawFixed;
+            listBox1.ItemHeight = 50;
             currentMovie = movie;
             movieList = movies;
             foreach (Image i in imgs) {
@@ -153,26 +154,20 @@ namespace VideoPlayerAndManager
 
         private void 视频截图ToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            IntPtr hwnd1 = FindWindow(null, "视频播放器");
-            if (!hwnd1.Equals(IntPtr.Zero))
+            Bitmap bmp = new Bitmap(axWindowsMediaPlayer1.Width, axWindowsMediaPlayer1.Height);
+            using (Graphics g = Graphics.FromImage(bmp))
             {
-                GetWindowRect(hwnd1, out Rectangle rect);  //获得目标窗体的大小
-                Bitmap Pic = new Bitmap(rect.Width, rect.Height);
-                Graphics g1 = Graphics.FromImage(Pic);
-                IntPtr hdc1 = GetDC(hwnd1);
-                IntPtr hdc2 = g1.GetHdc();  //得到Bitmap的DC
-                BitBlt(hdc2, 0, 0, rect.Width, rect.Height, hdc1, 0, 0, 13369376);
-                g1.ReleaseHdc(hdc2);  //释放掉Bitmap的DC
-                //以JPG文件格式保存
-                saveFileDialog1.Filter = "jpeg文件|*.jpeg|png文件|*.png|bmp文件|*.bmp";
-                //保存对话框是否记忆上次打开的目录
-                saveFileDialog1.RestoreDirectory = true;
-                //点了保存按钮进入
-                if (saveFileDialog1.ShowDialog() == DialogResult.OK)
-                {
-                    string localFilePath = saveFileDialog1.FileName.ToString();
-                    Pic.Save(localFilePath);
-                }
+                g.CopyFromScreen(PointToScreen(new Point(axWindowsMediaPlayer1.Left, axWindowsMediaPlayer1.Top)), new Point(0, 0), bmp.Size);
+                g.Dispose();
+            }
+            saveFileDialog1.Filter = "jpeg文件|*.jpeg|png文件|*.png|bmp文件|*.bmp";
+            //保存对话框是否记忆上次打开的目录
+            saveFileDialog1.RestoreDirectory = true;
+            //点了保存按钮进入
+            if (saveFileDialog1.ShowDialog() == DialogResult.OK)
+            {
+                string localFilePath = saveFileDialog1.FileName.ToString();
+                bmp.Save(localFilePath);
             }
         }
 
@@ -504,7 +499,7 @@ namespace VideoPlayerAndManager
 
         private void listBox1_MeasureItem(object sender, MeasureItemEventArgs e)
         {
-            listBox1.ItemHeight = 40;
+            listBox1.ItemHeight = 50;
         }
 
         private void PlayerForm_FormClosing(object sender, FormClosingEventArgs e)
