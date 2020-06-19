@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Drawing;
 using System.Windows.Forms;
 using System.Resources;
+using DBInterface;
 //using System.Runtime.InteropServices;
 
 namespace VideoPlayerAndManager
@@ -14,6 +15,8 @@ namespace VideoPlayerAndManager
         private playMode mode=playMode.Sequence;
 
         private Video currentMovie = null;
+
+        private VideoService service = new VideoService();
 
         private List<Video> movieList = new List<Video>();//电影类
 
@@ -40,6 +43,7 @@ namespace VideoPlayerAndManager
             try
             {
                 axWindowsMediaPlayer1.URL = currentMovie.url;
+                axWindowsMediaPlayer1.Ctlcontrols.currentPosition = service.GetPlayedTime(currentMovie.url);
                 axWindowsMediaPlayer1.Ctlcontrols.play();
             }
             catch
@@ -60,6 +64,7 @@ namespace VideoPlayerAndManager
             try
             {
                 axWindowsMediaPlayer1.URL = currentMovie.url;
+                axWindowsMediaPlayer1.Ctlcontrols.currentPosition = service.GetPlayedTime(currentMovie.url);
                 axWindowsMediaPlayer1.Ctlcontrols.play();
             }
             catch
@@ -109,6 +114,7 @@ namespace VideoPlayerAndManager
 
         private void closeToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            //service.UpdatePlayedTime(currentMovie.url, axWindowsMediaPlayer1.Ctlcontrols.currentPosition + "");
             this.Close();
         }
 
@@ -370,6 +376,7 @@ namespace VideoPlayerAndManager
         {
             if (axWindowsMediaPlayer1.playState == WMPLib.WMPPlayState.wmppsMediaEnded)
             {
+                service.UpdatePlayedTime(currentMovie.url, axWindowsMediaPlayer1.Ctlcontrols.currentPosition + "");
                 getPath();
                 axWindowsMediaPlayer1.Ctlcontrols.play();
             }
@@ -491,12 +498,18 @@ namespace VideoPlayerAndManager
 
         private void managerToolStripMenuItem_Click(object sender, EventArgs e)
         {
+            service.UpdatePlayedTime(currentMovie.url, axWindowsMediaPlayer1.Ctlcontrols.currentPosition+"");
             this.Hide();
         }
 
         private void listBox1_MeasureItem(object sender, MeasureItemEventArgs e)
         {
             listBox1.ItemHeight = 40;
+        }
+
+        private void PlayerForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            service.UpdatePlayedTime(currentMovie.url, axWindowsMediaPlayer1.Ctlcontrols.currentPosition + "");
         }
     }
 

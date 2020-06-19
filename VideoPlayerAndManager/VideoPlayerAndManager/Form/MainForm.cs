@@ -266,6 +266,10 @@ namespace VideoPlayerAndManager
             else if (listBox1.SelectedIndex == 2)//最近播放
             {
                 videoNames = service.GetByTime();
+                if (videoNames.Count == 0)
+                {
+                    return;
+                }
                 List<string> rctVideo=new List<string>();
                 for(int i=7;i>=0;i--)
                 {

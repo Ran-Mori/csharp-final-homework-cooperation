@@ -160,43 +160,43 @@
     <value>537, 17</value>
   </metadata>
   <data name="openToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 26</value>
+    <value>216, 26</value>
   </data>
   <data name="openToolStripMenuItem.Text" xml:space="preserve">
     <value>打开</value>
   </data>
   <data name="addToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 26</value>
+    <value>216, 26</value>
   </data>
   <data name="addToolStripMenuItem.Text" xml:space="preserve">
     <value>收藏</value>
   </data>
   <data name="informationToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 26</value>
+    <value>216, 26</value>
   </data>
   <data name="informationToolStripMenuItem.Text" xml:space="preserve">
     <value>信息</value>
   </data>
   <data name="closeToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 26</value>
+    <value>216, 26</value>
   </data>
   <data name="closeToolStripMenuItem.Text" xml:space="preserve">
     <value>关闭</value>
   </data>
   <data name="nextToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 26</value>
+    <value>216, 26</value>
   </data>
   <data name="nextToolStripMenuItem.Text" xml:space="preserve">
     <value>下一个</value>
   </data>
   <data name="openDirectoryToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 26</value>
+    <value>216, 26</value>
   </data>
   <data name="openDirectoryToolStripMenuItem.Text" xml:space="preserve">
     <value>打开文件夹</value>
   </data>
   <data name="managerToolStripMenuItem.Size" type="System.Drawing.Size, System.Drawing">
-    <value>159, 26</value>
+    <value>216, 26</value>
   </data>
   <data name="managerToolStripMenuItem.Text" xml:space="preserve">
     <value>管理器</value>

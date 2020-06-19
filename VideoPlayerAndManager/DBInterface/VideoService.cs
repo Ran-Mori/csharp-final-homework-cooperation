@@ -23,7 +23,7 @@ namespace DBInterface
             }
             Video video = new Video(filePath);
             helper.InsertValues("video",
-                new string[] { video.Address, video.Name, video.Time.ToString(), video.Collected.ToString(), video.ListID.ToString(), video.Note,video.IsBinded.ToString() });
+                new string[] { video.Address, video.Name, video.Time.ToString(), video.Collected.ToString(), video.ListID.ToString(), video.Note,video.IsBinded.ToString(), video.PlayedTime });
             return true;
         }
 
@@ -65,6 +65,27 @@ namespace DBInterface
                 note = sr.GetString(sr.GetOrdinal("note"));
             }
             return note;
+        }
+
+        //视频名查询,返回对应视频的播放时间
+        public Double GetPlayedTime(string url)
+        {
+            //string sql = $"select * from video where name like '%{name}%'";
+            string surl = $"%{url}%";
+            System.Data.SQLite.SQLiteDataReader sr = helper.Query("video", "address", "like", surl);
+            string pTime = "0";
+            while (sr.Read())
+            {
+                pTime = sr.GetString(sr.GetOrdinal("playedTime"));
+            }
+            if (Double.TryParse(pTime, out Double dTime))
+            {
+                return dTime;
+            }
+            else {
+                return 0;
+            }
+            
         }
 
         //相似日期查询,返回文件地址的list,time使用DateTime格式
@@ -121,7 +142,8 @@ namespace DBInterface
                 int id = sr.GetInt16(sr.GetOrdinal("listid"));
                 string note = sr.GetString(sr.GetOrdinal("note"));
                 bool binded = sr.GetBoolean(sr.GetOrdinal("isBinded"));
-                Video video = new Video(address, name, time, collected, id, note,binded);
+                string pTime = sr.GetString(sr.GetOrdinal("playedTime"));
+                Video video = new Video(address, name, time, collected, id, note, binded, pTime);
                 result.Add(video);
             }
             return result;
@@ -161,6 +183,13 @@ namespace DBInterface
         public void UpdateTime(string name, DateTime time)
         {
             string sql = $"update video set date = '{time}' where name = '{name}'";
+            helper.ExecuteQuery(sql);
+        }
+
+        //变更视频播放时间
+        public void UpdatePlayedTime(string url, string pTime)
+        {
+            string sql = $"update video set playedTime = '{pTime}' where address = '{url}'";
             helper.ExecuteQuery(sql);
         }
 
