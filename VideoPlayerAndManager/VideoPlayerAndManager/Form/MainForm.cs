@@ -42,7 +42,8 @@ namespace VideoPlayerAndManager
             listBox1.DrawItem += ListBox1_DrawItem;
             listBox1.MeasureItem += ListBox1_MeasureItem;
             listBox1.Items.Add("全部视频");
-            listBox1.Items.Add("收藏夹");//始终存在所以直接添加
+            listBox1.Items.Add("收藏夹");
+            listBox1.Items.Add("最近播放");//始终存在所以直接添加
             List<string> lists = service.GetVideoList();
             foreach (string list in lists)
             {
@@ -262,7 +263,16 @@ namespace VideoPlayerAndManager
                 videoNames = service.GetCollection();
                 ListViewUpdate(videoNames);
             }
-           
+            else if (listBox1.SelectedIndex == 2)//最近播放
+            {
+                videoNames = service.GetByTime();
+                List<string> rctVideo=new List<string>();
+                for(int i=7;i>=0;i--)
+                {
+                    rctVideo.Add(videoNames[i]);
+                }
+                ListViewUpdate(rctVideo);
+            }
             else //其他列表
             {
                 string name = listBox1.SelectedItem.ToString();
@@ -273,7 +283,7 @@ namespace VideoPlayerAndManager
             }
         }
 
-        private void ListView1_MouseClick(object sender, MouseEventArgs e)//右击视频添加至收藏夹，按ctrl可批量化操作
+        private void ListView1_MouseClick(object sender, MouseEventArgs e)//右击视频进行操作，按ctrl可批量化操作
         {
             if (e.Button == MouseButtons.Right)
             {
@@ -302,6 +312,7 @@ namespace VideoPlayerAndManager
                 PlayerForm player = new PlayerForm(video, lists, imageList1.Images);
                 player.Show();
                 player.AddtoLike += AddLike;
+                service.UpdateTime(name, DateTime.Now);
             }
         }
 

@@ -82,6 +82,19 @@ namespace DBInterface
             return result;
         }
 
+        //查询最新操作过的视频,返回文件地址的list,time使用DateTime格式
+        public List<string> GetByTime()
+        {
+            //string sql = $"select * from video order by time";
+            System.Data.SQLite.SQLiteDataReader sr = helper.Query("video", "date");
+            List<string> result = new List<string>();
+            while (sr.Read())
+            {
+                result.Add(sr.GetString(sr.GetOrdinal("address")));
+            }
+            return result;
+        }
+
         //创建收藏的文件列表,返回文件地址的list
         public List<string> GetCollection()
         {
@@ -141,6 +154,13 @@ namespace DBInterface
         public void UpdateNote(string name, string newNote)
         {
             string sql = $"update video set note = '{newNote}' where name = '{name}'";
+            helper.ExecuteQuery(sql);
+        }
+
+        //变更视频操作时间
+        public void UpdateTime(string name, DateTime time)
+        {
+            string sql = $"update video set date = '{time}' where name = '{name}'";
             helper.ExecuteQuery(sql);
         }
 

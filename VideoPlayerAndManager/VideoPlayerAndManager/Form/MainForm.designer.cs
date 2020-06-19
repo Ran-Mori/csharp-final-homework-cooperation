@@ -265,7 +265,7 @@
             this.ClientSize = new System.Drawing.Size(906, 629);
             this.Controls.Add(this.splitContainer1);
             this.Name = "MainForm";
-            this.Text = "Form1";
+            this.Text = "本地视频管理器";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.splitContainer1.Panel1.ResumeLayout(false);
             this.splitContainer1.Panel2.ResumeLayout(false);

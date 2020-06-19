@@ -188,6 +188,12 @@ namespace DBInterface
             return ExecuteQuery(sql);
         }
 
+        //顺序查询
+        public SQLiteDataReader Query(string tableName, string field)
+        {
+            string sql = $"select * from {tableName} order by {field} desc";
+            return ExecuteQuery(sql);
+        }
 
         /// Reads the table.
         /// <returns>The table.</returns>
