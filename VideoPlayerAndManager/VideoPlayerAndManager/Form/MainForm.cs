@@ -248,6 +248,7 @@ namespace VideoPlayerAndManager
         {
             if (listBox1.SelectedIndex == 0)//全部视频
             {
+                textBox1.Clear();
                 //DateTime beforeDT = System.DateTime.Now;
                 imageList1.Images.Clear();
                 listView1.Clear();
@@ -260,11 +261,13 @@ namespace VideoPlayerAndManager
             }
             else if (listBox1.SelectedIndex == 1)//收藏夹
             {
+                textBox1.Clear();
                 videoNames = service.GetCollection();
                 ListViewUpdate(videoNames);
             }
             else if (listBox1.SelectedIndex == 2)//最近播放
             {
+                textBox1.Clear();
                 videoNames = service.GetByTime();
                 if (videoNames.Count == 0)
                 {
