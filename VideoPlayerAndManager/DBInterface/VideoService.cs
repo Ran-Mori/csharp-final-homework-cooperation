@@ -277,7 +277,7 @@ namespace DBInterface
             }
             Video video = new Video(filePath);
             helper.InsertValues("video",
-                new string[] { video.Address, video.Name, video.Time.ToString(), video.Collected.ToString(), listId,video.Note,video.IsBinded.ToString() });
+                new string[] { video.Address, video.Name, video.Time.ToString(),  video.Collected.ToString(), listId,video.Note,video.IsBinded.ToString(),video.PlayedTime });
             return true;
         }
 
